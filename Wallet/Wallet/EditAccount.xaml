@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wallet.EditAccount"
+             Title="Chỉnh sửa tài khoản"
+           >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="deleteButton" Priority="0" Order="Primary" IconImageSource="delete.jpg" Clicked="deleteButton_Clicked"></ToolbarItem>
+        <ToolbarItem x:Name="completeButton" Priority="1" Order="Primary" IconImageSource="complete.jpg" Clicked="completeButton_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Thông tin tài khoản" TextColor="Black" FontSize="20" FontAttributes="Bold" Margin="10"/>
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Image Source="wallet.png"  Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Tên tài khoản " Grid.Row="0" Grid.Column="1" FontSize="Medium" VerticalOptions="Center" />
+                <Entry Keyboard="Text" Grid.Row="0" Grid.Column="2" VerticalOptions="Center" x:Name="walletName" Placeholder="Điền vào tên tài khoản" HorizontalTextAlignment="End"/>
+
+
+                <Image Source="money.jpg"  Grid.Row="1" Grid.Column="0"/>
+                <Label Text="Thăng bằng" Grid.Row="1" Grid.Column="1" FontSize="Medium" VerticalOptions="Center" />
+                <Entry Keyboard="Text" Grid.Row="1" Grid.Column="2" VerticalOptions="Center" x:Name="walletPrice" Placeholder="Vui lòng nhập số tiền" HorizontalTextAlignment="End" />
+
+
+
+                <Image Source="coin.jpg"  Grid.Row="2" Grid.Column="0"/>
+                <Label Text="Tiền tệ" Grid.Row="2" Grid.Column="1" FontSize="Medium" VerticalOptions="Center" />
+                <Entry Keyboard="Text" Grid.Row="2" Grid.Column="2" VerticalOptions="Center" x:Name="walletCurrency" Placeholder="VND" HorizontalTextAlignment="End"/>
+
+
+
+                <Image Source="plus.jpg"  Grid.Row="3" Grid.Column="0"/>
+                <Label Text="Biểu tượng" Grid.Row="3" Grid.Column="1" FontSize="Medium" VerticalOptions="Center" />
+                <Entry Keyboard="Text" Grid.Row="3" Grid.Column="2" VerticalOptions="Center" x:Name="walletImage" HorizontalTextAlignment="End"/>
+
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
