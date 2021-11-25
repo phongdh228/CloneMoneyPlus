@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wallet.Views.WalletPage"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="currencyButton" Priority="0" Order="Primary" IconImageSource="currency.jpg" Clicked="currencyButton_Clicked"></ToolbarItem>
+        <ToolbarItem x:Name="manageButton"  Priority="1" Order="Primary" IconImageSource="navbar.jpg" Clicked="manageButton_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame VerticalOptions="FillAndExpand" BackgroundColor="#f06292" Padding="5" >
+                <StackLayout VerticalOptions="FillAndExpand">
+                    <Label TextColor="White" HorizontalOptions="Start" Text="Ví tiền" FontSize="25" />
+                    <Label TextColor="White" HorizontalOptions="Start" Text="Tài sản ròng" FontSize="10" />
+                    <Label TextColor="White" HorizontalOptions="Start" Text="$430,002" FontSize="30" />
+                    <Label TextColor="White" HorizontalOptions="Start" Text="Tài sản" FontSize="10" />
+                    <Label TextColor="White" HorizontalOptions="Start" Text="$430,002" FontSize="12" />
+                </StackLayout>
+            </Frame>
+            <ListView x:Name="lstWallet" HasUnevenRows="True" IsPullToRefreshEnabled="True" ItemSelected="lstWallet_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid Margin="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50"/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Source="{Binding walletImg}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
+                                    <Label Text="{Binding  walletName}" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" FontSize="15"  VerticalOptions="Center"/>
+                                    <Label Text="{Binding walletPrice}" Grid.Row="0" Grid.Column="2" VerticalTextAlignment="Center" VerticalOptions="Center"/>
+                                    <Label Text="{Binding walletCurrency}" Grid.Row="1" Grid.Column="2"  VerticalOptions="Start"/>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
