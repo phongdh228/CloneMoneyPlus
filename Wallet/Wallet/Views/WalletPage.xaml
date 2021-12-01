@@ -13,9 +13,9 @@
                 <StackLayout VerticalOptions="FillAndExpand">
                     <Label TextColor="White" HorizontalOptions="Start" Text="Ví tiền" FontSize="25" />
                     <Label TextColor="White" HorizontalOptions="Start" Text="Tài sản ròng" FontSize="10" />
-                    <Label TextColor="White" HorizontalOptions="Start" Text="$430,002" FontSize="30" />
+                    <Label TextColor="White" HorizontalOptions="Start" x:Name="totalPrice" FontSize="30" />
                     <Label TextColor="White" HorizontalOptions="Start" Text="Tài sản" FontSize="10" />
-                    <Label TextColor="White" HorizontalOptions="Start" Text="$430,002" FontSize="12" />
+                    <Label TextColor="White" HorizontalOptions="Start" x:Name="totalPrice2" FontSize="12" />
                 </StackLayout>
             </Frame>
             <ListView x:Name="lstWallet" HasUnevenRows="True" IsPullToRefreshEnabled="True" ItemSelected="lstWallet_ItemSelected">
@@ -36,9 +36,10 @@
                                     </Grid.ColumnDefinitions>
 
                                     <Image Source="{Binding walletImg}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
-                                    <Label Text="{Binding  walletName}" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" FontSize="15"  VerticalOptions="Center"/>
-                                    <Label Text="{Binding walletPrice}" Grid.Row="0" Grid.Column="2" VerticalTextAlignment="Center" VerticalOptions="Center"/>
-                                    <Label Text="{Binding walletCurrency}" Grid.Row="1" Grid.Column="2"  VerticalOptions="Start"/>
+                                    <Label Text="{Binding  walletName}" Grid.Row="0" Grid.Column="1" FontSize="15"  VerticalOptions="Center" FontAttributes="Bold"/>
+                                    <Label Text="{Binding walletNote}" Grid.Row="1" Grid.Column="1" FontSize="12" VerticalOptions="Center"/>
+                                    <Label Text="{Binding walletPrice}" Grid.Row="0" Grid.Column="2" VerticalTextAlignment="Center" VerticalOptions="Center"  FontAttributes="Bold" TextColor="Black"  HorizontalOptions="Center"/>
+                                    <Label Text="{Binding walletCurrency}" Grid.Row="1" Grid.Column="2"  VerticalOptions="Start" HorizontalOptions="Center"/>
                                 </Grid>
                             </ViewCell.View>
                         </ViewCell>

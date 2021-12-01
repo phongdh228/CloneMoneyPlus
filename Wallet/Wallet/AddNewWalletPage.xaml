@@ -16,6 +16,7 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
@@ -32,7 +33,7 @@
 
                 <Image Source="money.jpg"  Grid.Row="1" Grid.Column="0"/>
                 <Label Text="Thăng bằng" Grid.Row="1" Grid.Column="1" FontSize="Medium" VerticalOptions="Center" />
-                <Entry Keyboard="Text" Grid.Row="1" Grid.Column="2" VerticalOptions="Center" x:Name="walletPrice" Placeholder="Vui lòng nhập số tiền" HorizontalTextAlignment="End"/>
+                <Entry Keyboard="Numeric" Grid.Row="1" Grid.Column="2" VerticalOptions="Center" x:Name="walletPrice" Placeholder="Vui lòng nhập số tiền" HorizontalTextAlignment="End"/>
 
 
 
@@ -46,6 +47,8 @@
                 <Label Text="Biểu tượng" Grid.Row="3" Grid.Column="1" FontSize="Medium" VerticalOptions="Center" />
                 <Entry Keyboard="Text" Grid.Row="3" Grid.Column="2" VerticalOptions="Center" x:Name="walletImage" HorizontalTextAlignment="End"/>
 
+                <Label Text="Ghi chú" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" FontSize="Medium" FontAttributes="Bold"/>
+                <Editor HeightRequest="100" x:Name="edtNote" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Placeholder="Nhập ghi chú"/>
 
             </Grid>
         </StackLayout>
