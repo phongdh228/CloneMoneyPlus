@@ -28,7 +28,7 @@ namespace Wallet
         void EditInitializing(WalletInfo wallet)
         {
             walletName.Text = wallet.walletName;
-            walletPrice.Text = wallet.walletPrice;
+            walletPrice.Text = wallet.walletPrice.ToString();
             walletCurrency.Text = wallet.walletCurrency;
             walletImage.Text = wallet.walletImg;
             this.wallet = wallet;
@@ -57,7 +57,7 @@ namespace Wallet
             Database db = new Database();
 
             wallet.walletName = walletNameValue;
-            wallet.walletPrice = walletPriceValue;
+            wallet.walletPrice = Int32.Parse(walletPriceValue);
             wallet.walletCurrency = walletCurrencyValue;
             wallet.walletImg = walletImageValue;
 

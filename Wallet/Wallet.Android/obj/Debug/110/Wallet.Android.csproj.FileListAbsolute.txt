@@ -609,3 +609,4 @@ D:\projectxamarin\DoAnCuoiKi\Wallet\Wallet\Wallet.Android\obj\Debug\110\res\draw
 D:\projectxamarin\DoAnCuoiKi\Wallet\Wallet\Wallet.Android\obj\Debug\110\res\drawable\paypal.png
 D:\projectxamarin\DoAnCuoiKi\Wallet\Wallet\Wallet.Android\obj\Debug\110\res\drawable\visa.png
 D:\projectxamarin\DoAnCuoiKi\Wallet\Wallet\Wallet.Android\obj\Debug\110\res\drawable\editbtn.png
+D:\projectxamarin\DoAnCuoiKi\Wallet\Wallet\Wallet.Android\obj\Debug\110\android\src\crc64e24fa185f056d2a2\CustomProgressBarAndroid.java
