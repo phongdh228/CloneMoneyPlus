@@ -33,6 +33,7 @@ paths;D:\projectxamarin\DoAnCuoiKi\Wallet\Wallet\Wallet.Android\obj\Release\110\
 resources;D:\projectxamarin\DoAnCuoiKi\Wallet\Wallet\Wallet.Android\obj\Release\110\lp\45\jl\res\values\attrs.xml
 resources;D:\projectxamarin\DoAnCuoiKi\Wallet\Wallet\Wallet.Android\obj\Release\110\lp\45\jl\res\values\strings.xml
 resources;D:\projectxamarin\DoAnCuoiKi\Wallet\Wallet\Wallet.Android\obj\Release\110\lp\45\jl\res\values\styles.xml
+resources;E:\BT\Git\Wallet\Wallet.Android\obj\Release\110\lp\89\jl\res\values\strings.xml
 resources;obj\Release\110\res\values\colors.xml
 resources;obj\Release\110\res\values\styles.xml
 set;D:\projectxamarin\DoAnCuoiKi\Wallet\Wallet\Wallet.Android\obj\Release\110\lp\45\jl\res\anim\enterfromleft.xml
@@ -40,6 +41,7 @@ set;D:\projectxamarin\DoAnCuoiKi\Wallet\Wallet\Wallet.Android\obj\Release\110\lp
 set;D:\projectxamarin\DoAnCuoiKi\Wallet\Wallet\Wallet.Android\obj\Release\110\lp\45\jl\res\anim\exittoleft.xml
 set;D:\projectxamarin\DoAnCuoiKi\Wallet\Wallet\Wallet.Android\obj\Release\110\lp\45\jl\res\anim\exittoright.xml
 string;D:\projectxamarin\DoAnCuoiKi\Wallet\Wallet\Wallet.Android\obj\Release\110\lp\45\jl\res\values\strings.xml
+string;E:\BT\Git\Wallet\Wallet.Android\obj\Release\110\lp\89\jl\res\values\strings.xml
 style;D:\projectxamarin\DoAnCuoiKi\Wallet\Wallet\Wallet.Android\obj\Release\110\lp\45\jl\res\values\styles.xml
 style;obj\Release\110\res\values\styles.xml
 translate;D:\projectxamarin\DoAnCuoiKi\Wallet\Wallet\Wallet.Android\obj\Release\110\lp\45\jl\res\anim\enterfromleft.xml
