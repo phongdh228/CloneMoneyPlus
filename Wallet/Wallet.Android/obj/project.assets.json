@@ -2377,24 +2377,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\namsa\\.nuget\\packages\\": {},
+    "C:\\Users\\phong\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projectxamarin\\DoAnCuoiKi\\Wallet\\Wallet\\Wallet.Android\\Wallet.Android.csproj",
+      "projectUniqueName": "D:\\PillDocuments\\Some of my Web-Making\\W4\\CloneMoneyPlus\\Wallet\\Wallet.Android\\Wallet.Android.csproj",
       "projectName": "Wallet.Android",
-      "projectPath": "D:\\projectxamarin\\DoAnCuoiKi\\Wallet\\Wallet\\Wallet.Android\\Wallet.Android.csproj",
-      "packagesPath": "C:\\Users\\namsa\\.nuget\\packages\\",
-      "outputPath": "D:\\projectxamarin\\DoAnCuoiKi\\Wallet\\Wallet\\Wallet.Android\\obj\\",
+      "projectPath": "D:\\PillDocuments\\Some of my Web-Making\\W4\\CloneMoneyPlus\\Wallet\\Wallet.Android\\Wallet.Android.csproj",
+      "packagesPath": "C:\\Users\\phong\\.nuget\\packages\\",
+      "outputPath": "D:\\PillDocuments\\Some of my Web-Making\\W4\\CloneMoneyPlus\\Wallet\\Wallet.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\namsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\phong\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2408,8 +2408,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "D:\\projectxamarin\\DoAnCuoiKi\\Wallet\\Wallet\\Wallet\\Wallet.csproj": {
-              "projectPath": "D:\\projectxamarin\\DoAnCuoiKi\\Wallet\\Wallet\\Wallet\\Wallet.csproj"
+            "D:\\PillDocuments\\Some of my Web-Making\\W4\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj": {
+              "projectPath": "D:\\PillDocuments\\Some of my Web-Making\\W4\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj"
             }
           }
         }

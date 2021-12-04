@@ -16,5 +16,10 @@ namespace Wallet.Views
         {
             InitializeComponent();
         }
+
+        private void newPayment_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new addNewPaymentPage());
+        }
     }
 }

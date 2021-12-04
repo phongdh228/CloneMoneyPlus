@@ -1,12 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Wallet.Views.Pocketbook">
+             x:Class="Wallet.Views.Pocketbook"
+             NavigationPage.HasBackButton ="False"
+             Title="Sổ cái mặc định">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="billButton" Priority="0" Order="Primary" IconImageSource="hoadon.png"></ToolbarItem>
+        <ToolbarItem x:Name="calendarButton" Priority="1" Order="Primary" IconImageSource="calendar.png"></ToolbarItem>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
+
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Rectangle BackgroundColor="#f06292" Grid.RowSpan="1" Grid.ColumnSpan="4" />
+                <ImageButton Source="sachbotui.png" Grid.Row="0" Grid.Column="0" WidthRequest="50"/>
+                <ImageButton Source="daucong.png" Grid.Row="0" Grid.Column="1" WidthRequest="50"/>
+            </Grid>
+            
+            <ListView>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Source="{Binding PaymentImg}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
+
+                                <Label Text="{Binding PaymentTitle}" Grid.Row="0" Grid.Column="1"/>
+                                
+                                <Label Text="{Binding PaymentNote}" Grid.Row="1" Grid.Column="1"/>
+                                
+                                <Label Text="{Binding PaymentMoney}" Grid.Row="0" Grid.Column="2"/>
+                                
+                                <Label Text="{Binding PaymentWallet}" Grid.Row="1" Grid.Column="2"/>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+            <AbsoluteLayout>
+                <ImageButton Source="addNew.png" 
+            BackgroundColor="Transparent"
+            AbsoluteLayout.LayoutFlags="PositionProportional"  
+            AbsoluteLayout.LayoutBounds=".95,.95,80,130" 
+                             x:Name="newPayment" Clicked="newPayment_Clicked"
+             />
+            </AbsoluteLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
