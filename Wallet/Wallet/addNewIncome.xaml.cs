@@ -16,5 +16,25 @@ namespace Wallet.Views
         {
             InitializeComponent();
         }
+
+        private void pickAccount_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pickMember_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pickDate_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pickcalculationX_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

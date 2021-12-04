@@ -28,7 +28,6 @@ D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\bin\Debug
 D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\bin\Debug\netstandard2.0\Wallet.dll
 D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\bin\Debug\netstandard2.0\ref\Wallet.dll
 D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\bin\Debug\netstandard2.0\Wallet.pdb
-D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.csproj.AssemblyReference.cache
 D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.GeneratedMSBuildEditorConfig.editorconfig
 D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\AddNewWalletPage.xaml.g.cs
 D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\App.xaml.g.cs
@@ -50,4 +49,6 @@ D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\obj\Debug
 D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.dll
 D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\ref\Wallet.dll
 D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.pdb
-D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\Views\addNewPaymentPage.xaml.g.cs
+D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\addNewIncome.xaml.g.cs
+D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\addNewPaymentPage.xaml.g.cs
+D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\addNewTranferPage.xaml.g.cs
