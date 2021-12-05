@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
+using System.Globalization;
 
 namespace Wallet.Views
 {
@@ -39,7 +41,7 @@ namespace Wallet.Views
 
         private void tiente_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MoneyPlusPremium());
+            Navigation.PushAsync(new MyCurrency());
         }
 
         private void theloai_Tapped(object sender, EventArgs e)
@@ -64,7 +66,7 @@ namespace Wallet.Views
 
         private void quanlytaikhoan_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MoneyPlusPremium());
+            Navigation.PushAsync(new Views.WalletPage());
         }
 
         private void timkiemhoadon_Tapped(object sender, EventArgs e)
@@ -77,14 +79,21 @@ namespace Wallet.Views
             Navigation.PushAsync(new MoneyPlusPremium());
         }
 
-        private void binhluan_Tapped(object sender, EventArgs e)
+        private async void binhluan_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MoneyPlusPremium());
+            string url = string.Empty;
+            var location = RegionInfo.CurrentRegion.Name.ToLower(); 
+            if(Device.RuntimePlatform == Device.Android)
+            {
+                url = "https://play.google.com/store/apps/details?id=com.zotiger.accountbook&hl=vi&gl=US";
+            }
+            await Browser.OpenAsync(url, BrowserLaunchMode.External);
         }
 
         private void phanhoi_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MoneyPlusPremium());
+            var address = "namsaoquan@gmail.com";
+            Launcher.OpenAsync(new Uri($"mailto:{address}"));
         }
 
         private void trongkhoang_Tapped(object sender, EventArgs e)
@@ -102,9 +111,14 @@ namespace Wallet.Views
             Navigation.PushAsync(new MoneyPlusPremium());
         }
 
-        private void banbe_Tapped(object sender, EventArgs e)
+        async void banbe_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MoneyPlusPremium());
+            await Share.RequestAsync(new ShareTextRequest
+            {
+                Subject="Clone Money Plus",
+                Text="Dang Ngo Hong Hai - Dang Hoang Phong - Nguyen Huy Khoa",
+                Title="Do an cuoi ky"
+            });
         }
     }
 }

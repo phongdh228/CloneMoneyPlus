@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Wallet.MyCurrency"
-             Title="Tiền tệ của tôi">
+             Title="Tiền tệ của tôi"
+             Background="White">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Margin="10">
