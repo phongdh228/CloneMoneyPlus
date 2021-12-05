@@ -1457,11 +1457,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projectxamarin\\DoAnCuoiKi\\Wallet\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
+      "projectUniqueName": "D:\\projectxamarin\\CloneMoneyPlus\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
       "projectName": "Wallet.iOS",
-      "projectPath": "D:\\projectxamarin\\DoAnCuoiKi\\Wallet\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
+      "projectPath": "D:\\projectxamarin\\CloneMoneyPlus\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
       "packagesPath": "C:\\Users\\namsa\\.nuget\\packages\\",
-      "outputPath": "D:\\projectxamarin\\DoAnCuoiKi\\Wallet\\Wallet\\Wallet.iOS\\obj\\",
+      "outputPath": "D:\\projectxamarin\\CloneMoneyPlus\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1482,8 +1482,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\projectxamarin\\DoAnCuoiKi\\Wallet\\Wallet\\Wallet\\Wallet.csproj": {
-              "projectPath": "D:\\projectxamarin\\DoAnCuoiKi\\Wallet\\Wallet\\Wallet\\Wallet.csproj"
+            "D:\\projectxamarin\\CloneMoneyPlus\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj": {
+              "projectPath": "D:\\projectxamarin\\CloneMoneyPlus\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj"
             }
           }
         }

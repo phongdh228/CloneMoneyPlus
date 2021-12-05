@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5Oh9NyrXWM5Tn68+g39Xyhvjo82XBqqQLOPxZ4TFupfT8tugdA9kW4PQaMSo2Nwtkc5PQ9WlbwOAdAhfbJ2ZKg==",
+  "dgSpecHash": "RinVx338ptfmzmnCv018y3tEk+gXVheprLfMR5W7igWov1an3YMFXhgNk5hY33oN9ExeqH2aY7cv8JaxlQecyg==",
   "success": true,
-  "projectFilePath": "D:\\projectxamarin\\DoAnCuoiKi\\Wallet\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
+  "projectFilePath": "D:\\projectxamarin\\CloneMoneyPlus\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\namsa\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\namsa\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",

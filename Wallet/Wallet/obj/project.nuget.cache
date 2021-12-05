@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yny8VwsBVnNKEmAjMwgHeR2qgjRepE8GzjlOFDyG4YcA76dn5nZWH6MJClcdGHvD5SYwq7TsoakBggAxaEaWCw==",
+  "dgSpecHash": "mLBjYKb+RHQbm5JhyzYFkM4GNdY0E8qwI882yfu6FtIYJAM9sxDANnPl54NtDLFZJsbHgoRsNkSxpq0K/d1s/w==",
   "success": true,
-  "projectFilePath": "D:\\projectxamarin\\DoAnCuoiKi\\Wallet\\Wallet\\Wallet\\Wallet.csproj",
+  "projectFilePath": "D:\\projectxamarin\\CloneMoneyPlus\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\namsa\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\namsa\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
