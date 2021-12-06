@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PillDocuments\\Some of my Web-Making\\W4\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj": {}
+    "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj": {}
   },
   "projects": {
-    "D:\\PillDocuments\\Some of my Web-Making\\W4\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj": {
+    "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PillDocuments\\Some of my Web-Making\\W4\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
         "projectName": "Wallet.iOS",
-        "projectPath": "D:\\PillDocuments\\Some of my Web-Making\\W4\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
+        "projectPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
         "packagesPath": "C:\\Users\\phong\\.nuget\\packages\\",
-        "outputPath": "D:\\PillDocuments\\Some of my Web-Making\\W4\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\obj\\",
+        "outputPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "D:\\PillDocuments\\Some of my Web-Making\\W4\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj": {
-                "projectPath": "D:\\PillDocuments\\Some of my Web-Making\\W4\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj"
+              "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj": {
+                "projectPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj"
               }
             }
           }
@@ -65,14 +65,14 @@
         }
       }
     },
-    "D:\\PillDocuments\\Some of my Web-Making\\W4\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj": {
+    "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PillDocuments\\Some of my Web-Making\\W4\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj",
+        "projectUniqueName": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj",
         "projectName": "Wallet",
-        "projectPath": "D:\\PillDocuments\\Some of my Web-Making\\W4\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj",
+        "projectPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj",
         "packagesPath": "C:\\Users\\phong\\.nuget\\packages\\",
-        "outputPath": "D:\\PillDocuments\\Some of my Web-Making\\W4\\CloneMoneyPlus\\Wallet\\Wallet\\obj\\",
+        "outputPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

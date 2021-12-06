@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MwOAZje2fr/ML4oc8y5GkljpZ/JUq2/KXx2doj9LF3oLYqoPvhJL+HHPvFbVkNuM8JUVZ6lhfbnhZJQGlx/taQ==",
+  "dgSpecHash": "jy3/c8m/+9LHAm8JwwDdEm8dyBADeEruScUg1jPATINCJ0eEvkw0pC+tk2Us6ni3s2aGNIqvABIwlOJrrexHMA==",
   "success": true,
-  "projectFilePath": "D:\\PillDocuments\\Some of my Web-Making\\W4\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj",
+  "projectFilePath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\phong\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\phong\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

@@ -29,7 +29,7 @@
                 <ImageButton Source="sachbotui_income_07.png" Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
                 <ImageButton Source="sachbotui_income_09.png" Grid.Row="0" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
 
-                <!--<ImageButton Source="sachbotui_expend_12.png" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <ImageButton Source="sachbotui_expend_12.png" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
                 <ImageButton Source="sachbotui_expend_13.png" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
                 <ImageButton Source="sachbotui_expend_14.png" Grid.Row="1" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
                 <ImageButton Source="sachbotui_expend_15.png" Grid.Row="1" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
@@ -42,7 +42,7 @@
                 <ImageButton Source="sachbotui_expend_01.png" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
                 <ImageButton Source="sachbotui_expend_01.png" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
                 <ImageButton Source="sachbotui_expend_01.png" Grid.Row="3" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <ImageButton Source="sachbotui_expend_01.png" Grid.Row="3" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>-->
+                <ImageButton Source="sachbotui_expend_01.png" Grid.Row="3" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
 
             </Grid>
             <Grid>
@@ -68,9 +68,8 @@
                 <Button ImageSource="sachbotui_income_20.png" Grid.Row="1" Grid.Column="2"/>
                 <Button ImageSource="sachbotui_income_22.png" Grid.Row="1" Grid.Column="3"/>
 
-                <Button Text="X" Grid.Row="2" Grid.Column="0" FontAttributes="Bold" x:Name="pickcalculationX" Clicked="pickcalculationX_Clicked"/>
-                <!--Đoạn dưới chưa có handle click-->
-                <!--<Button Text="7" Grid.Row="2" Grid.Column="1" FontAttributes="Bold" x:Name="picknumber7" Clicked="picknumber7_Clicked"/>
+                <Button Text="X" Grid.Row="2" Grid.Column="0" FontAttributes="Bold" x:Name="pickcalculationX" Clicked="pickcalculationX_Clicked"/>            
+                <Button Text="7" Grid.Row="2" Grid.Column="1" FontAttributes="Bold" x:Name="picknumber7" Clicked="picknumber7_Clicked"/>
                 <Button Text="8" Grid.Row="2" Grid.Column="2" FontAttributes="Bold" x:Name="picknumber8" Clicked="picknumber8_Clicked"/>
                 <Button Text="9" Grid.Row="2" Grid.Column="3" FontAttributes="Bold" x:Name="picknumber9" Clicked="picknumber9_Clicked"/>
 
@@ -87,7 +86,7 @@
                 <Button Text="+" Grid.Row="5" Grid.Column="0" FontAttributes="Bold" x:Name="pickcalculationAdd" Clicked="pickcalculationAdd_Clicked"/>
                 <Button Text="." Grid.Row="5" Grid.Column="1" FontAttributes="Bold" x:Name="pickcalculationPoint" Clicked="pickcalculationPoint_Clicked"/>
                 <Button Text="0" Grid.Row="5" Grid.Column="2" FontAttributes="Bold" x:Name="picknumber0" Clicked="picknumber0_Clicked"/>
-                <Button ImageSource="sachbotui_income_27.png" Grid.Row="5" Grid.Column="3" x:Name="pickDelete" Clicked="pickDelete_Clicked"/>-->
+                <Button ImageSource="sachbotui_income_27.png" Grid.Row="5" Grid.Column="3" x:Name="pickDelete" Clicked="pickDelete_Clicked"/>
 
             </Grid>
         </StackLayout>

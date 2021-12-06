@@ -52,3 +52,32 @@ D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\obj\Debug
 D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\addNewIncome.xaml.g.cs
 D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\addNewPaymentPage.xaml.g.cs
 D:\PillDocuments\Some of my Web-Making\W4\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\addNewTranferPage.xaml.g.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\bin\Debug\netstandard2.0\Wallet.deps.json
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\bin\Debug\netstandard2.0\Wallet.dll
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\bin\Debug\netstandard2.0\ref\Wallet.dll
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\bin\Debug\netstandard2.0\Wallet.pdb
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.csproj.AssemblyReference.cache
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\addNewIncome.xaml.g.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\addNewPaymentPage.xaml.g.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\addNewTranferPage.xaml.g.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\AddNewWalletPage.xaml.g.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\EditAccount.xaml.g.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\ManageAccount.xaml.g.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\MyCurrency.xaml.g.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\NewAccount.xaml.g.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\TabbedPageMain.xaml.g.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Analysis.xaml.g.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Pocketbook.xaml.g.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Settings.xaml.g.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\Views\WalletPage.xaml.g.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\WalletCardView.xaml.g.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.AssemblyInfoInputs.cache
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.AssemblyInfo.cs
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.csproj.CoreCompileInputs.cache
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.dll
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\ref\Wallet.dll
+C:\Users\phong\source\repos\CloneMoneyPlus\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.pdb

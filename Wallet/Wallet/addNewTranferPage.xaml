@@ -40,10 +40,10 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <!--<Button ImageSource="vitien_chinhsuataikhoan_20.png" Grid.Row="0" Grid.Column="0" x:Name="pickAccount" Clicked="pickAccount_Clicked"/>-->
-                <!--<Entry Text="Ghi chú" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" x:Name="paymentNote"/>
+                <Button ImageSource="vitien_chinhsuataikhoan_20.png" Grid.Row="0" Grid.Column="0" x:Name="pickAccount" Clicked="pickAccount_Clicked"/>
+                <Entry Text="Ghi chú" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" x:Name="paymentNote"/>
 
-                --><!--<Button ImageSource="sachbotui_income_18.png" Grid.Row="1" Grid.Column="0" x:Name="pickMember" Clicked="pickMember_Clicked"/>--><!--
+                <Button ImageSource="sachbotui_income_18.png" Grid.Row="1" Grid.Column="0" x:Name="pickMember" Clicked="pickMember_Clicked"/>
                 <Button Text="TODAY" Grid.Row="1" Grid.Column="1" x:Name="pickDate" Clicked="pickDate_Clicked"/>
                 <Button ImageSource="sachbotui_income_20.png" Grid.Row="1" Grid.Column="2"/>
                 <Button ImageSource="sachbotui_income_22.png" Grid.Row="1" Grid.Column="3"/>
@@ -66,7 +66,7 @@
                 <Button Text="+" Grid.Row="5" Grid.Column="0" FontAttributes="Bold" x:Name="pickcalculationAdd" Clicked="pickcalculationAdd_Clicked"/>
                 <Button Text="." Grid.Row="5" Grid.Column="1" FontAttributes="Bold" x:Name="pickcalculationPoint" Clicked="pickcalculationPoint_Clicked"/>
                 <Button Text="0" Grid.Row="5" Grid.Column="2" FontAttributes="Bold" x:Name="picknumber0" Clicked="picknumber0_Clicked"/>
-                <Button ImageSource="sachbotui_income_27.png" Grid.Row="5" Grid.Column="3" x:Name="pickDelete" Clicked="pickDelete_Clicked"/>-->
+                <Button ImageSource="sachbotui_income_27.png" Grid.Row="5" Grid.Column="3" x:Name="pickDelete" Clicked="pickDelete_Clicked"/>
 
             </Grid>
 
