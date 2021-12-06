@@ -8,6 +8,7 @@ namespace Wallet
     public class Payment
     {
         [PrimaryKey, AutoIncrement]
+        public int PaymentId {get; set; }
         public string PaymentImg { get; set; }
         public string PaymentTime { get; set; }
         public string PaymentMoney { get; set; }
