@@ -12,6 +12,7 @@ using Android.Content;
 [assembly: ExportRenderer(typeof(Entry), typeof(CustomEntryRenderer))]
 namespace Wallet.Droid
 {
+
     [Activity(Label = "Wallet", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
@@ -39,8 +40,8 @@ namespace Wallet.Droid
 {
     public CustomEntryRenderer(Context context) : base(context) { }
 
-    protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
-    {
+        protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
+          {
         base.OnElementChanged(e);
 
         if(e.OldElement == null)
@@ -54,6 +55,11 @@ namespace Wallet.Droid
             Control.SetPadding(0, 0, 0, 0);
             SetPadding(0, 0, 0, 0);
         }
+           
         }
-}
+       
+    }
+
+    
+
 }

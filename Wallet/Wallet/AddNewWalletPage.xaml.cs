@@ -12,6 +12,7 @@ namespace Wallet
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddNewWalletPage : ContentPage
     {
+        WalletInfo wallet;
         public AddNewWalletPage()
         {
             InitializeComponent();
@@ -28,20 +29,25 @@ namespace Wallet
             WalletInfo newWallet = new WalletInfo();
             newWallet.walletName = walletName.Text;
             newWallet.walletImg = walletImage.Text;
-            newWallet.walletPrice = walletPrice.Text;
+            newWallet.walletPrice = Int32.Parse(walletPrice.Text);
             newWallet.walletCurrency = walletCurrency.Text;
+            newWallet.walletNote = edtNote.Text;
 
 
             Database db = new Database();
-            if (db.AddNewWallet(newWallet))
-            {
-                DisplayAlert("Thông báo", "Thêm ví thành công", null, "OK");
-                Navigation.PushAsync(new ManageAccount());
-            }
-            else
-            {
-                DisplayAlert("Thông báo", "Thêm ví thất bại", null, "OK");
-            }
+    
+                if (db.AddNewWallet(newWallet))
+                {
+                    DisplayAlert("Thông báo", "Thêm ví thành công", null, "OK");
+                    Navigation.PushAsync(new ManageAccount());
+                }
+                else
+                {
+                    DisplayAlert("Thông báo", "Thêm ví thất bại", null, "OK");
+                }
+
+            
+           
         }
     }
 }

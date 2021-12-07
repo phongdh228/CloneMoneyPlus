@@ -58,18 +58,18 @@ public final class R {
 		public static final int notification_top_pad_large_text = 0x7f060151;
 	}
 	public static final class drawable {
-		public static final int notification_action_background = 0x7f070093;
-		public static final int notification_bg = 0x7f070094;
-		public static final int notification_bg_low = 0x7f070095;
-		public static final int notification_bg_low_normal = 0x7f070096;
-		public static final int notification_bg_low_pressed = 0x7f070097;
-		public static final int notification_bg_normal = 0x7f070098;
-		public static final int notification_bg_normal_pressed = 0x7f070099;
-		public static final int notification_icon_background = 0x7f07009a;
-		public static final int notification_template_icon_bg = 0x7f07009b;
-		public static final int notification_template_icon_low_bg = 0x7f07009c;
-		public static final int notification_tile_bg = 0x7f07009d;
-		public static final int notify_panel_notification_icon_bg = 0x7f07009e;
+		public static final int notification_action_background = 0x7f0700b8;
+		public static final int notification_bg = 0x7f0700b9;
+		public static final int notification_bg_low = 0x7f0700ba;
+		public static final int notification_bg_low_normal = 0x7f0700bb;
+		public static final int notification_bg_low_pressed = 0x7f0700bc;
+		public static final int notification_bg_normal = 0x7f0700bd;
+		public static final int notification_bg_normal_pressed = 0x7f0700be;
+		public static final int notification_icon_background = 0x7f0700bf;
+		public static final int notification_template_icon_bg = 0x7f0700c0;
+		public static final int notification_template_icon_low_bg = 0x7f0700c1;
+		public static final int notification_tile_bg = 0x7f0700c2;
+		public static final int notify_panel_notification_icon_bg = 0x7f0700c3;
 	}
 	public static final class id {
 		public static final int accessibility_action_clickable_span = 0x7f08000a;
@@ -164,7 +164,7 @@ public final class R {
 		public static final int fallback_menu_item_copy_link = 0x7f0e0027;
 		public static final int fallback_menu_item_open_in_browser = 0x7f0e0028;
 		public static final int fallback_menu_item_share_link = 0x7f0e0029;
-		public static final int status_bar_notification_info_overflow = 0x7f0e005a;
+		public static final int status_bar_notification_info_overflow = 0x7f0e0059;
 	}
 	public static final class style {
 		public static final int TextAppearance_Compat_Notification = 0x7f0f0160;

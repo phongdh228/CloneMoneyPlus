@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\BT\\Git\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj": {}
+    "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj": {}
   },
   "projects": {
-    "E:\\BT\\Git\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj": {
+    "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BT\\Git\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
         "projectName": "Wallet.iOS",
-        "projectPath": "E:\\BT\\Git\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
-        "packagesPath": "C:\\Users\\thank\\.nuget\\packages\\",
-        "outputPath": "E:\\BT\\Git\\Wallet\\Wallet.iOS\\obj\\",
+        "projectPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
+        "packagesPath": "C:\\Users\\phong\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\thank\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\phong\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "E:\\BT\\Git\\Wallet\\Wallet\\Wallet.csproj": {
-                "projectPath": "E:\\BT\\Git\\Wallet\\Wallet\\Wallet.csproj"
+              "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj": {
+                "projectPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj"
               }
             }
           }
@@ -65,20 +65,20 @@
         }
       }
     },
-    "E:\\BT\\Git\\Wallet\\Wallet\\Wallet.csproj": {
+    "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BT\\Git\\Wallet\\Wallet\\Wallet.csproj",
+        "projectUniqueName": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj",
         "projectName": "Wallet",
-        "projectPath": "E:\\BT\\Git\\Wallet\\Wallet\\Wallet.csproj",
-        "packagesPath": "C:\\Users\\thank\\.nuget\\packages\\",
-        "outputPath": "E:\\BT\\Git\\Wallet\\Wallet\\obj\\",
+        "projectPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj",
+        "packagesPath": "C:\\Users\\phong\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\thank\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\phong\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -105,10 +105,6 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
-            "Microcharts.Forms": {
-              "target": "Package",
-              "version": "[0.9.5.9, )"
-            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -138,7 +134,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

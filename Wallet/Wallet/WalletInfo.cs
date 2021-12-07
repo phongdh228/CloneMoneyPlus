@@ -13,8 +13,13 @@ namespace Wallet
         public string walletName { get; set; }
         public string walletImg { get; set; }
 
-        public string walletPrice { get; set; }
+        public int walletPrice { get; set; }
 
         public string walletCurrency { get; set; }
+
+        public string walletNote { get; set; }
+
+        public int totalAmount { get; set; }
     }
+
 }
