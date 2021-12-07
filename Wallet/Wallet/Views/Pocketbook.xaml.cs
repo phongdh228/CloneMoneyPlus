@@ -16,5 +16,22 @@ namespace Wallet.Views
         {
             InitializeComponent();
         }
+
+        void PaymentInit()
+        {
+            Database db = new Database();
+            List<Payment> payments = db.GetPayments();
+            lstPayment.ItemsSource = payments;
+        }
+
+        private void newPayment_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new addNewPaymentPage());
+        }
+
+        private void lstPayment_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+
+        }
     }
 }
