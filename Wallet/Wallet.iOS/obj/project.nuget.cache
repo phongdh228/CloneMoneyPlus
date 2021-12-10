@@ -1,17 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "4o5kWl4D3B/+Ey1fr+8oVq0UbGsgCy4JSnNPgt8rzj9EGd6OsOZfRMe16Tew7RHSMwWCvnpJSmiFDz89G+ToSg==",
+  "dgSpecHash": "opZK9p6GIPa1yc8nm6Wmn0U+nlmHZTuqpSmPLpT4NFN0E/1WUKimErd/7Iz7uoPn7oqXmfcOLIXRtZu4YD3hrw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
+  "projectFilePath": "D:\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\phong\\.nuget\\packages\\nodatime\\3.0.9\\nodatime.3.0.9.nupkg.sha512",
     "C:\\Users\\phong\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\phong\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
     "C:\\Users\\phong\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
     "C:\\Users\\phong\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.4\\sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
     "C:\\Users\\phong\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\phong\\.nuget\\packages\\system.globalization.calendars\\4.3.0\\system.globalization.calendars.4.3.0.nupkg.sha512",
     "C:\\Users\\phong\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\phong\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\phong\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\phong\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
   ],

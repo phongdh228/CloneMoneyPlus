@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.Android\\Wallet.Android.csproj": {}
+    "D:\\CloneMoneyPlus\\Wallet\\Wallet.Android\\Wallet.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.Android\\Wallet.Android.csproj": {
+    "D:\\CloneMoneyPlus\\Wallet\\Wallet.Android\\Wallet.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.Android\\Wallet.Android.csproj",
+        "projectUniqueName": "D:\\CloneMoneyPlus\\Wallet\\Wallet.Android\\Wallet.Android.csproj",
         "projectName": "Wallet.Android",
-        "projectPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.Android\\Wallet.Android.csproj",
+        "projectPath": "D:\\CloneMoneyPlus\\Wallet\\Wallet.Android\\Wallet.Android.csproj",
         "packagesPath": "C:\\Users\\phong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.Android\\obj\\",
+        "outputPath": "D:\\CloneMoneyPlus\\Wallet\\Wallet.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid11.0": {
             "projectReferences": {
-              "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj": {
-                "projectPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj"
+              "D:\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj": {
+                "projectPath": "D:\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj"
               }
             }
           }
@@ -54,14 +54,14 @@
         }
       }
     },
-    "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj": {
+    "D:\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj",
+        "projectUniqueName": "D:\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj",
         "projectName": "Wallet",
-        "projectPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj",
+        "projectPath": "D:\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj",
         "packagesPath": "C:\\Users\\phong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\obj\\",
+        "outputPath": "D:\\CloneMoneyPlus\\Wallet\\Wallet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -99,6 +99,14 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "NodaTime": {
+              "target": "Package",
+              "version": "[3.0.9, )"
+            },
+            "System.Globalization.Calendars": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

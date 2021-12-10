@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "NodaTime/3.0.9": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.7.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NodaTime.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NodaTime.dll": {}
+        }
+      },
       "sqlite-net-pcl/1.8.116": {
         "type": "package",
         "dependencies": {
@@ -62,6 +74,15 @@
           "lib/netstandard2.0/System.Buffers.dll": {}
         }
       },
+      "System.Globalization.Calendars/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
       "System.Memory/4.5.3": {
         "type": "package",
         "dependencies": {
@@ -84,7 +105,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "System.Runtime.CompilerServices.Unsafe/4.7.1": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -237,6 +258,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "NodaTime": "3.0.9",
+          "System.Globalization.Calendars": "4.3.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "sqlite-net-pcl": "1.8.116"
@@ -250,6 +273,18 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "NodaTime/3.0.9": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.7.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NodaTime.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NodaTime.dll": {}
+        }
+      },
       "sqlite-net-pcl/1.8.116": {
         "type": "package",
         "dependencies": {
@@ -310,6 +345,15 @@
           "lib/netstandard2.0/System.Buffers.dll": {}
         }
       },
+      "System.Globalization.Calendars/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
       "System.Memory/4.5.3": {
         "type": "package",
         "dependencies": {
@@ -332,7 +376,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "System.Runtime.CompilerServices.Unsafe/4.7.1": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -485,6 +529,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "NodaTime": "3.0.9",
+          "System.Globalization.Calendars": "4.3.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "sqlite-net-pcl": "1.8.116"
@@ -498,6 +544,18 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "NodaTime/3.0.9": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.7.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NodaTime.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NodaTime.dll": {}
+        }
+      },
       "sqlite-net-pcl/1.8.116": {
         "type": "package",
         "dependencies": {
@@ -558,6 +616,15 @@
           "lib/netstandard2.0/System.Buffers.dll": {}
         }
       },
+      "System.Globalization.Calendars/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
       "System.Memory/4.5.3": {
         "type": "package",
         "dependencies": {
@@ -580,7 +647,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "System.Runtime.CompilerServices.Unsafe/4.7.1": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -733,6 +800,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "NodaTime": "3.0.9",
+          "System.Globalization.Calendars": "4.3.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "sqlite-net-pcl": "1.8.116"
@@ -746,6 +815,18 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "NodaTime/3.0.9": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.7.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NodaTime.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NodaTime.dll": {}
+        }
+      },
       "sqlite-net-pcl/1.8.116": {
         "type": "package",
         "dependencies": {
@@ -806,6 +887,15 @@
           "lib/netstandard2.0/System.Buffers.dll": {}
         }
       },
+      "System.Globalization.Calendars/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
       "System.Memory/4.5.3": {
         "type": "package",
         "dependencies": {
@@ -828,7 +918,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "System.Runtime.CompilerServices.Unsafe/4.7.1": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -981,6 +1071,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "NodaTime": "3.0.9",
+          "System.Globalization.Calendars": "4.3.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "sqlite-net-pcl": "1.8.116"
@@ -995,6 +1087,20 @@
     }
   },
   "libraries": {
+    "NodaTime/3.0.9": {
+      "sha512": "7KzJBkgSzLLyBXNYafDlnzlji3aB/8myvt5RJu5aaTFq6puVCq2WDJY9v9yDMg22+5or5IaKNItQ1jNA8nzQNA==",
+      "type": "package",
+      "path": "nodatime/3.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/NodaTime.dll",
+        "lib/netstandard2.0/NodaTime.pdb",
+        "lib/netstandard2.0/NodaTime.xml",
+        "nodatime.3.0.9.nupkg.sha512",
+        "nodatime.nuspec"
+      ]
+    },
     "sqlite-net-pcl/1.8.116": {
       "sha512": "W0NuwAOVVAR9LP4eZwNBIrim1p3EN7t8iNfSHXEhtzKAd4YyItekoQ8NyWYs4faVSrN2KZr/P5u4hycCjKKexg==",
       "type": "package",
@@ -1077,6 +1183,44 @@
         "version.txt"
       ]
     },
+    "System.Globalization.Calendars/4.3.0": {
+      "sha512": "GUlBtdOWT4LTV3I+9/PJW+56AnnChTaOqqTLFtdmype/L500M2LIyXgmtd9X2P2VOkmJd5c67H5SaC2QcL1bFA==",
+      "type": "package",
+      "path": "system.globalization.calendars/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Globalization.Calendars.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Globalization.Calendars.dll",
+        "ref/netstandard1.3/System.Globalization.Calendars.dll",
+        "ref/netstandard1.3/System.Globalization.Calendars.xml",
+        "ref/netstandard1.3/de/System.Globalization.Calendars.xml",
+        "ref/netstandard1.3/es/System.Globalization.Calendars.xml",
+        "ref/netstandard1.3/fr/System.Globalization.Calendars.xml",
+        "ref/netstandard1.3/it/System.Globalization.Calendars.xml",
+        "ref/netstandard1.3/ja/System.Globalization.Calendars.xml",
+        "ref/netstandard1.3/ko/System.Globalization.Calendars.xml",
+        "ref/netstandard1.3/ru/System.Globalization.Calendars.xml",
+        "ref/netstandard1.3/zh-hans/System.Globalization.Calendars.xml",
+        "ref/netstandard1.3/zh-hant/System.Globalization.Calendars.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.globalization.calendars.4.3.0.nupkg.sha512",
+        "system.globalization.calendars.nuspec"
+      ]
+    },
     "System.Memory/4.5.3": {
       "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
       "type": "package",
@@ -1145,26 +1289,31 @@
         "version.txt"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
-      "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+    "System.Runtime.CompilerServices.Unsafe/4.7.1": {
+      "sha512": "zOHkQmzPCn5zm/BH+cxC1XbUS3P4Yoi3xzW7eRgVpDR2tPGSzyMZ17Ig1iRkfJuY0nhxkQQde8pgePNiA7z7TQ==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "path": "system.runtime.compilerservices.unsafe/4.7.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -1457,11 +1606,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
+      "projectUniqueName": "D:\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
       "projectName": "Wallet.iOS",
-      "projectPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
+      "projectPath": "D:\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\Wallet.iOS.csproj",
       "packagesPath": "C:\\Users\\phong\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\obj\\",
+      "outputPath": "D:\\CloneMoneyPlus\\Wallet\\Wallet.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1482,8 +1631,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj": {
-              "projectPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj"
+            "D:\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj": {
+              "projectPath": "D:\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj"
             }
           }
         }
