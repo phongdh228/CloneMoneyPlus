@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oHtRpIZvQYdmMglnj+VhsG9Bl40QloMPts9TMqJpiJWeSyUO4lbOxPG8Q10ZesckhH0Nuo8swKZhi08XnhujTQ==",
+  "dgSpecHash": "mjKf8EafqnFU4bCR+EjDHo47DahChIaCnmkos1RQTcggSUKCHRf3Lp+JRJdHTvFXf2WX2kzRTOiH27ieDiduMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet.Android\\Wallet.Android.csproj",
+  "projectFilePath": "D:\\CloneMoneyPlus\\Wallet\\Wallet.Android\\Wallet.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\phong\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\phong\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",

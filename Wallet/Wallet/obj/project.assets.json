@@ -846,11 +846,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj",
+      "projectUniqueName": "D:\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj",
       "projectName": "Wallet",
-      "projectPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj",
+      "projectPath": "D:\\CloneMoneyPlus\\Wallet\\Wallet\\Wallet.csproj",
       "packagesPath": "C:\\Users\\phong\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\phong\\source\\repos\\CloneMoneyPlus\\Wallet\\Wallet\\obj\\",
+      "outputPath": "D:\\CloneMoneyPlus\\Wallet\\Wallet\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
