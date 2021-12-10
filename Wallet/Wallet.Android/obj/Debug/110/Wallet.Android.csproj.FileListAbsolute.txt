@@ -2113,10 +2113,8 @@ E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\main_caidat_1_35.png
 E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\main_caidat_2_03.png
 E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\main_caidat_2_06.png
 E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\main_caidat_2_09.png
-E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\main_sachbotui_03.png
 E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\phantich_taisan_07.png
 E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\phantich_taisan_09.png
-E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\phantich_taisan_15.png
 E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\phantich_thunhap2_03.png
 E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\sachbotui_expend_21.png
 E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\sachbotui_expend_22.png
@@ -2693,3 +2691,14 @@ E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\analytics.png
 E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\settings.png
 E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\expensetab.png
 E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\incometab.png
+E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\hoadon.png
+E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\calendar.png
+E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\sachbotui_expend_01.png
+E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\sachbotui_expend_03.png
+E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\sachbotui_expend_05.png
+E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\sachbotui_expend_07.png
+E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\sachbotui_expend_12.png
+E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\sachbotui_expend_13.png
+E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\sachbotui_expend_14.png
+E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\sachbotui_expend_15.png
+E:\BT\Git\Wallet\Wallet.Android\obj\Debug\110\res\drawable\sachbotui_expend_20.png

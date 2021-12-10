@@ -14,44 +14,80 @@ namespace Wallet.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AnalyExpensePage : ContentPage
     {
+        List<AnalyIE> ExpenseList = new List<AnalyIE>();
         public AnalyExpensePage()
         {
             InitializeComponent();
+            InitExpense();
             InitChart();
+            InitList();
+        }
+
+        protected void InitExpense()
+        {
+            ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend_01.png", ieTitle = "Chế độ ăn", iePrice = 0, ieColor = "#f44336" });
+            ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend_03.png", ieTitle = "Hằng ngày", iePrice = 0, ieColor = "#e91e63" });
+            ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend_05.png", ieTitle = "Giao thông", iePrice = 0, ieColor = "#9c27b0" });
+            ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend_07.png", ieTitle = "Xã hội", iePrice = 0, ieColor = "#673ab7" });
+            ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend_12.png", ieTitle = "Dân cư", iePrice = 0, ieColor = "#3f51b5" });
+            ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend_13.png", ieTitle = "Quà tặng", iePrice = 0, ieColor = "#2196f3" });
+            ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend_14.png", ieTitle = "Giao tiếp", iePrice = 0, ieColor = "#03a9f4" });
+            ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend_15.png", ieTitle = "Quần áo", iePrice = 0, ieColor = "#00bcd4" });
+            ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend_20.png", ieTitle = "Giải trí", iePrice = 0, ieColor = "#009688" });
+            ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend_21.png", ieTitle = "Sắc đẹp", iePrice = 0, ieColor = "#4caf50" });
+            ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend_22.png", ieTitle = "Y khoa", iePrice = 0, ieColor = "#8bc34a" });
+            ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend_23.png", ieTitle = "Thuế", iePrice = 0, ieColor = "#cddc39" });
+
+            Database db = new Database();
+            List<Payment> payments = db.GetPayments();
+            if (payments != null)
+                foreach(Payment payment in payments)
+                {
+                    if (int.Parse(payment.PaymentMoney)>0)
+                    {
+                        foreach(AnalyIE Expense in ExpenseList)
+                        {
+                            if (Expense.ieTitle==payment.PaymentTitle)
+                            {
+                                Expense.iePrice += int.Parse(payment.PaymentMoney);
+                                break;
+                            }
+                        }
+                    }
+                }
+            if (ExpenseList != null)
+                foreach (AnalyIE Expense in ExpenseList)
+                {
+                    if (Expense.iePrice==0)
+                    {
+                        ExpenseList.Remove(Expense);
+                    }
+                }
         }
 
         protected void InitChart()
         {
-            var entries = new[]
-            {
-                new ChartEntry(212)
+            List<ChartEntry> entries = new List<ChartEntry>();
+            if (ExpenseList != null)
+                foreach (AnalyIE Expense in ExpenseList)
                 {
-                    Label = "UWP",
-                    ValueLabel = "112",
-                    Color = SKColor.Parse("#2c3e50")
-                },
-                new ChartEntry(248)
-                {
-                    Label = "Android",
-                    ValueLabel = "648",
-                    Color = SKColor.Parse("#77d065")
-                },
-                new ChartEntry(128)
-                {
-                    Label = "iOS",
-                    ValueLabel = "428",
-                    Color = SKColor.Parse("#b455b6")
-                },
-                new ChartEntry(514)
-                {
-                    Label = "Forms",
-                    ValueLabel = "214",
-                    Color = SKColor.Parse("#3498db")
+                    entries.Add(new ChartEntry(Expense.iePrice)
+                    {
+                        Label = Expense.ieTitle,
+                        ValueLabel = Expense.iePrice.ToString(),
+                        Color = SKColor.Parse(Expense.ieColor),
+                        ValueLabelColor = SKColor.Parse(Expense.ieColor)
+                    });
                 }
-            };
+            
             var chart = new DonutChart { Entries = entries, HoleRadius = (float)0.55, LabelTextSize = 36 };
 
             chartViewBar.Chart = chart;
+        }
+
+        public void InitList()
+        {
+            lstExpense.ItemsSource = ExpenseList;
         }
 
         private void lstExpense_ItemSelected(object sender, SelectedItemChangedEventArgs e)
