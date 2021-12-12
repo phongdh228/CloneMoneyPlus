@@ -56,7 +56,7 @@ namespace Wallet.Views
                     }
                 }
             if (ExpenseList != null)
-                foreach (AnalyIE Expense in ExpenseList)
+                foreach (AnalyIE Expense in ExpenseList.ToList<AnalyIE>())
                 {
                     if (Expense.iePrice==0)
                     {
@@ -92,7 +92,7 @@ namespace Wallet.Views
 
         private void lstExpense_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-
+            Navigation.PushAsync(new AnalyIEDetail(e.SelectedItem as AnalyIE));
         }
     }
 }

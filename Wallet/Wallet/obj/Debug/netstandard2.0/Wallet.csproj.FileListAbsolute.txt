@@ -112,3 +112,4 @@ E:\BT\Git\Wallet\Wallet\bin\Debug\netstandard2.0\Wallet.dll
 E:\BT\Git\Wallet\Wallet\bin\Debug\netstandard2.0\ref\Wallet.dll
 E:\BT\Git\Wallet\Wallet\bin\Debug\netstandard2.0\Wallet.pdb
 E:\BT\Git\Wallet\Wallet\obj\Debug\netstandard2.0\XamlC.stamp
+E:\BT\Git\Wallet\Wallet\obj\Debug\netstandard2.0\AnalyIEDetail.xaml.g.cs
