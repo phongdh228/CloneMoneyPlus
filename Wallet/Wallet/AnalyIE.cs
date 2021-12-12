@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wallet
 {
-    public class AnalyIE
+    public class AnalyIE //Analy Income Expense
     {
         public string ieImg { get; set; }
         public string ieTitle { get; set; }
