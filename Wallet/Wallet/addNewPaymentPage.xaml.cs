@@ -14,7 +14,10 @@ namespace Wallet.Views
     {
         int money=0;
         string title = "Chế độ ăn", img = "";
-     
+        int currentState = 1;
+        string mathOperator;
+        double firstNumber, secondNumber;
+
         public addNewPaymentPage()
         {
             InitializeComponent();
@@ -34,81 +37,49 @@ namespace Wallet.Views
         {
 
         }
-
-        private void picknumber7_Clicked(object sender, EventArgs e)
+        private void onSelectNumber_Clicked(object sender, EventArgs e)
         {
+            Button button = (Button)sender;
+            string pressed = button.Text;
 
+            if (this.resultText.Text == "0" || currentState < 0)
+            {
+                this.resultText.Text = "";
+                if (currentState < 0)
+                    currentState *= -1;
+            }
+
+            this.resultText.Text += pressed;
+
+            double number;
+            if (double.TryParse(this.resultText.Text, out number))
+            {
+                this.resultText.Text = number.ToString("N0");
+                if (currentState == 1)
+                {
+                    firstNumber = number;
+                }
+                else
+                {
+                    secondNumber = number;
+                }
+            }
+        }
+ 
+        private void onSelectOperator_Clicked(object sender, EventArgs e)
+        {
+            currentState = -2;
+            Button button = (Button)sender;
+            string pressed = button.Text;
+            mathOperator = pressed;
         }
 
-        private void picknumber8_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picknumber9_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pickcalculationX_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pickcaculationDivine_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picknumber4_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picknumber5_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picknumber6_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pickcalculationSubtract_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picknumber1_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picknumber2_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picknumber3_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pickcalculationAdd_Clicked(object sender, EventArgs e)
-        {
-
-        }
 
         private void pickcalculationPoint_Clicked(object sender, EventArgs e)
         {
 
         }
 
-        private void picknumber0_Clicked(object sender, EventArgs e)
-        {
-
-        }
 
         private void pickDelete_Clicked(object sender, EventArgs e)
         {
@@ -129,29 +100,16 @@ namespace Wallet.Views
             Database db = new Database();
             if (db.AddNewPayment(newPayment))
             {
-                Navigation.PopAsync();
+                Navigation.PushAsync(new Views.Pocketbook());
             }
             else
             {
-                DisplayAlert("Thông báo", "Thêm ví thất bại", null, "OK");
+                DisplayAlert("Thông báo", "Thêm chi tiêu không thành công.", null, "OK");
                 Navigation.PopAsync();
             }
         }
 
-        private void confirm01_Clicked(object sender, EventArgs e)
-        {
-            confirm_Clicked(sender,e);
-        }
 
-        private void tranfer_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void income_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new addNewIncome());
-        }
 
         private void chedoan_Clicked(object sender, EventArgs e)
         {
@@ -243,12 +201,22 @@ namespace Wallet.Views
             img = "sachbotui_expend2_07.png";
         }
 
-      
 
         private void dulich_Clicked(object sender, EventArgs e)
         {
             title = "Du lịch";
             img = "sachbotui_expend2_09.png";
+        }
+
+        private void tranfer_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new addNewTranferPage());
+        }
+
+     
+        private void income_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new addNewIncome());
         }
     }
 }

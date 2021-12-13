@@ -12,7 +12,7 @@ namespace Wallet
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddNewWalletPage : ContentPage
     {
-        WalletInfo wallet;
+        //WalletInfo wallet;
         public AddNewWalletPage()
         {
             InitializeComponent();

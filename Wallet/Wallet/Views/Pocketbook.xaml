@@ -36,8 +36,8 @@
 
             </Grid>
             
-            <ListView x:Name="lstPayment" HasUnevenRows="True" ItemSelected="lstPayment_ItemSelected">
-                <ListView.ItemTemplate>
+            <ListView x:Name="lstPayment" HasUnevenRows="True" ItemSelected="lstPayment_ItemSelected" >
+                <ListView.ItemTemplate >
                     <DataTemplate>
                         <ViewCell>
                             <Grid>

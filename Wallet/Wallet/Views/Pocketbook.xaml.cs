@@ -15,6 +15,7 @@ namespace Wallet.Views
         public Pocketbook()
         {
             InitializeComponent();
+            PaymentInit();
         }
 
         void PaymentInit()
