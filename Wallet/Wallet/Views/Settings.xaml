@@ -1,12 +1,117 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Wallet.Views.Settings">
+             x:Class="Wallet.Views.Settings"
+             Title="Cài đặt">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <Grid Grid.Column="0" Grid.Row="7" x:Name="mgrid" Margin="0,10,0,10" Background="White" >
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="setting_language.jpg" Grid.Row="0" Grid.Column="0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="language" Tapped="language_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="setting_chude.jpg" Grid.Row="0" Grid.Column="1">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="chude" Tapped="chude_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="setting_hoadondinhky.jpg" Grid.Row="0" Grid.Column="2">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="hoadondinhky" Tapped="hoadondinhky_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="setting_dichvucaocap.jpg" Grid.Row="1" Grid.Column="0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="dichvucaocap" Tapped="dichvucaocap_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="setting_tiente.jpg" Grid.Row="1" Grid.Column="1">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="tiente" Tapped="tiente_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="setting_theloai.jpg" Grid.Row="1" Grid.Column="2">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="theloai" Tapped="theloai_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="setting_cacthanhvien.jpg" Grid.Row="2" Grid.Column="0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="cacthanhvien" Tapped="cacthanhvien_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="setting_caidatngansach.jpg" Grid.Row="2" Grid.Column="1">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="caidatngansach" Tapped="caidatngansach_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="setting_quanlysocai.jpg" Grid.Row="2" Grid.Column="2">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="quanlysocai" Tapped="quanlysocai_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="setting_quanlytaikhoan.jpg" Grid.Row="3" Grid.Column="0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="quanlytaikhoan" Tapped="quanlytaikhoan_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="setting_timkiemhoadon.jpg" Grid.Row="3" Grid.Column="1">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="timkiemhoadon" Tapped="timkiemhoadon_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="setting_saoluu.jpg" Grid.Row="3" Grid.Column="2">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="saoluu" Tapped="saoluu_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="setting_binhluan.jpg" Grid.Row="4" Grid.Column="0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="binhluan" Tapped="binhluan_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="setting_phanhoi.jpg" Grid.Row="4" Grid.Column="1">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="phanhoi" Tapped="phanhoi_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="setting_trongkhoang.jpg" Grid.Row="4" Grid.Column="2">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="trongkhoang" Tapped="trongkhoang_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="setting_excel.jpg" Grid.Row="5" Grid.Column="0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="excel" Tapped="excel_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="setting_them.jpg" Grid.Row="5" Grid.Column="1">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="them" Tapped="them_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="setting_chobanbe.jpg" Grid.Row="5" Grid.Column="2">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="banbe" Tapped="banbe_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+        </ScrollView>
+       
     </ContentPage.Content>
 </ContentPage>
