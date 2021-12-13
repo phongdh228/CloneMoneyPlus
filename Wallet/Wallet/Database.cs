@@ -101,5 +101,35 @@ namespace Wallet
                 return false;
             }
         }
+
+        public bool AddNewPayment(Payment payment)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "walletDB.db");
+                var connection = new SQLiteConnection(path);
+
+                connection.Insert(payment);
+                return true;
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public List<Payment> GetPayments()
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "walletDB.db");
+                var connection = new SQLiteConnection(path);
+                return connection.Table<Payment>().ToList();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }
