@@ -24,25 +24,25 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <ImageButton Source="sachbotui_expend_01.png" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <ImageButton Source="sachbotui_expend_03.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <ImageButton Source="sachbotui_expend_05.png" Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <ImageButton Source="sachbotui_expend_07.png" Grid.Row="0" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <ImageButton Source="sachbotui_expend_01.png" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" x:Name="chedoan" Clicked="chedoan_Clicked"/>
+                <ImageButton Source="sachbotui_expend_03.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" x:Name="hangngay" Clicked="hangngay_Clicked"/>
+                <ImageButton Source="sachbotui_expend_05.png" Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" x:Name="giaothong" Clicked="giaothong_Clicked"/>
+                <ImageButton Source="sachbotui_expend_07.png" Grid.Row="0" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" x:Name="xahoi"   Clicked="xahoi_Clicked"/>
                 
-                <ImageButton Source="sachbotui_expend_12.png" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <ImageButton Source="sachbotui_expend_13.png" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <ImageButton Source="sachbotui_expend_14.png" Grid.Row="1" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <ImageButton Source="sachbotui_expend_15.png" Grid.Row="1" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <ImageButton Source="sachbotui_expend_12.png" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" x:Name="dancu" Clicked="dancu_Clicked"/>
+                <ImageButton Source="sachbotui_expend_13.png" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" x:Name="quatang" Clicked="quatang_Clicked"/>
+                <ImageButton Source="sachbotui_expend_14.png" Grid.Row="1" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" x:Name="giaotiep" Clicked="giaotiep_Clicked"/>
+                <ImageButton Source="sachbotui_expend_15.png" Grid.Row="1" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" x:Name="quanao" Clicked="quanao_Clicked"/>
                 
-                <ImageButton Source="sachbotui_expend_20.png" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <ImageButton Source="sachbotui_expend_21.png" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <ImageButton Source="sachbotui_expend_22.png" Grid.Row="2" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <ImageButton Source="sachbotui_expend_23.png" Grid.Row="2" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <ImageButton Source="sachbotui_expend_20.png" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" x:Name="giaitri" Clicked="giaitri_Clicked"/>
+                <ImageButton Source="sachbotui_expend_21.png" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" x:Name="sacdep" Clicked="sacdep_Clicked"/>
+                <ImageButton Source="sachbotui_expend_22.png" Grid.Row="2" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" x:Name="ykhoa" Clicked="ykhoa_Clicked"/>
+                <ImageButton Source="sachbotui_expend_23.png" Grid.Row="2" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" x:Name="thue" Clicked="thue_Clicked"/>
                 
-                <ImageButton Source="sachbotui_expend_01.png" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <ImageButton Source="sachbotui_expend_01.png" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <ImageButton Source="sachbotui_expend_01.png" Grid.Row="3" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <ImageButton Source="sachbotui_expend_01.png" Grid.Row="3" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <ImageButton Source="sachbotui_expend2_03.png" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" x:Name="giaoduc" Clicked="giaoduc_Clicked"/>
+                <ImageButton Source="caidat_thanhvien_14.png" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" x:Name="treem" Clicked="treem_Clicked"/>
+                <ImageButton Source="sachbotui_expend2_07.png" Grid.Row="3" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" x:Name="thunuoi" Clicked="thunuoi_Clicked"/>
+                <ImageButton Source="sachbotui_expend2_09.png" Grid.Row="3" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" x:Name="dulich" Clicked="dulich_Clicked"/>
 
             </Grid>
             <Grid>
