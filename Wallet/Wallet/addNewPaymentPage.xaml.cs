@@ -121,11 +121,10 @@ namespace Wallet.Views
             newPayment.PaymentImg = img;
             newPayment.PaymentMoney = money.ToString();
             newPayment.PaymentTitle = title;
-            /*
-            newPayment.PaymentNote = ;
-            newPayment.PaymentTime = ;
-            newPayment.PaymentWallet = ;
-            */
+            newPayment.PaymentNote = paymentNote.Text;
+            newPayment.PaymentTime = "";
+            newPayment.PaymentWallet = "";
+            
 
             Database db = new Database();
             if (db.AddNewPayment(newPayment))
@@ -135,7 +134,13 @@ namespace Wallet.Views
             else
             {
                 DisplayAlert("Thông báo", "Thêm ví thất bại", null, "OK");
+                Navigation.PopAsync();
             }
+        }
+
+        private void confirm01_Clicked(object sender, EventArgs e)
+        {
+            confirm_Clicked(sender,e);
         }
 
         private void tranfer_Clicked(object sender, EventArgs e)
@@ -237,6 +242,8 @@ namespace Wallet.Views
             title = "Thú nuôi";
             img = "sachbotui_expend2_07.png";
         }
+
+      
 
         private void dulich_Clicked(object sender, EventArgs e)
         {

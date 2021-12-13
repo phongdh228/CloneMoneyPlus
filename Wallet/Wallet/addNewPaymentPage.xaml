@@ -66,7 +66,7 @@
                 <Button ImageSource="sachbotui_income_18.png" Grid.Row="1" Grid.Column="0" x:Name="pickMember" Clicked="pickMember_Clicked"/>
                 <Button Text="TODAY" Grid.Row="1" Grid.Column="1" x:Name="pickDate" Clicked="pickDate_Clicked"/>
                 <Button ImageSource="sachbotui_income_20.png" Grid.Row="1" Grid.Column="2"/>
-                <Button ImageSource="sachbotui_income_22.png" Grid.Row="1" Grid.Column="3"/>
+                <Button ImageSource="sachbotui_income_22.png" Grid.Row="1" Grid.Column="3" x:Name="confirm01" Clicked="confirm01_Clicked"/>
                 
                 <Button Text="X" Grid.Row="2" Grid.Column="0" FontAttributes="Bold" x:Name="pickcalculationX" Clicked="pickcalculationX_Clicked"/>
                 <Button Text="7" Grid.Row="2" Grid.Column="1" FontAttributes="Bold" x:Name="picknumber7" Clicked="picknumber7_Clicked"/>
