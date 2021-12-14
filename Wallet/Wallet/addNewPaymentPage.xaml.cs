@@ -13,7 +13,8 @@ namespace Wallet.Views
     public partial class addNewPaymentPage : ContentPage
     {
         double money=0;
-        string title = "Chế độ ăn", img = "sachbotui_expend_01.png";
+        string title = "Chế độ ăn", img = "sachbotui_expend_01.png", walletKind= "Sổ cái mặc định";
+        DateTime date = DateTime.Today;
 
         int currentState = 1;
         string mathOperator;
@@ -24,14 +25,38 @@ namespace Wallet.Views
             InitializeComponent();
         }
 
+        private void confirm_Clicked(object sender, EventArgs e)
+        {
+            onCalculate_Clicked(sender, e);
+            Payment newPayment = new Payment();
+            newPayment.PaymentImg = img;
+            newPayment.PaymentMoney = money.ToString();
+            newPayment.PaymentTitle = title;
+            newPayment.PaymentNote = paymentNote.Text;
+            newPayment.PaymentTime = date;
+            newPayment.PaymentWallet = walletKind;
+
+
+            Database db = new Database();
+            if (db.AddNewPayment(newPayment))
+            {
+                Navigation.PushAsync(new Views.Pocketbook());
+            }
+            else
+            {
+                DisplayAlert("Thông báo", "Thêm chi tiêu không thành công.", null, "OK");
+                Navigation.PopAsync();
+            }
+        }
+
         private void pickAccount_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new PickWalletAccount());
         }
 
         private void pickMember_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new pickMember());
         }
 
         private void pickDate_Clicked(object sender, EventArgs e)
@@ -102,32 +127,6 @@ namespace Wallet.Views
         {
 
         }
-
-        private void confirm_Clicked(object sender, EventArgs e)
-        {
-            onCalculate_Clicked(sender, e);
-            Payment newPayment = new Payment();
-            newPayment.PaymentImg = img;
-            newPayment.PaymentMoney = money.ToString();
-            newPayment.PaymentTitle = title;
-            newPayment.PaymentNote = paymentNote.Text;
-            newPayment.PaymentTime = "";
-            newPayment.PaymentWallet = "Sổ cái mặc định";
-            
-
-            Database db = new Database();
-            if (db.AddNewPayment(newPayment))
-            {
-                Navigation.PushAsync(new Views.Pocketbook());
-            }
-            else
-            {
-                DisplayAlert("Thông báo", "Thêm chi tiêu không thành công.", null, "OK");
-                Navigation.PopAsync();
-            }
-        }
-
-
 
         private void chedoan_Clicked(object sender, EventArgs e)
         {

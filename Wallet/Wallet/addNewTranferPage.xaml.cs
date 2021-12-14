@@ -116,5 +116,16 @@ namespace Wallet
         {
 
         }
+
+        private void expend_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
+
+        private void income_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new addNewIncomePage());
+
+        }
     }
 }

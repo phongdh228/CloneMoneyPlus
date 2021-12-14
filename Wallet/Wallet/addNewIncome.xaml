@@ -4,10 +4,10 @@
              x:Class="Wallet.Views.addNewIncome"
              NavigationPage.HasBackButton="True">
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="expend" Priority="1" Order="Primary" IconImageSource="sachbotui_income_03.png" ></ToolbarItem>
-        <ToolbarItem x:Name="income" Priority="0" Order="Primary" IconImageSource="sachbotui_income_05.png"></ToolbarItem>
-        <ToolbarItem x:Name="tranfer" Priority="1" Order="Primary" IconImageSource="vitien_chinhsuataikhoan_20.png" ></ToolbarItem>
-        <ToolbarItem x:Name="confirm" Priority="1" Order="Primary" IconImageSource="vitien_chinhsuataikhoan_06.png"></ToolbarItem>
+        <ToolbarItem x:Name="expend" IconImageSource="sachbotui_income_03.png" Clicked="expend_Clicked"></ToolbarItem>
+        <ToolbarItem x:Name="income" IconImageSource="sachbotui_income_05.png"></ToolbarItem>
+        <ToolbarItem x:Name="tranfer" IconImageSource="vitien_chinhsuataikhoan_20.png" Clicked="tranfer_Clicked"></ToolbarItem>
+        <ToolbarItem x:Name="confirm" IconImageSource="vitien_chinhsuataikhoan_06.png"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>

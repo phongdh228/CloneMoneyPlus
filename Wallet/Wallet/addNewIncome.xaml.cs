@@ -111,5 +111,16 @@ namespace Wallet.Views
         {
 
         }
+
+        private void expend_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new addNewPaymentPage());
+        }
+
+        private void tranfer_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new addNewTranferPage());
+
+        }
     }
 }
