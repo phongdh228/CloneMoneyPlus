@@ -133,5 +133,22 @@ namespace Wallet
                 return null;
             }
         }
+
+        public bool DeleteOnePayment(Payment payment)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "walletDB.db");
+
+                var connection = new SQLiteConnection(path);
+                connection.Delete(payment);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }
