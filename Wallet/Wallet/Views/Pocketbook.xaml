@@ -8,8 +8,14 @@
         <ToolbarItem x:Name="billButton" Priority="0" Order="Primary" IconImageSource="main_sachbotui_03.png"></ToolbarItem>
         <ToolbarItem x:Name="calendarButton" Priority="1" Order="Primary" IconImageSource="phantich_taisan_15.png" Clicked="calendarButton_Clicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
-    <ContentPage.Content>
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+           
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
         <StackLayout>
             <Grid BackgroundColor="#f06292" Padding="10">
                 <Grid.RowDefinitions>
@@ -33,10 +39,10 @@
 
                 <Label Text="Tiền đô nè" Grid.Row="2" Grid.Column="2" HorizontalOptions="End"/>
                 <Label Text="Tiền đô nè" Grid.Row="2" Grid.Column="3" HorizontalOptions="End"/>
-
             </Grid>
 
-            <ListView x:Name="lstPayment" HasUnevenRows="True" ItemSelected="lstPayment_ItemSelected" HeightRequest="500">
+            <ListView x:Name="lstPayment" HasUnevenRows="True" ItemSelected="lstPayment_ItemSelected" HeightRequest="500"
+                     >
                 <ListView.ItemTemplate >
                     <DataTemplate>
                         <ViewCell>
@@ -53,14 +59,14 @@
 
 
                                 <Image Source="{Binding PaymentImg}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" BackgroundColor="LightPink"/>
-                                    
-                                <Label Text="{Binding PaymentTitle}" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" VerticalTextAlignment="Center"/>
-                                
-                                <Label Text="{Binding PaymentNote}" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" />
-                                
-                                <Label Text="{Binding PaymentMoney}" Grid.Row="0" Grid.Column="2" HorizontalOptions="End"/>
 
-                                <Label Text="{Binding PaymentWallet}" Grid.Row="1" Grid.Column="2" HorizontalOptions="End"/>
+                                <Label Text="{Binding PaymentTitle}" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+
+                                <Label Text="{Binding PaymentNote}" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" />
+
+                                <Label Text="{Binding PaymentMoney}" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" FontAttributes="Bold"/>
+
+                                <Label Text="{Binding PaymentWallet}" Grid.Row="1" Grid.Column="2" HorizontalOptions="End" />
 
                             </Grid>
                         </ViewCell>
@@ -68,7 +74,8 @@
                 </ListView.ItemTemplate>
             </ListView>
             <ImageButton Source="sachbotui_hoadon_07.png" HorizontalOptions="End" VerticalOptions="End"
-                         CornerRadius="20" Padding="10" Margin="20" HeightRequest="50" WidthRequest="50"/>
+                         CornerRadius="20" Padding="10" Margin="20" HeightRequest="50" WidthRequest="50" 
+                         Clicked="newPayment_Clicked"/>
 
             <!--<AbsoluteLayout>
                 <ImageButton Source="sachbotui_hoadon_07.png" 
