@@ -12,8 +12,9 @@ namespace Wallet.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class addNewPaymentPage : ContentPage
     {
-        int money=0;
-        string title = "Chế độ ăn", img = "";
+        double money=0;
+        string title = "Chế độ ăn", img = "sachbotui_expend_01.png";
+
         int currentState = 1;
         string mathOperator;
         double firstNumber, secondNumber;
@@ -44,7 +45,7 @@ namespace Wallet.Views
 
             if (this.resultText.Text == "0" || currentState < 0)
             {
-                this.resultText.Text = "";
+                this.resultText.Text = "0";
                 if (currentState < 0)
                     currentState *= -1;
             }
@@ -63,7 +64,10 @@ namespace Wallet.Views
                 {
                     secondNumber = number;
                 }
+                money = number;
             }
+
+
         }
  
         private void onSelectOperator_Clicked(object sender, EventArgs e)
@@ -74,6 +78,19 @@ namespace Wallet.Views
             mathOperator = pressed;
         }
 
+        private void onCalculate_Clicked(object sender, EventArgs e)
+        {
+
+            if (currentState == 2)
+            {
+                var result = SimpleCalculator.Calculate(firstNumber, secondNumber, mathOperator);
+
+                this.resultText.Text = result.ToString();
+                firstNumber = result;
+                money = result;
+                currentState = -1;
+            }
+        }
 
         private void pickcalculationPoint_Clicked(object sender, EventArgs e)
         {
@@ -88,13 +105,14 @@ namespace Wallet.Views
 
         private void confirm_Clicked(object sender, EventArgs e)
         {
+            onCalculate_Clicked(sender, e);
             Payment newPayment = new Payment();
             newPayment.PaymentImg = img;
             newPayment.PaymentMoney = money.ToString();
             newPayment.PaymentTitle = title;
             newPayment.PaymentNote = paymentNote.Text;
             newPayment.PaymentTime = "";
-            newPayment.PaymentWallet = "";
+            newPayment.PaymentWallet = "Sổ cái mặc định";
             
 
             Database db = new Database();

@@ -9,14 +9,30 @@
         <ToolbarItem x:Name="tranfer" Priority="1" Order="Primary" IconImageSource="vitien_chinhsuataikhoan_20.png" Clicked="tranfer_Clicked"></ToolbarItem>
         <ToolbarItem x:Name="confirm" Priority="1" Order="Primary" IconImageSource="vitien_chinhsuataikhoan_06.png" Clicked="confirm_Clicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
+
+    <ContentPage.Resources>
+        <Style Class="title-style" TargetType="ImageButton">
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+        </Style>
+
+        <Style Class="number-button" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="WhiteSmoke"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="CornerRadius" Value="16"/>
+            
+        </Style>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
         <StackLayout>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="65"/>
+                    <RowDefinition Height="65"/>
+                    <RowDefinition Height="65"/>
+                    <RowDefinition Height="65"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -24,28 +40,44 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <ImageButton Source="sachbotui_expend_01.png" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" x:Name="chedoan" Clicked="chedoan_Clicked"/>
-                <ImageButton Source="sachbotui_expend_03.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" x:Name="hangngay" Clicked="hangngay_Clicked"/>
-                <ImageButton Source="sachbotui_expend_05.png" Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" x:Name="giaothong" Clicked="giaothong_Clicked"/>
-                <ImageButton Source="sachbotui_expend_07.png" Grid.Row="0" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" x:Name="xahoi"   Clicked="xahoi_Clicked"/>
-                
-                <ImageButton Source="sachbotui_expend_12.png" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" x:Name="dancu" Clicked="dancu_Clicked"/>
-                <ImageButton Source="sachbotui_expend_13.png" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" x:Name="quatang" Clicked="quatang_Clicked"/>
-                <ImageButton Source="sachbotui_expend_14.png" Grid.Row="1" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" x:Name="giaotiep" Clicked="giaotiep_Clicked"/>
-                <ImageButton Source="sachbotui_expend_15.png" Grid.Row="1" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" x:Name="quanao" Clicked="quanao_Clicked"/>
-                
-                <ImageButton Source="sachbotui_expend_20.png" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" x:Name="giaitri" Clicked="giaitri_Clicked"/>
-                <ImageButton Source="sachbotui_expend_21.png" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" x:Name="sacdep" Clicked="sacdep_Clicked"/>
-                <ImageButton Source="sachbotui_expend_22.png" Grid.Row="2" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" x:Name="ykhoa" Clicked="ykhoa_Clicked"/>
-                <ImageButton Source="sachbotui_expend_23.png" Grid.Row="2" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" x:Name="thue" Clicked="thue_Clicked"/>
-                
-                <ImageButton Source="sachbotui_expend2_03.png" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" x:Name="giaoduc" Clicked="giaoduc_Clicked"/>
-                <ImageButton Source="caidat_thanhvien_14.png" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" x:Name="treem" Clicked="treem_Clicked"/>
-                <ImageButton Source="sachbotui_expend2_07.png" Grid.Row="3" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" x:Name="thunuoi" Clicked="thunuoi_Clicked"/>
-                <ImageButton Source="sachbotui_expend2_09.png" Grid.Row="3" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" x:Name="dulich" Clicked="dulich_Clicked"/>
+                <ImageButton Source="sachbotui_expend_01.png" Grid.Row="0" Grid.Column="0" class="title-style"
+                              x:Name="chedoan" Clicked="chedoan_Clicked"/>
+                <ImageButton Source="sachbotui_expend_03.png" Grid.Row="0" Grid.Column="1" class="title-style"
+                             x:Name="hangngay" Clicked="hangngay_Clicked"/>
+                <ImageButton Source="sachbotui_expend_05.png" Grid.Row="0" Grid.Column="2" class="title-style"
+                             x:Name="giaothong" Clicked="giaothong_Clicked"/>
+                <ImageButton Source="sachbotui_expend_07.png" Grid.Row="0" Grid.Column="3" class="title-style"
+                             x:Name="xahoi"   Clicked="xahoi_Clicked"/>
+
+                <ImageButton Source="sachbotui_expend_12.png" Grid.Row="1" Grid.Column="0" class="title-style"
+                             x:Name="dancu" Clicked="dancu_Clicked"/>
+                <ImageButton Source="sachbotui_expend_13.png" Grid.Row="1" Grid.Column="1" class="title-style"
+                             x:Name="quatang" Clicked="quatang_Clicked"/>
+                <ImageButton Source="sachbotui_expend_14.png" Grid.Row="1" Grid.Column="2" class="title-style"
+                             x:Name="giaotiep" Clicked="giaotiep_Clicked"/>
+                <ImageButton Source="sachbotui_expend_15.png" Grid.Row="1" Grid.Column="3" class="title-style"
+                             x:Name="quanao" Clicked="quanao_Clicked"/>
+
+                <ImageButton Source="sachbotui_expend_20.png" Grid.Row="2" Grid.Column="0" class="title-style"
+                             x:Name="giaitri" Clicked="giaitri_Clicked"/>
+                <ImageButton Source="sachbotui_expend_21.png" Grid.Row="2" Grid.Column="1" class="title-style"
+                             x:Name="sacdep" Clicked="sacdep_Clicked"/>
+                <ImageButton Source="sachbotui_expend_22.png" Grid.Row="2" Grid.Column="2" class="title-style"
+                             x:Name="ykhoa" Clicked="ykhoa_Clicked"/>
+                <ImageButton Source="sachbotui_expend_23.png" Grid.Row="2" Grid.Column="3" class="title-style"
+                             x:Name="thue" Clicked="thue_Clicked"/>
+
+                <ImageButton Source="sachbotui_expend2_03.png" Grid.Row="3" Grid.Column="0" class="title-style"
+                             x:Name="giaoduc" Clicked="giaoduc_Clicked"/>
+                <ImageButton Source="caidat_thanhvien_14.png" Grid.Row="3" Grid.Column="1" class="title-style"
+                             x:Name="treem" Clicked="treem_Clicked"/>
+                <ImageButton Source="sachbotui_expend2_07.png" Grid.Row="3" Grid.Column="2" class="title-style"
+                             x:Name="thunuoi" Clicked="thunuoi_Clicked"/>
+                <ImageButton Source="sachbotui_expend2_09.png" Grid.Row="3" Grid.Column="3" class="title-style"
+                             x:Name="dulich" Clicked="dulich_Clicked"/>
 
             </Grid>
-            <Grid>
+            <Grid BackgroundColor="#f06292" ColumnSpacing="7" RowSpacing="7" Padding="10">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
@@ -60,37 +92,37 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button ImageSource="vitien_chinhsuataikhoan_20.png" Grid.Row="0" Grid.Column="0" x:Name="pickAccount" Clicked="pickAccount_Clicked"/>
-                <Entry Text="Ghi chú" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" x:Name="paymentNote"/>
-                <Entry Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" x:Name="resultText"/>
-                
-                <Button ImageSource="sachbotui_income_18.png" Grid.Row="1" Grid.Column="0" x:Name="pickMember" Clicked="pickMember_Clicked"/>
-                <Button Text="TODAY" Grid.Row="1" Grid.Column="1" x:Name="pickDate" Clicked="pickDate_Clicked"/>
-                <Button ImageSource="sachbotui_income_20.png" Grid.Row="1" Grid.Column="2"/>
-                <Button ImageSource="sachbotui_income_22.png" Grid.Row="1" Grid.Column="3" x:Name="confirm01" Clicked="confirm_Clicked"/>
-                
-                <Button Text="X" Grid.Row="2" Grid.Column="0" FontAttributes="Bold" Clicked="onSelectOperator_Clicked"/>
-                <Button Text="7" Grid.Row="2" Grid.Column="1" FontAttributes="Bold" Clicked="onSelectNumber_Clicked"/>
-                <Button Text="8" Grid.Row="2" Grid.Column="2" FontAttributes="Bold" Clicked="onSelectNumber_Clicked"/>
-                <Button Text="9" Grid.Row="2" Grid.Column="3" FontAttributes="Bold" Clicked="onSelectNumber_Clicked"/>
+                <Button ImageSource="vitien_chinhsuataikhoan_20.png" Grid.Row="0" Grid.Column="0" x:Name="pickAccount" Clicked="pickAccount_Clicked" class="number-button" BackgroundColor= "#FBD1DF"/>
+                <Entry Placeholder="Ghi chú" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" x:Name="paymentNote" BackgroundColor="WhiteSmoke" />
+                <Entry Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" x:Name="resultText" HorizontalTextAlignment="End" BackgroundColor="WhiteSmoke"/>
 
-                <Button Text="/" Grid.Row="3" Grid.Column="0" FontAttributes="Bold" Clicked="onSelectOperator_Clicked"/>
-                <Button Text="4" Grid.Row="3" Grid.Column="1" FontAttributes="Bold" Clicked="onSelectNumber_Clicked"/>
-                <Button Text="5" Grid.Row="3" Grid.Column="2" FontAttributes="Bold" Clicked="onSelectNumber_Clicked"/>
-                <Button Text="6" Grid.Row="3" Grid.Column="3" FontAttributes="Bold" Clicked="onSelectNumber_Clicked"/>
+                <Button ImageSource="sachbotui_income_18.png" Grid.Row="1" Grid.Column="0" x:Name="pickMember" Clicked="pickMember_Clicked" class="number-button" BackgroundColor="#FBD1DF"/>
+                <Button Text="TODAY" Grid.Row="1" Grid.Column="1" x:Name="pickDate" Clicked="pickDate_Clicked" class="number-button" BackgroundColor="#FBD1DF"/>
+                <Button ImageSource="sachbotui_income_20.png" Grid.Row="1" Grid.Column="2" class="number-button" BackgroundColor="#FBD1DF"/>
+                <Button ImageSource="sachbotui_income_22.png" Grid.Row="1" Grid.Column="3" x:Name="onCalculate" Clicked="onCalculate_Clicked" class="number-button" BackgroundColor="#FBD1DF"/>
 
-                <Button Text="-" Grid.Row="4" Grid.Column="0" FontAttributes="Bold" Clicked="onSelectOperator_Clicked"/>
-                <Button Text="1" Grid.Row="4" Grid.Column="1" FontAttributes="Bold" Clicked="onSelectNumber_Clicked"/>
-                <Button Text="2" Grid.Row="4" Grid.Column="2" FontAttributes="Bold" Clicked="onSelectNumber_Clicked"/>
-                <Button Text="3" Grid.Row="4" Grid.Column="3" FontAttributes="Bold" Clicked="onSelectNumber_Clicked"/>
+                <Button Text="X" Grid.Row="2" Grid.Column="0" Clicked="onSelectOperator_Clicked" class="number-button" BackgroundColor="#FBD1DF"/>
+                <Button Text="7" Grid.Row="2" Grid.Column="1" Clicked="onSelectNumber_Clicked" class="number-button"/>
+                <Button Text="8" Grid.Row="2" Grid.Column="2" Clicked="onSelectNumber_Clicked" class="number-button"/>
+                <Button Text="9" Grid.Row="2" Grid.Column="3" Clicked="onSelectNumber_Clicked" class="number-button"/>
 
-                <Button Text="+" Grid.Row="5" Grid.Column="0" FontAttributes="Bold" Clicked="onSelectOperator_Clicked"/>
-                <Button Text="." Grid.Row="5" Grid.Column="1" FontAttributes="Bold" x:Name="pickcalculationPoint" Clicked="pickcalculationPoint_Clicked"/>
-                <Button Text="0" Grid.Row="5" Grid.Column="2" FontAttributes="Bold" Clicked="onSelectNumber_Clicked"/>
-                <Button ImageSource="sachbotui_income_27.png" Grid.Row="5" Grid.Column="3" x:Name="pickDelete" Clicked="pickDelete_Clicked"/>
+                <Button Text="/" Grid.Row="3" Grid.Column="0" Clicked="onSelectOperator_Clicked" class="number-button" BackgroundColor="#FBD1DF"/>
+                <Button Text="4" Grid.Row="3" Grid.Column="1" Clicked="onSelectNumber_Clicked" class="number-button"/>
+                <Button Text="5" Grid.Row="3" Grid.Column="2" Clicked="onSelectNumber_Clicked" class="number-button"/>
+                <Button Text="6" Grid.Row="3" Grid.Column="3" Clicked="onSelectNumber_Clicked" class="number-button"/>
+
+                <Button Text="-" Grid.Row="4" Grid.Column="0" Clicked="onSelectOperator_Clicked" class="number-button" BackgroundColor="#FBD1DF"/>
+                <Button Text="1" Grid.Row="4" Grid.Column="1" Clicked="onSelectNumber_Clicked" class="number-button"/>
+                <Button Text="2" Grid.Row="4" Grid.Column="2" Clicked="onSelectNumber_Clicked" class="number-button"/>
+                <Button Text="3" Grid.Row="4" Grid.Column="3" Clicked="onSelectNumber_Clicked" class="number-button"/>
+
+                <Button Text="+" Grid.Row="5" Grid.Column="0" Clicked="onSelectOperator_Clicked" class="number-button" BackgroundColor="#FBD1DF"/>
+                <Button Text="." Grid.Row="5" Grid.Column="1" x:Name="pickcalculationPoint" Clicked="pickcalculationPoint_Clicked" class="number-button"/>
+                <Button Text="0" Grid.Row="5" Grid.Column="2" Clicked="onSelectNumber_Clicked" class="number-button"/>
+                <Button ImageSource="sachbotui_income_27.png" Grid.Row="5" Grid.Column="3" x:Name="pickDelete" Clicked="pickDelete_Clicked" class="number-button" BackgroundColor="#FBD1DF"/>
 
             </Grid>
-            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
