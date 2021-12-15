@@ -12,6 +12,11 @@ namespace Wallet.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class addNewPaymentPage : ContentPage
     {
+        public addNewPaymentPage()
+        {
+            InitializeComponent();
+        }
+
         double money=0;
         string title = "Chế độ ăn", img = "sachbotui_expend_01.png", walletKind= "Sổ cái mặc định";
         DateTime date = DateTime.Today;
@@ -19,11 +24,6 @@ namespace Wallet.Views
         int currentState = 1;
         string mathOperator;
         double firstNumber, secondNumber;
-
-        public addNewPaymentPage()
-        {
-            InitializeComponent();
-        }
 
         private void confirm_Clicked(object sender, EventArgs e)
         {
@@ -91,8 +91,6 @@ namespace Wallet.Views
                 }
                 money = number;
             }
-
-
         }
  
         private void onSelectOperator_Clicked(object sender, EventArgs e)
