@@ -24,7 +24,7 @@ namespace Wallet
 
         private void billButton_Clicked(object sender, EventArgs e)
         {
-           
+            Navigation.PushAsync(new Views.Pocketbook());
         }
     }
 }

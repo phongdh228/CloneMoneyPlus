@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Wallet.Views.addNewTranferPage">
+             x:Class="Wallet.Views.addNewTranferPage"
+             NavigationPage.HasBackButton="true">
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="expend" IconImageSource="sachbotui_income_03.png" Clicked="expend_Clicked"></ToolbarItem>
         <ToolbarItem x:Name="income" IconImageSource="sachbotui_income_05.png" Clicked="income_Clicked"></ToolbarItem>
