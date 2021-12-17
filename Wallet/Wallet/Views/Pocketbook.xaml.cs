@@ -15,7 +15,6 @@ namespace Wallet.Views
         public Pocketbook()
         {
             InitializeComponent();
-            PaymentInit();
         }
 
         void PaymentInit()
@@ -33,11 +32,6 @@ namespace Wallet.Views
         private void lstPayment_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
 
-        }
-
-        private void calendarButton_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new PocketCalendar());
         }
     }
 }

@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Wallet
+namespace Wallet.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PickWalletAccount : ContentPage
+    public partial class Analysis : ContentPage
     {
-        public PickWalletAccount()
+        public Analysis()
         {
             InitializeComponent();
         }

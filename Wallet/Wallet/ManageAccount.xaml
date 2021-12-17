@@ -11,7 +11,7 @@
             <ListView x:Name="lstWallet" HasUnevenRows="True" IsPullToRefreshEnabled="True" ItemSelected="lstWallet_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ImageCell ImageSource="{Binding walletImg}" Text="{Binding walletName}"  TextColor="Black"/>
+                        <ImageCell ImageSource="{Binding walletImg}" Text="{Binding walletName}" TextColor="Black"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
