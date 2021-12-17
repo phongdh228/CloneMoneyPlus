@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wallet.MoneyPlusPremium"
+             Background="White">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout >
+                <Image Source="vip_icon_app.jpg" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Image Source="money_premium.jpg" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="30"/>
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="0.25*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="drive.png" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
+                    <Label Text="Sao lưu / khôi phục Google Drive" FontSize="Medium" FontAttributes="Bold" Grid.Row="0" Grid.Column="1"/>
+                    <Label Text="Sao lưu / Phục hồi dữ liệu của bạn..." FontSize="Small" Grid.Row="1" Grid.Column="1"/>
+                    <Image Source="tickxanh.jpg" Grid.Row="0" Grid.Column="2" Grid.RowSpan="2"/>
+
+                    <Image Source="socai.png" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2"/>
+                    <Label Text="Tạo nhiều sổ cái" FontSize="Medium" FontAttributes="Bold" Grid.Row="2" Grid.Column="1"/>
+                    <Label Text="Accountbooks cho mỗi kịch bản" FontSize="Small" Grid.Row="3" Grid.Column="1"/>
+                    <Image Source="tickxanh.jpg" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2"/>
+
+                    <Image Source="theloai.png" Grid.Row="4" Grid.Column="0" Grid.RowSpan="2"/>
+                    <Label Text="Danh mục không giới hạn" FontSize="Medium" FontAttributes="Bold" Grid.Row="4" Grid.Column="1"/>
+                    <Label Text="Tạo danh mục không hạn chế số lượng" FontSize="Small" Grid.Row="5" Grid.Column="1"/>
+                    <Image Source="tickxanh.jpg" Grid.Row="4" Grid.Column="2" Grid.RowSpan="2"/>
+
+                    <Image Source="vantay.jpg" Grid.Row="6" Grid.Column="0" Grid.RowSpan="2"/>
+                    <Label Text="Nhận dạng vân tay / khuôn mặt" FontSize="Medium" FontAttributes="Bold" Grid.Row="6" Grid.Column="1"/>
+                    <Label Text="Ứng dụng mở khóa bằng vân tay..." FontSize="Small" Grid.Row="7" Grid.Column="1"/>
+                    <Image Source="tickxanh.jpg" Grid.Row="6" Grid.Column="2" Grid.RowSpan="2"/>
+
+                    <Image Source="excel_icon.png" Grid.Row="8" Grid.Column="0" Grid.RowSpan="2"/>
+                    <Label Text="Xuất Excel" FontSize="Medium" FontAttributes="Bold" Grid.Row="8" Grid.Column="1"/>
+                    <Label Text="Xuất hóa đơn ra tệp excel" FontSize="Small" Grid.Row="9" Grid.Column="1"/>
+                    <Image Source="tickxanh.jpg" Grid.Row="8" Grid.Column="2" Grid.RowSpan="2"/>
+                </Grid>
+
+                <Frame VerticalOptions="FillAndExpand" BackgroundColor="#f06292" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Thành viên suốt đời (Money+ quản lý chi tiêu đẹp) (Mua một lần, sử dụng vĩnh viễn)" Grid.Row="0" Grid.Column="0" TextColor="White"/>
+                        <Label Text="138.000đ" Grid.Row="0" Grid.Column="1" TextColor="White"/>
+                    </Grid>
+                </Frame>
+
+                <Frame VerticalOptions="FillAndExpand" BackgroundColor="#f06292">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Trả cho mỗi năm(Money+ quản lý chi tiêu đẹp) (Tự động thuê bao 1 năm)" Grid.Row="0" Grid.Column="0" TextColor="White"/>
+                        <Label Text="67.000đ" Grid.Row="0" Grid.Column="1" TextColor="White"/>
+                    </Grid>
+                </Frame>
+
+                
+                <Label Text="-Thanh toán sẽ được tính vào tài khoản Google Play của bạn để xác nhận mua hàng."/>
+                <Label Text="-Nếu bạn đã mua trước đó, bạn có nhấp vào khôi phục mua hàng để khôi phục lại tình trạng phần mềm."/>
+                <Label Text="-Nếu bạn chọn đăng ký để mua, vui lòng lưu ý những điều sau trước khi đăng ký: Chế độ đăng ký là dịch vụ gia hạn tự động. Nếu bạn không có ý định gia hạn, vui lòng đóng thủ công ít nhất 24 giờ trước khi kết thúc chu kỳ thanh toán. Chi phi gia hạn sẽ được trừ trong vòng 24 giờ trước khi kết thúc giai đoạn hiện tại. Sau khi đăng ký, bạn có thể hủy gia hạn tự động và các hoạt động khác tại cổng Đăng ký được cung cấp trong Google Play. "/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                       <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                       <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Điều khoản sử dụng" HorizontalOptions="End" Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="Chính sách bảo mật" HorizontalOptions="Start" Grid.Row="0" Grid.Column="1"/>
+                    </Grid>
+
+               
+
+            </StackLayout>
+        </ScrollView>
+       
+    </ContentPage.Content>
+</ContentPage>

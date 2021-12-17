@@ -17,6 +17,7 @@ namespace Wallet
 
                 var connection = new SQLiteConnection(path);
                 connection.CreateTable<WalletInfo>();
+                connection.CreateTable<Payment>();
                 return true;
             }
             catch (Exception ex)
@@ -107,12 +108,13 @@ namespace Wallet
             try
             {
                 string path = System.IO.Path.Combine(folder, "walletDB.db");
+
                 var connection = new SQLiteConnection(path);
 
                 connection.Insert(payment);
                 return true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return false;
             }
@@ -131,5 +133,22 @@ namespace Wallet
                 return null;
             }
         }
+
+        public bool DeleteOnePayment(Payment payment)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "walletDB.db");
+
+                var connection = new SQLiteConnection(path);
+                connection.Delete(payment);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }
