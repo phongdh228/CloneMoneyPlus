@@ -14,7 +14,7 @@ namespace Wallet
     {
         WalletInfo wallet;
         public string icon { get; set; }
-        
+
         public AddNewWalletPage()
         {
             InitializeComponent();
