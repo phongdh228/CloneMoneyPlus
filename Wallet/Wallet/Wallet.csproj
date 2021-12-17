@@ -11,6 +11,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+
+    <PackageReference Include="Microcharts.Forms" Version="0.9.5.9" />
+
     <PackageReference Include="NodaTime" Version="3.0.9" />
     <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
     <PackageReference Include="System.Globalization.Calendars" Version="4.3.0" />
@@ -23,6 +26,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="AddNewWalletPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AnalyIEDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="EditAccount.xaml">

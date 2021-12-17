@@ -24,14 +24,14 @@
         </NavigationPage>
         <NavigationPage
             Title="Phân tích"
-            Icon="analyze.png">
+            Icon="analytics.png">
             <x:Arguments>
-                <views:Analysis/>
+                <views:AnalyticPage/>
             </x:Arguments>
         </NavigationPage>
         <NavigationPage
             Title="Cài đặt"
-            Icon="setting.png">
+            Icon="settings.png">
             <x:Arguments>
                 <views:Settings />
             </x:Arguments>
