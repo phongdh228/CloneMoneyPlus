@@ -13,6 +13,7 @@ namespace Wallet
     public partial class EditAccount : ContentPage
     {
         WalletInfo wallet;
+        public string icon { get; set; }
         public EditAccount()
         {
             InitializeComponent();
@@ -25,12 +26,20 @@ namespace Wallet
             
         }
 
+        public EditAccount(string str)
+        {
+            InitializeComponent();
+            icon = str;
+            this.BindingContext = this;
+        }
+
         void EditInitializing(WalletInfo wallet)
         {
             walletName.Text = wallet.walletName;
             walletPrice.Text = wallet.walletPrice.ToString();
             walletCurrency.Text = wallet.walletCurrency;
             walletImage.Text = wallet.walletImg;
+
             this.wallet = wallet;
         }
 
@@ -70,6 +79,11 @@ namespace Wallet
             {
                 DisplayAlert("Thông Báo", "Cập nhật ví Thất bại", "OK");
             }
+        }
+
+        private void pickIcon_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }
