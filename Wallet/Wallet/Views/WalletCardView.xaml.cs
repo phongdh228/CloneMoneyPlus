@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,11 +27,12 @@ namespace Wallet
             CardViewInit(wallet);
         }
 
-        void CardViewInit(WalletInfo wallet)
+        async void CardViewInit(WalletInfo wallet)
         {
-            Database db = new Database();
-            wallets = db.GetOneWallet(wallet.Id);
-            lstWallet.ItemsSource = wallets;
+            HttpClient http = new HttpClient();
+            var chuoi = await http.GetStringAsync("http://webapimoneyplus.somee.com/api/XuLyController/LayWalletTheoId?Id=" + wallet.Id);
+            var dswallet = JsonConvert.DeserializeObject<List<WalletInfo>>(chuoi);
+            lstWallet.ItemsSource = dswallet;
         }
 
         private void lstWallet_ItemSelected(object sender, SelectedItemChangedEventArgs e)

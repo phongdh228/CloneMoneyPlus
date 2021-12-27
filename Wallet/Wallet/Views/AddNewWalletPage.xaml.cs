@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,11 +17,12 @@ namespace Wallet
     {
         WalletInfo wallet;
         public string icon { get; set; }
-        
+
+        addNewIcon addPage = new addNewIcon();
         public AddNewWalletPage()
         {
             InitializeComponent();
-            BindingContext = new MyWalletPageViewModel();
+            
         }
         public AddNewWalletPage(string str)
         {
@@ -32,7 +36,14 @@ namespace Wallet
             Title = "Tạo nên "+ account.accountName;
         }
 
-        private void completeButton_Clicked(object sender, EventArgs e)
+        protected override void OnAppearing()
+        {
+            icon = addPage.str;
+            pickIcon.ImageSource = icon;
+        }
+
+
+        public void completeButton_Clicked(object sender, EventArgs e)
         {
             WalletInfo newWallet = new WalletInfo();
             newWallet.walletName = walletName.Text;
@@ -41,26 +52,19 @@ namespace Wallet
             newWallet.walletCurrency = walletCurrency.Text;
             newWallet.walletNote = edtNote.Text;
 
-
-            Database db = new Database();
-    
-                if (db.AddNewWallet(newWallet))
-                {
-                    DisplayAlert("Thông báo", "Thêm ví thành công", null, "OK");
-                    Navigation.PushAsync(new ManageAccount());
-                }
-                else
-                {
-                    DisplayAlert("Thông báo", "Thêm ví thất bại", null, "OK");
-                }
-
-            
+            HttpClient http = new HttpClient();
+            var chuoi = http.PostAsync("http://webapimoneyplus.somee.com/api/XuLyController/TaoWallet?walletName=" + newWallet.walletName + "&walletImg=" + newWallet.walletImg + "&walletPrice=" + newWallet.walletPrice + "&walletCurrency=" + newWallet.walletCurrency + "&walletNote=" + newWallet.walletNote, null);
+            if (chuoi != null)
+            {
+                Navigation.PushAsync(new ManageAccount());
+                DisplayAlert("Thông báo", "Tạo ví thành công", null, "OK");
+            }
            
         }
 
         private void pickIcon_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new addNewIcon());
+            Navigation.PushAsync(addPage);
         }
     }
 }

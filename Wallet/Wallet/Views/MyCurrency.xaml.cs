@@ -15,9 +15,7 @@ namespace Wallet
         public MyCurrency()
         {
             InitializeComponent();
-            BindingContext = new MyCurrencyViewModel();
-
-
+            BindingContext = new ViewModels.MyCurrencyViewModel();
         }
     }
 }
