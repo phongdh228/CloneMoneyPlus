@@ -37,17 +37,18 @@ namespace Wallet.Views
             Database db = new Database();
             List<WalletInfo> walletOthers = db.GetWallets();
 
-            foreach (WalletInfo wallet in walletOthers)
-            {
-                var walletId  = wallet.Id;
-                List<WalletInfo> temp = db.GetOneWallet(walletId);
-                if (temp.Count > 0)
+            if (walletOthers != null)
+                foreach (WalletInfo wallet in walletOthers)
                 {
-                    walletMain.Add(temp.ElementAt(0));
-                    total += temp.ElementAt(0).walletPrice;
-                }
+                    var walletId  = wallet.Id;
+                    List<WalletInfo> temp = db.GetOneWallet(walletId);
+                    if (temp.Count > 0)
+                    {
+                        walletMain.Add(temp.ElementAt(0));
+                        total += temp.ElementAt(0).walletPrice;
+                    }
 
-            };
+                };
             lstWallet.ItemsSource = walletMain;
         }
 
