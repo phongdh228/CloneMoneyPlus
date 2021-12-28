@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,7 +17,14 @@ namespace Wallet.Views
         public Pocketbook()
         {
             InitializeComponent();
-            PaymentInit();
+            HienThiPayments();
+        }
+        async void HienThiPayments()
+        {
+            HttpClient http = new HttpClient();
+            var chuoi = await http.GetStringAsync("http://webapimoneyplus.somee.com/api/XuLyController/GetPayment");
+            var dspayment = JsonConvert.DeserializeObject<List<Payment>>(chuoi);
+            lstPayment.ItemsSource = dspayment;
         }
 
         void PaymentInit()
