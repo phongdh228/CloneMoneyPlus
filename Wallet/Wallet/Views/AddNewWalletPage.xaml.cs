@@ -17,8 +17,10 @@ namespace Wallet
     {
         WalletInfo wallet;
         public string icon { get; set; }
+        public string unit { get; set; }
 
         addNewIcon addPage = new addNewIcon();
+        Unit unitPage = new Unit();
         public AddNewWalletPage()
         {
             InitializeComponent();
@@ -40,6 +42,9 @@ namespace Wallet
         {
             icon = addPage.str;
             pickIcon.ImageSource = icon;
+
+            unit = unitPage.str;
+            pickUnit.Text = unit;
         }
 
 
@@ -49,7 +54,7 @@ namespace Wallet
             newWallet.walletName = walletName.Text;
             newWallet.walletImg = icon;
             newWallet.walletPrice = Int32.Parse(walletPrice.Text);
-            newWallet.walletCurrency = walletCurrency.Text;
+            newWallet.walletCurrency = unit;
             newWallet.walletNote = edtNote.Text;
 
             HttpClient http = new HttpClient();
@@ -65,6 +70,11 @@ namespace Wallet
         private void pickIcon_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(addPage);
+        }
+
+        private void pickUnit_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(unitPage);
         }
     }
 }

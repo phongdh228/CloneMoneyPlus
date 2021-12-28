@@ -15,8 +15,10 @@ namespace Wallet
     {
         WalletInfo wallet;
         public string icon { get; set; }
+        public string unit { get; set; }
 
         addEditIcon addPage = new addEditIcon();
+        Unit unitPage = new Unit();
         public EditAccount()
         {
             InitializeComponent();
@@ -32,10 +34,18 @@ namespace Wallet
             Navigation.PushAsync(addPage);
         }
 
+        private void pickUnit_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(unitPage);
+        }
+
         protected override void OnAppearing()
         {
             icon = addPage.str;
             pickIcon.ImageSource = icon;
+
+            unit = unitPage.str;
+            pickUnit.Text = unit;
         }
 
         //public EditAccount(string str)
@@ -53,7 +63,7 @@ namespace Wallet
             List<WalletInfo> walletOthers = dswallet;
             walletName.Text = walletOthers.ElementAt(0).walletName;
             walletPrice.Text = walletOthers.ElementAt(0).walletPrice.ToString();
-            walletCurrency.Text = walletOthers.ElementAt(0).walletCurrency;
+            pickUnit.Text = walletOthers.ElementAt(0).walletCurrency;
             edtNote.Text = walletOthers.ElementAt(0).walletNote;
             pickIcon.ImageSource = walletOthers.ElementAt(0).walletImg;
             this.wallet = wallet;
@@ -79,7 +89,7 @@ namespace Wallet
         {
             var walletNameValue = walletName.Text;
             var walletPriceValue = walletPrice.Text;
-            var walletCurrencyValue = walletCurrency.Text;
+            var walletCurrencyValue = unit;
             var walletImageValue = icon;
             var walletNoteValue = edtNote.Text;
 

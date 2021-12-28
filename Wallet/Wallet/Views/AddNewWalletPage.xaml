@@ -41,13 +41,13 @@
 
                 <Image Source="coin.jpg"  Grid.Row="2" Grid.Column="0"/>
                 <Label Text="Tiền tệ" Grid.Row="2" Grid.Column="1" FontSize="Medium" VerticalOptions="Center" />
-                <Entry Keyboard="Text" Grid.Row="2" Grid.Column="2"  VerticalOptions="Center" x:Name="walletCurrency" Placeholder="VND hoặc USD" HorizontalTextAlignment="End" />
+                <Button HeightRequest="20" Grid.Row="2" Grid.Column="2" x:Name="pickUnit" Clicked="pickUnit_Clicked"  BackgroundColor="Transparent" HorizontalOptions="End" />
 
 
 
                 <Image Source="plus.jpg"  Grid.Row="3" Grid.Column="0"/>
                 <Label Text="Biểu tượng" Grid.Row="3" Grid.Column="1" FontSize="Medium" VerticalOptions="Center" />
-                <Button  HeightRequest="20" Grid.Row="3" Grid.Column="2" x:Name="pickIcon" Clicked="pickIcon_Clicked" BackgroundColor="Transparent" HorizontalOptions="End" />
+                <Button HeightRequest="20" Grid.Row="3" Grid.Column="2" x:Name="pickIcon" Clicked="pickIcon_Clicked" BackgroundColor="Transparent" HorizontalOptions="End" />
                 
 
                 <Label Text="Ghi chú" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" FontSize="Medium" FontAttributes="Bold"/>

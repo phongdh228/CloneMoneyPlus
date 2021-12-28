@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wallet.UnitEdit"
+             Title="Tiền tệ"
+             Background="#fff">
+    <ContentPage.Resources>
+        <Style Class="title-style" TargetType="ImageButton">
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="VerticalOptions" Value="Start"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Thường được sử dụng" TextColor="Gray" FontSize="13" Padding="5"/>
+                <Grid Margin="50,0,0,5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition />
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <ImageButton Source="unit_dolamy.jpg" Grid.Row="0" Grid.Column="0" class="title-style" x:Name="dolamy" Clicked="dolamy_Clicked"/>
+                    <ImageButton Source="unit_CNY.jpg" Grid.Row="1" Grid.Column="0" class="title-style" x:Name="cny" Clicked="cny_Clicked"/>
+                    <ImageButton Source="unit_EUR.jpg" Grid.Row="2" Grid.Column="0" class="title-style" x:Name="eur" Clicked="eur_Clicked"/>
+                    <ImageButton Source="unit_GBP.jpg" Grid.Row="3" Grid.Column="0" class="title-style" x:Name="gbp" Clicked="gbp_Clicked"/>
+                    <ImageButton Source="unit_dolauc.jpg" Grid.Row="4" Grid.Column="0" class="title-style" x:Name="aud" Clicked="aud_Clicked"/>
+                    <ImageButton Source="unit_VND.jpg" Grid.Row="5" Grid.Column="0" class="title-style" x:Name="vnd" Clicked="vnd_Clicked"/>
+                    <ImageButton Source="unit_SGD.jpg" Grid.Row="6" Grid.Column="0" class="title-style" x:Name="sgd" Clicked="sgd_Clicked"/>
+                    <ImageButton Source="unit_yennhat.jpg" Grid.Row="7" Grid.Column="0" class="title-style" x:Name="jpy" Clicked="jpy_Clicked"/>
+                    <ImageButton Source="unit_KRW.jpg" Grid.Row="8" Grid.Column="0" class="title-style" x:Name="krw" Clicked="krw_Clicked"/>
+                    <ImageButton Source="unit_macanese.jpg" Grid.Row="9" Grid.Column="0" class="title-style" x:Name="MOP" Clicked="MOP_Clicked"/>
+                    <ImageButton Source="unit_TWD.jpg" Grid.Row="10" Grid.Column="0" class="title-style" x:Name="twd" Clicked="twd_Clicked"/>
+                    <ImageButton Source="unit_ARS.jpg" Grid.Row="11" Grid.Column="0" class="title-style" x:Name="ars" Clicked="ars_Clicked"/>
+                    <ImageButton Source="unit_BOB.jpg" Grid.Row="12" Grid.Column="0" class="title-style" x:Name="bob" Clicked="bob_Clicked"/>
+                    <ImageButton Source="unit_canada.jpg" Grid.Row="13" Grid.Column="0" class="title-style" x:Name="canada" Clicked="canada_Clicked"/>
+                    <ImageButton Source="unit_TZS.jpg" Grid.Row="14" Grid.Column="0" class="title-style" x:Name="tzs" Clicked="tzs_Clicked"/>
+                    <ImageButton Source="unit_UYU.jpg" Grid.Row="15" Grid.Column="0" class="title-style" x:Name="uyu" Clicked="uyu_Clicked"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

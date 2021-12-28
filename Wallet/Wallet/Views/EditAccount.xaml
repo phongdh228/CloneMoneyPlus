@@ -42,7 +42,7 @@
 
                 <Image Source="coin.jpg"  Grid.Row="2" Grid.Column="0"/>
                 <Label Text="Tiền tệ" Grid.Row="2" Grid.Column="1" FontSize="Medium" VerticalOptions="Center" />
-                <Entry Keyboard="Text" Grid.Row="2" Grid.Column="2" VerticalOptions="Center" x:Name="walletCurrency" Placeholder="VND" HorizontalTextAlignment="End"/>
+                <Button HeightRequest="20" Grid.Row="2" Grid.Column="2" x:Name="pickUnit" Clicked="pickUnit_Clicked"  BackgroundColor="Transparent" HorizontalOptions="End" />
 
 
 
