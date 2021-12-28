@@ -5,35 +5,51 @@
              NavigationPage.HasBackButton ="False"
              Title="Sổ cái mặc định">
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="billButton" Priority="0" Order="Primary" IconImageSource="hoadon.png"></ToolbarItem>
-        <ToolbarItem x:Name="calendarButton" Priority="1" Order="Primary" IconImageSource="calendar.png"></ToolbarItem>
+        <ToolbarItem x:Name="billButton" Priority="0" Order="Primary" IconImageSource="main_sachbotui_03.png"></ToolbarItem>
+        <ToolbarItem x:Name="calendarButton" Priority="1" Order="Primary" IconImageSource="phantich_taisan_15.png" Clicked="calendarButton_Clicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
-    <ContentPage.Content>
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
         <StackLayout>
-            <Grid>
+            <Grid BackgroundColor="#f06292" Padding="10">
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Rectangle BackgroundColor="#f06292" Grid.RowSpan="1" Grid.ColumnSpan="4" />
-                <ImageButton Source="sachbotui.png" Grid.Row="0" Grid.Column="0" WidthRequest="50"/>
-                <ImageButton Source="daucong.png" Grid.Row="0" Grid.Column="1" WidthRequest="50"/>
+                <ImageButton Source="phantich_taisan_19.png" Grid.Row="0" Grid.Column="0" WidthRequest="50" BackgroundColor="Transparent"/>
+                <ImageButton Source="sachbotui_hoadon_03.png" Grid.Row="0" Grid.Column="1" WidthRequest="50" BackgroundColor="Transparent"/>
+
+                <Label Text="Này là để ngày nè" Grid.Row="1" Grid.Column="0" FontAttributes="Bold" />
+                <Label Text="Thu nhập" Grid.Row="1" Grid.Column="2" FontAttributes="Bold" HorizontalOptions="End"/>
+                <Label Text="Chi tiêu" Grid.Row="1" Grid.Column="3" FontAttributes="Bold" HorizontalOptions="End"/>
+
+                <Label Text="Tiền đô nè" Grid.Row="2" Grid.Column="2" HorizontalOptions="End"/>
+                <Label Text="Tiền đô nè" Grid.Row="2" Grid.Column="3" HorizontalOptions="End"/>
             </Grid>
-            
-            <ListView x:Name="lstPayment" HasUnevenRows="True" ItemSelected="lstPayment_ItemSelected">
-                <ListView.ItemTemplate>
+
+            <ListView x:Name="lstPayment" HasUnevenRows="True" ItemSelected="lstPayment_ItemSelected" HeightRequest="500"
+                     >
+                <ListView.ItemTemplate >
                     <DataTemplate>
                         <ViewCell>
-                            <Grid>
+                            <Grid Padding="10">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="50"/>
-                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition/>
@@ -41,30 +57,37 @@
                                     <ColumnDefinition Width="2*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <Image Source="{Binding PaymentImg}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
 
-                                <Label Text="{Binding PaymentTitle}" Grid.Row="0" Grid.Column="1"/>
-                                
-                                <Label Text="{Binding PaymentNote}" Grid.Row="1" Grid.Column="1"/>
-                                
-                                <Label Text="{Binding PaymentMoney}" Grid.Row="0" Grid.Column="2"/>
-                                
-                                <Label Text="{Binding PaymentWallet}" Grid.Row="1" Grid.Column="2"/>
+                                <Image Source="{Binding PaymentImg}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" BackgroundColor="LightPink"/>
+
+                                <Label Text="{Binding PaymentTitle}" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+
+                                <Label Text="{Binding PaymentNote}" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" />
+
+                                <Label Text="{Binding PaymentMoney}" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" FontAttributes="Bold"/>
+
+                                <Label Text="{Binding PaymentWallet}" Grid.Row="1" Grid.Column="2" HorizontalOptions="End" />
 
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            
-            <AbsoluteLayout>
-                <ImageButton Source="addNew.png" 
-            BackgroundColor="Transparent"
-            AbsoluteLayout.LayoutFlags="PositionProportional"  
-            AbsoluteLayout.LayoutBounds=".95,.95,80,130" 
-                             x:Name="newPayment" Clicked="newPayment_Clicked"
+            <ImageButton Source="sachbotui_hoadon_07.png" HorizontalOptions="End" VerticalOptions="End"
+                         CornerRadius="20" Padding="10" Margin="20" HeightRequest="50" WidthRequest="50" 
+                         Clicked="newPayment_Clicked"/>
+
+            <!--<AbsoluteLayout>
+                <ImageButton Source="sachbotui_hoadon_07.png" 
+                            BackgroundColor="LightGray"
+                            AbsoluteLayout.LayoutFlags="PositionProportional"  
+                            AbsoluteLayout.LayoutBounds=".95,.95,80,130" 
+                            x:Name="newPayment" Clicked="newPayment_Clicked"
+                            CornerRadius="32"
+                            HeightRequest="30"
+                            WidthRequest="30"
              />
-            </AbsoluteLayout>
+            </AbsoluteLayout>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

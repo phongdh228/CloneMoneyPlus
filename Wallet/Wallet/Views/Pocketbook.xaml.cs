@@ -43,5 +43,9 @@ namespace Wallet.Views
         {
 
         }
+        private void calendarButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PocketCalendar());
+        }
     }
 }
