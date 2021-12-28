@@ -40,11 +40,15 @@ namespace Wallet.Views
                 List<WalletInfo> temp = dswallet2;
                 if (temp.Count > 0)
                 {
-                    walletMain.Add(temp.ElementAt(0));
-                    total += temp.ElementAt(0).walletPrice;
-                }
+                    var walletId  = wallet.Id;
+                    List<WalletInfo> temp = db.GetOneWallet(walletId);
+                    if (temp.Count > 0)
+                    {
+                        walletMain.Add(temp.ElementAt(0));
+                        total += temp.ElementAt(0).walletPrice;
+                    }
 
-            };
+                };
             lstWallet.ItemsSource = walletMain;
             totalPrice.Text = "$" + total.ToString();
             totalPrice2.Text = "$" + total.ToString();
