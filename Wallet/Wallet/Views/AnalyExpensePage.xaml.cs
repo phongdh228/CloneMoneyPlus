@@ -8,6 +8,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Microcharts;
 using SkiaSharp;
+using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace Wallet.Views
 {
@@ -53,15 +55,16 @@ namespace Wallet.Views
             ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend2_09.png", ieTitle = "Du lịch", iePrice = 0, ieColor = "#cddc39" });
         }
 
-        public void CountPrice()
+        async void CountPrice()
         {
             foreach (AnalyIE Expense in ExpenseList)
             {
-                    Expense.iePrice = 0;
+                Expense.iePrice = 0;
             }
             ListToShow.Clear();
-            Database db = new Database();
-            List<Payment> payments = db.GetPayments();
+            HttpClient http = new HttpClient();
+            var chuoi = await http.GetStringAsync("http://webapimoneyplus.somee.com/api/XuLyController/GetPayment");
+            var payments = JsonConvert.DeserializeObject<List<Payment>>(chuoi);
             if (payments != null)
                 foreach (Payment payment in payments)
                 {
@@ -108,7 +111,7 @@ namespace Wallet.Views
                         ValueLabelColor = SKColor.Parse(Expense.ieColor)
                     });
                 }
-            
+
             var chart = new DonutChart { Entries = entries, HoleRadius = (float)0.55, LabelTextSize = 36 };
 
             chartViewBar.Chart = chart;

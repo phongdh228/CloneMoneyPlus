@@ -10,11 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace Wallet.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Analysis : ContentPage
+    public partial class AnalyticPage : TabbedPage
     {
-        public Analysis()
+        public AnalyticPage()
         {
             InitializeComponent();
+        }
+
+        private void timeButton_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

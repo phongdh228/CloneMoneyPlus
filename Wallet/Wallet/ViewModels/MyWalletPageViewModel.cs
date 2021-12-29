@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Text;
 using System.Runtime.CompilerServices;
 
-namespace Wallet
+namespace Wallet.ViewModels
 {
     public class MyWalletPageViewModel : INotifyPropertyChanged
     {

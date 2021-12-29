@@ -12,22 +12,22 @@
                     <DataTemplate>
                         <ViewCell>
                             <Grid Margin="10">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="50"/>
-                                    </Grid.RowDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
 
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="2*"/>
-                                        <ColumnDefinition Width="2*"/>
-                                        <ColumnDefinition Width="2*"/>
-                                    </Grid.ColumnDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
 
-                                    <Image Source="{Binding ieImg}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" VerticalOptions="Center"/>
-                                    <Label Text="{Binding  ieTitle}" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" FontSize="15"  VerticalOptions="Center"/>
-                                    <Label Text="{Binding iePercent}" Grid.Row="0" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center"/>
-                                    <Label Text="{Binding iePrice}" Grid.Row="0" Grid.Column="3"  VerticalOptions="Center" HorizontalOptions="Center"/>
-                                </Grid>
+                                <Image Source="{Binding ieImg}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" VerticalOptions="Center"/>
+                                <Label Text="{Binding  ieTitle}" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" FontSize="15"  VerticalOptions="Center"/>
+                                <Label Text="{Binding iePercent}" Grid.Row="0" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                <Label Text="{Binding iePrice}" Grid.Row="0" Grid.Column="3"  VerticalOptions="Center" HorizontalOptions="Center"/>
+                            </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

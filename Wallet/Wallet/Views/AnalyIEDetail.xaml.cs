@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,16 +23,17 @@ namespace Wallet
         {
             InitializeComponent();
             ieTitle.Text = analyIE.ieTitle;
-            totalPrice.Text = analyIE.iePrice.ToString()+"đ";
+            totalPrice.Text = analyIE.iePrice.ToString() + "đ";
             InitList(analyIE.ieTitle);
         }
 
-        public void InitList(string Title)
+        public async void InitList(string Title)
         {
-            Database db = new Database();
-            List<Payment> payments = db.GetPayments();
+            HttpClient http = new HttpClient();
+            var chuoi = await http.GetStringAsync("http://webapimoneyplus.somee.com/api/XuLyController/GetPayment");
+            var payments = JsonConvert.DeserializeObject<List<Payment>>(chuoi);
             List<Payment> list = new List<Payment>();
-            if (payments!=null)
+            if (payments != null)
                 foreach (Payment payment in payments)
                 {
                     if (payment.PaymentTitle == Title)
