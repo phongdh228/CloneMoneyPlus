@@ -29,12 +29,14 @@ namespace Wallet
         {
             Database db = new Database();
             List<Payment> payments = db.GetPayments();
+            List<Payment> list = new List<Payment>();
             if (payments!=null)
                 foreach (Payment payment in payments)
                 {
-                    if (payment.PaymentTitle != Title)
-                        payments.Remove(payment);
+                    if (payment.PaymentTitle == Title)
+                        list.Add(payment);
                 }
+            lstPayment.ItemsSource = list;
         }
     }
 }
