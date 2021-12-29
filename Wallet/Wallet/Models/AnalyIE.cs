@@ -8,7 +8,7 @@ namespace Wallet
     {
         public string ieImg { get; set; }
         public string ieTitle { get; set; }
-        public float iePercent { get; set; }
+        public string iePercent { get; set; }
         public int iePrice { get; set; }
         public string ieColor { get; set; }
     }
