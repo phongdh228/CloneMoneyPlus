@@ -8,8 +8,11 @@ using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
 using Wallet.Droid;
 using Android.Content;
+using Android.Graphics.Drawables;
+using Android.Text;
 
 [assembly: ExportRenderer(typeof(Entry), typeof(CustomEntryRenderer))]
+[assembly: ExportRenderer(typeof(Editor), typeof(EditorRendererAndroid), new[] { typeof(VisualMarker.DefaultVisual) })]
 namespace Wallet.Droid
 {
 
@@ -61,6 +64,20 @@ namespace Wallet.Droid
        
     }
 
-    
+    public class EditorRendererAndroid : EditorRenderer
+    {
+        public EditorRendererAndroid(Context context) : base(context) { }
+
+        protected override void OnElementChanged(ElementChangedEventArgs<Editor> e)
+        {
+            base.OnElementChanged(e);
+
+            if (Control != null)
+            {
+                Control.Background = null;
+                Control.SetBackgroundColor(Android.Graphics.Color.Transparent);
+            }
+        }
+    }
 
 }
