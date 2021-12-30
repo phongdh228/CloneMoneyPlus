@@ -89,9 +89,6 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\analyze.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Wallet\Wallet.csproj">
       <Project>{BE48A6C2-69FF-4A00-AEE7-A69E114A36E0}</Project>
       <Name>Wallet</Name>
