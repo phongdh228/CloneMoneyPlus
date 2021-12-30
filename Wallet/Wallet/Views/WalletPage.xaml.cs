@@ -22,7 +22,7 @@ namespace Wallet.Views
             lstWallet.ItemsSource = dswallet;
         }
         int total = 0;
-
+        int debit = 0;
         async void TotalInit()
         {
             List<WalletInfo> walletMain = new List<WalletInfo>();
@@ -42,12 +42,17 @@ namespace Wallet.Views
                 {
                     walletMain.Add(temp.ElementAt(0));
                     total += temp.ElementAt(0).walletPrice;
+                    if (temp.ElementAt(0).walletPrice < 0)
+                    {
+                        debit += temp.ElementAt(0).walletPrice;
+                    }
                 }
 
             };
             lstWallet.ItemsSource = walletMain;
             totalPrice.Text = "$" + total.ToString();
-            totalPrice2.Text = "$" + total.ToString();
+            totalPrice2.Text = "$" + (total-debit).ToString();
+            debitPrice.Text = "$" + (-debit).ToString();
         }
       
         public WalletPage()
