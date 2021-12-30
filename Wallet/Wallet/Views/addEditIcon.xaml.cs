@@ -28,195 +28,195 @@ namespace Wallet
 
         private void tiengiay_Clicked(object sender, EventArgs e)
         {
-            str = "icon_tiengiay.jpg";
+            str = "icon_03.png";
             Navigation.PopAsync();
         }
 
 
         private void atm_Clicked(object sender, EventArgs e)
         {
-            str = "icon_atm.jpg";
+            str = "icon_05.png";
             Navigation.PopAsync();
         }
 
         private void bit_Clicked(object sender, EventArgs e)
         {
-            str = "icon_bit.jpg";
+            str = "icon_07.png";
             Navigation.PopAsync();
         }
 
         private void tusach_Clicked(object sender, EventArgs e)
         {
-            str = "icon_tusach.jpg";
+            str = "icon_09.png";
             Navigation.PopAsync();
         }
 
         private void hungtien_Clicked(object sender, EventArgs e)
         {
-            str = "icon_hungtien.jpg";
+            str = "icon_15.png";
             Navigation.PopAsync();
         }
 
         private void bangtien_Clicked(object sender, EventArgs e)
         {
-            str = "icon_bangtien.jpg";
+            str = "icon_16.png";
             Navigation.PopAsync();
         }
 
         private void dongtien_Clicked(object sender, EventArgs e)
         {
-            str = "icon_dongtien.jpg";
+            str = "icon_17.png";
             Navigation.PopAsync();
         }
 
         private void mastercard_Clicked(object sender, EventArgs e)
         {
-            str = "icon_mastercard.jpg";
+            str = "icon_18.png";
             Navigation.PopAsync();
         }
 
         private void visa_Clicked(object sender, EventArgs e)
         {
-            str = "icon_visa.jpg";
+            str = "icon_23.png";
             Navigation.PopAsync();
         }
 
         private void amex_Clicked(object sender, EventArgs e)
         {
-            str = "icon_amex.jpg";
+            str = "icon_24.png";
             Navigation.PopAsync();
         }
 
         private void w_Clicked(object sender, EventArgs e)
         {
-            str = "icon_w.jpg";
+            str = "icon_25.png";
             Navigation.PopAsync();
         }
 
         private void heodat_Clicked(object sender, EventArgs e)
         {
-            str = "icon_heodat.jpg";
+            str = "icon_26.png";
             Navigation.PopAsync();
         }
 
         private void paypal_Clicked(object sender, EventArgs e)
         {
-            str = "icon_paypal.jpg";
+            str = "icon_31.png";
             Navigation.PopAsync();
         }
 
         private void jcb_Clicked(object sender, EventArgs e)
         {
-            str = "icon_jcb.jpg";
+            str = "icon_32.png";
             Navigation.PopAsync();
         }
 
         private void wechat_Clicked(object sender, EventArgs e)
         {
-            str = "icon_wechat.jpg";
+            str = "icon_33.png";
             Navigation.PopAsync();
         }
 
         private void applepay_Clicked(object sender, EventArgs e)
         {
-            str = "icon_applepay.jpg";
+            str = "icon_34.png";
             Navigation.PopAsync();
         }
 
         private void mayatm_Clicked(object sender, EventArgs e)
         {
-            str = "icon_mayatm.jpg";
+            str = "icon_39.png";
             Navigation.PopAsync();
         }
 
         private void coin_Clicked(object sender, EventArgs e)
         {
-            str = "icon_coin.jpg";
+            str = "icon_40.png";
             Navigation.PopAsync();
         }
 
         private void city_Clicked(object sender, EventArgs e)
         {
-            str = "icon_city.jpg";
+            str = "icon_41.png";
             Navigation.PopAsync();
         }
 
         private void discover_Clicked(object sender, EventArgs e)
         {
-            str = "icon_discover.jpg";
+            str = "icon_42.png";
             Navigation.PopAsync();
         }
 
         private void gpay_Clicked(object sender, EventArgs e)
         {
-            str = "icon_gpay.jpg";
+            str = "icon_47.png";
             Navigation.PopAsync();
         }
 
         private void hsbc_Clicked(object sender, EventArgs e)
         {
-            str = "icon_hsbc.jpg";
+            str = "icon_48.png";
             Navigation.PopAsync();
         }
 
         private void atm2_Clicked(object sender, EventArgs e)
         {
-            str = "icon_atm2.jpg";
+            str = "icon_49.png";
             Navigation.PopAsync();
         }
 
         private void stripe_Clicked(object sender, EventArgs e)
         {
-            str = "icon_stripe.jpg";
+            str = "icon_50.png";
             Navigation.PopAsync();
         }
 
         private void atm3_Clicked(object sender, EventArgs e)
         {
-            str = "icon_atm3.jpg";
+            str = "icon_55.png";
             Navigation.PopAsync();
         }
 
         private void thumuc_Clicked(object sender, EventArgs e)
         {
-            str = "icon_thumuc.jpg";
+            str = "icon_56.png";
             Navigation.PopAsync();
         }
 
         private void damau_Clicked(object sender, EventArgs e)
         {
-            str = "icon_damau.jpg";
+            str = "icon_57.png";
             Navigation.PopAsync();
         }
 
         private void dola_Clicked(object sender, EventArgs e)
         {
-            str = "icon_dola.jpg";
+            str = "icon_58.png";
             Navigation.PopAsync();
         }
 
         private void atm4_Clicked(object sender, EventArgs e)
         {
-            str = "icon_atm4.jpg";
+            str = "icon_63.png";
             Navigation.PopAsync();
         }
 
         private void line_Clicked(object sender, EventArgs e)
         {
-            str = "icon_line.jpg";
+            str = "icon_64.png";
             Navigation.PopAsync();
         }
 
 
         private void phone_Clicked(object sender, EventArgs e)
         {
-            str = "icon_phone.jpg";
+            str = "icon_66.png";
             Navigation.PopAsync();
         }
 
         private void v_Clicked(object sender, EventArgs e)
         {
-            str = "icon_v.jpg";
+            str = "icon_65.png";
             Navigation.PopAsync();
         }
 
