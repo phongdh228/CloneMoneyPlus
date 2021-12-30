@@ -10,28 +10,28 @@
     <TabbedPage.Children>
         <NavigationPage
             Title="Sách bỏ túi"
-            Icon="pocketbook.png">
+            IconImageSource="pocketbook.png" >
             <x:Arguments>
                 <views:Pocketbook />
             </x:Arguments>
         </NavigationPage>
         <NavigationPage
             Title="Ví tiền"
-            Icon="wallet.png">
+            IconImageSource="wallet.png">
             <x:Arguments>
                 <views:WalletPage />
             </x:Arguments>
         </NavigationPage>
         <NavigationPage
             Title="Phân tích"
-            Icon="analytics.png">
+            IconImageSource="analytics.png">
             <x:Arguments>
                 <views:AnalyticPage/>
             </x:Arguments>
         </NavigationPage>
         <NavigationPage
             Title="Cài đặt"
-            Icon="settings.png">
+            IconImageSource="settings.png">
             <x:Arguments>
                 <views:Settings />
             </x:Arguments>
