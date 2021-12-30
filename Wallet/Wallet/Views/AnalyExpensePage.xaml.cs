@@ -24,6 +24,10 @@ namespace Wallet.Views
         {
             InitializeComponent();
             InitExpense();
+            GetData();
+            CountPrice();
+            InitChart();
+            InitList();
         }
 
         protected override void OnAppearing()
@@ -100,7 +104,11 @@ namespace Wallet.Views
             if (ListToShow != null)
                 foreach (AnalyIE Expense in ListToShow)
                 {
-                    Expense.iePercent = string.Format("{0:#.##}", (float)Expense.iePrice * 100 / TotalPrice) + " %";
+                    float price = (float)Expense.iePrice * 100 / TotalPrice;
+                    if (price<1)
+                        Expense.iePercent ="0" + string.Format("{0:#.##}", price) + " %";
+                    else
+                        Expense.iePercent = string.Format("{0:#.##}", price) + " %";
                 }
         }
 
