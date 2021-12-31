@@ -41,7 +41,7 @@
                 <Label Text="Tiền đô nè" Grid.Row="2" Grid.Column="3" HorizontalOptions="End"/>
             </Grid>
 
-            <ListView x:Name="lstPayment" HasUnevenRows="True" ItemSelected="lstPayment_ItemSelected" HeightRequest="500"
+            <ListView x:Name="lstPayment" HasUnevenRows="True" ItemSelected="lstPayment_ItemSelected"
                      >
                 <ListView.ItemTemplate >
                     <DataTemplate>
@@ -74,8 +74,8 @@
                 </ListView.ItemTemplate>
             </ListView>
             <ImageButton Source="sachbotui_hoadon_07.png" HorizontalOptions="End" VerticalOptions="End"
-                         CornerRadius="20" Padding="10" Margin="20" HeightRequest="50" WidthRequest="50" 
-                         Clicked="newPayment_Clicked"/>
+                        Padding="10" Margin="20" WidthRequest="50" HeightRequest="50" CornerRadius="20"
+                         Clicked="newPayment_Clicked" BackgroundColor="Transparent"/>
 
             <!--<AbsoluteLayout>
                 <ImageButton Source="sachbotui_hoadon_07.png" 

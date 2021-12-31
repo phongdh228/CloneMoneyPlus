@@ -18,8 +18,13 @@ namespace Wallet.Views
             InitializeComponent();
         }
 
+        public addNewPaymentPage(Payment payment)
+        {
+
+        }
+
         double money=0;
-        string title = "Chế độ ăn", img = "sachbotui_expend_01.png", walletKind= "Sổ cái mặc định";
+        string title = "Tiền công", img = "sachbotui_income_03.png", walletKind = "Sổ cái mặc định";
         DateTime date = DateTime.Today;
 
         int currentState = 1;

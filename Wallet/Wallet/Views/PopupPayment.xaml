@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage  
+    xmlns:Page="http://rotorgames.com" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wallet.Views.PopupPayment"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Background="white" WidthRequest="300" HeightRequest="300" Padding="10">
+        <ImageButton Source="vitien_chinhsuataikhoan_03.png" x:Name="delete" Clicked="delete_Clicked"/>
+        <ImageButton Source="sachbotui_hoadon_07.png" x:Name="edit" Clicked="edit_Clicked"/>
+        <ListView x:Name="lstPayment" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="2*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding PaymentImg}" Grid.Row="0" Grid.Column="0"/>
+                                <Label Text="{Binding PaymentTitle}" Grid.Row="0" Grid.Column="1" HorizontalOptions="Start"/>
+
+                                <Label Text="{Binding PaymentMoney}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+                                <Label Text="Ngày: " Grid.Row="2" Grid.Column="0" />
+                                <Label Text="{Binding PaymentTime} " Grid.Row="2" Grid.Column="1" HorizontalOptions="Start"/>
+
+                                <Label Text="Thành viên: " Grid.Row="3" Grid.Column="0"/>
+                                <Label Text="{Binding } " Grid.Row="3" Grid.Column="1" HorizontalOptions="Start"/>
+
+                                <Label Text="Tài khoản: " Grid.Row="4" Grid.Column="0"/>
+                                <Label Text="{Binding } " Grid.Row="4" Grid.Column="1" HorizontalOptions="Start"/>
+
+                                <Label Text="Sổ cái: " Grid.Row="5" Grid.Column="0"/>
+                                <Label Text="{Binding PaymentWallet} " Grid.Row="5" Grid.Column="1" HorizontalOptions="Start"/>
+
+                                <Label Text="{Binding PaymentNote} " Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Start"/>
+
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</pages:PopupPage>

@@ -27,6 +27,7 @@
 
     <ContentPage.Content>
         <StackLayout>
+            <ScrollView>
             <Grid Padding="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
@@ -48,7 +49,9 @@
                 <ImageButton Source="sachbotui_income_15.png" Grid.Row="1" Grid.Column="0" class="title-style"/>
                
             </Grid>
-            <Grid BackgroundColor="#f06292" ColumnSpacing="7" RowSpacing="7" Padding="10">
+            </ScrollView>
+            <Frame BackgroundColor="#f06292">
+            <Grid  ColumnSpacing="7" RowSpacing="7" >
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
@@ -93,6 +96,7 @@
                 <Button ImageSource="sachbotui_income_27.png" Grid.Row="5" Grid.Column="3" x:Name="pickDelete" Clicked="pickDelete_Clicked" class="number-button" BackgroundColor="#FBD1DF"/>
 
             </Grid>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

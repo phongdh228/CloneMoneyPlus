@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,9 @@ namespace Wallet.Views
         public Pocketbook()
         {
             InitializeComponent();
+            MessagingCenter.Subscribe<App>((App)Application.Current, "OnCategoryCreated", (sender) => {
+                HienThiPayments();
+            });
             HienThiPayments();
         }
         async void HienThiPayments()
@@ -27,21 +31,22 @@ namespace Wallet.Views
             lstPayment.ItemsSource = dspayment;
         }
 
-        void PaymentInit()
-        {
-            Database db = new Database();
-            List<Payment> payments = db.GetPayments();
-            lstPayment.ItemsSource = payments;
-        }
+        //void PaymentInit()
+        //{
+        //    Database db = new Database();
+        //    List<Payment> payments = db.GetPayments();
+        //    lstPayment.ItemsSource = payments;
+        //}
 
         private void newPayment_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new addNewPaymentPage());
         }
 
-        private void lstPayment_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void lstPayment_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-
+            Payment selectedPayment = e.SelectedItem as Payment;
+            await PopupNavigation.Instance.PushAsync(new PopupPayment(selectedPayment));
         }
         private void calendarButton_Clicked(object sender, EventArgs e)
         {
