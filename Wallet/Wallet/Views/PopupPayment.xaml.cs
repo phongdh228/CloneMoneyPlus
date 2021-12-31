@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Rg.Plugins.Popup.Extensions;
+using Rg.Plugins.Popup.Services;
+using Rg.Plugins.Popup.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +11,20 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Collections.ObjectModel;
 
 namespace Wallet.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PopupPayment : Rg.Plugins.Popup.Pages.PopupPage
+    public partial class PopupPayment : PopupPage
     {
         Payment payment;
+
         public PopupPayment()
         {
             InitializeComponent();
+       
+
         }
         public PopupPayment(Payment payment)
         {
@@ -61,7 +67,14 @@ namespace Wallet.Views
 
         private void edit_Clicked(object sender, EventArgs e)
         {
+            Payment myPayment = ((ListView)sender).SelectedItem as Payment;
+            Navigation.PushModalAsync(new EditPaymentPage(myPayment));
+        }
 
+
+        private async void turnoff_Clicked(object sender, EventArgs e)
+        {
+           await PopupNavigation.Instance.PopAsync();
         }
     }
 }
