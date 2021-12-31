@@ -57,7 +57,8 @@ namespace Wallet
 
         private void lstMember_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-
+            Member selectedMember = e.SelectedItem as Member;
+            
         }
     }
 }
