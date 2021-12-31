@@ -38,6 +38,14 @@ namespace Wallet.Views
         //    lstPayment.ItemsSource = payments;
         //}
 
+
+        //void PaymentInit()
+        //{
+        //    Database db = new Database();
+        //    List<Payment> payments = db.GetPayments();
+        //    lstPayment.ItemsSource = payments;
+        //}
+
         private void newPayment_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new addNewPaymentPage());
