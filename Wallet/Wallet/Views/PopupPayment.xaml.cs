@@ -73,7 +73,7 @@ namespace Wallet.Views
             else
             {
                 Navigation.PopPopupAsync();
-                await Navigation.PushModalAsync(new EditPaymentPage(item));
+                await Navigation.PushModalAsync(new NavigationPage(new EditPaymentPage(item)));
          
             }
         }
