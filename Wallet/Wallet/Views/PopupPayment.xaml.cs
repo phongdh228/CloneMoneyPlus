@@ -65,16 +65,28 @@ namespace Wallet.Views
             MessagingCenter.Send<App>((App)Application.Current, "OnCategoryCreated");
         }
 
-        private void edit_Clicked(object sender, EventArgs e)
+        private async void edit_Clicked(object sender, EventArgs e)
         {
-            Payment myPayment = ((ListView)sender).SelectedItem as Payment;
-            Navigation.PushModalAsync(new EditPaymentPage(myPayment));
+            ImageButton btn = sender as ImageButton;
+            Payment item = btn.BindingContext as Payment;
+            if (item == null) { return; }
+            else
+            {
+                Navigation.PopPopupAsync();
+                await Navigation.PushModalAsync(new EditPaymentPage(item));
+         
+            }
         }
 
 
         private async void turnoff_Clicked(object sender, EventArgs e)
         {
            await PopupNavigation.Instance.PopAsync();
+        }
+
+        private void lstPayment_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+
         }
     }
 }

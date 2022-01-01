@@ -31,6 +31,11 @@ namespace Wallet.Views
             lstPayment.ItemsSource = dspayment;
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            HienThiPayments();
+        }
         //void PaymentInit()
         //{
         //    Database db = new Database();

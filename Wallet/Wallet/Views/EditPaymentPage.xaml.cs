@@ -25,9 +25,6 @@ namespace Wallet.Views
         public EditPaymentPage(Payment payment)
         {
             InitializeComponent();
-            MessagingCenter.Subscribe<App>((App)Application.Current, "OnCategoryCreated", (sender) => {
-                EditInitializing(payment);
-            });
             EditInitializing(payment);
         }
 
@@ -146,6 +143,31 @@ namespace Wallet.Views
                 firstNumber = result;
                 money = result;
                 currentState = -1;
+            }
+            var PaymentImgValue = img;
+            var PaymentMoneyValue = money.ToString();
+            var PaymentTitleValue = title;
+            var PaymentNoteValue = paymentNote.Text;
+            var PaymentTimeValue = date;
+            var PaymentWalletValue = walletKind;
+
+            payment.PaymentImg = PaymentImgValue;
+            payment.PaymentMoney = PaymentMoneyValue;
+            payment.PaymentTitle = PaymentTitleValue;
+            payment.PaymentNote = PaymentNoteValue;
+            payment.PaymentTime = PaymentTimeValue;
+            payment.PaymentWallet = PaymentWalletValue;
+
+            HttpClient http = new HttpClient();
+            var chuoi = http.PutAsync("http://webapimoneyplus.somee.com/api/XuLyController/UpdatePayment?PaymentId=" + payment.PaymentId + "&PaymentImg=" + payment.PaymentImg + "&PaymentTime=" + payment.PaymentTime + "&PaymentMoney=" + payment.PaymentMoney + "&PaymentTitle=" + payment.PaymentTitle + "&PaymentWallet=" + payment.PaymentWallet + "&PaymentNote=" + payment.PaymentNote, null);
+            if (chuoi != null)
+            {
+                Navigation.PopModalAsync();
+            }
+            else
+            {
+                DisplayAlert("Thông báo", "Thêm chi tiêu không thành công.", null, "OK");
+                Navigation.PopModalAsync();
             }
         }
 
