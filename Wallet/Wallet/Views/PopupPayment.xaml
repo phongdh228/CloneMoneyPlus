@@ -3,53 +3,58 @@
     xmlns:Page="http://rotorgames.com" xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Wallet.Views.PopupPayment"
-             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup">
 
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Background="white" WidthRequest="300" HeightRequest="300" Padding="10">
-        <ImageButton Source="vitien_chinhsuataikhoan_03.png" x:Name="delete" Clicked="delete_Clicked"/>
-        <ImageButton Source="sachbotui_hoadon_07.png" x:Name="edit" Clicked="edit_Clicked"/>
-        <ListView x:Name="lstPayment" HasUnevenRows="True">
+    <Frame HorizontalOptions="Center" VerticalOptions="Center" Background="white" WidthRequest="300" HeightRequest="330" Padding="10" CornerRadius="10">
+        <StackLayout>
+            <ListView x:Name="lstPayment" HasUnevenRows="True"  SeparatorColor="Transparent" ItemSelected="lstPayment_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.View>
-                            <Grid>
+                            <Frame BackgroundColor="#fff" CornerRadius="10" Margin="5,5,5,5">
+                                <Grid>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition Height="30"/>
                                     <RowDefinition Height="1*"/>
                                     <RowDefinition Height="1*"/>
                                     <RowDefinition Height="1*"/>
                                     <RowDefinition Height="1*"/>
-                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition/>
                                     <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
-                                <Image Source="{Binding PaymentImg}" Grid.Row="0" Grid.Column="0"/>
-                                <Label Text="{Binding PaymentTitle}" Grid.Row="0" Grid.Column="1" HorizontalOptions="Start"/>
+                                <ImageButton Source="icon_turnoff.jpg" x:Name="turnoff" Clicked="turnoff_Clicked"  Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" Aspect="AspectFit" BackgroundColor="Transparent"/>
+                                <ImageButton Source="icon_trash.jpg" x:Name="delete" Clicked="delete_Clicked" Grid.Row="0" Grid.Column="2"  HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"  Aspect="AspectFit" BackgroundColor="Transparent"/>
+                                <ImageButton Source="icon_edit.jpg" x:Name="edit" Clicked="edit_Clicked" Grid.Row="0" Grid.Column="3" HorizontalOptions="End" Aspect="AspectFit" BackgroundColor="Transparent"/>
+                                <Image Source="{Binding PaymentImg}" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" Grid.Row="1" Grid.Column="0"/>
+                                <Label Text="{Binding PaymentTitle}" Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" TextColor="Black"/>
 
-                                <Label Text="{Binding PaymentMoney}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+                                <Label Text="{Binding PaymentMoney}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" TextColor="Green"/>
+                                <Label Text="Ngày: " Grid.Row="3" Grid.Column="0" />
+                                <Label Text="{Binding PaymentTime} " Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Start" TextColor="Black"/>
 
-                                <Label Text="Ngày: " Grid.Row="2" Grid.Column="0" />
-                                <Label Text="{Binding PaymentTime} " Grid.Row="2" Grid.Column="1" HorizontalOptions="Start"/>
+                                <Label Text="Thành viên: " Grid.Row="4" Grid.Column="0"/>
+                                <Label Text="Riêng tôi" Grid.Row="4" Grid.Column="1" HorizontalOptions="Start" TextColor="Black"/>
 
-                                <Label Text="Thành viên: " Grid.Row="3" Grid.Column="0"/>
-                                <Label Text="{Binding } " Grid.Row="3" Grid.Column="1" HorizontalOptions="Start"/>
+                                <Label Text="Tài khoản: " Grid.Row="5" Grid.Column="0"/>
+                                <Label Text="Mặc định" Grid.Row="5" Grid.Column="1" HorizontalOptions="Start" TextColor="Black"/>
 
-                                <Label Text="Tài khoản: " Grid.Row="4" Grid.Column="0"/>
-                                <Label Text="{Binding } " Grid.Row="4" Grid.Column="1" HorizontalOptions="Start"/>
-
-                                <Label Text="Sổ cái: " Grid.Row="5" Grid.Column="0"/>
-                                <Label Text="{Binding PaymentWallet} " Grid.Row="5" Grid.Column="1" HorizontalOptions="Start"/>
-
-                                <Label Text="{Binding PaymentNote} " Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Start"/>
-
+                                <Label Text="Sổ cái: " Grid.Row="6" Grid.Column="0"/>
+                                <Label Text="{Binding PaymentWallet} " Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Start" TextColor="Black"/>
                             </Grid>
+                            </Frame>
                         </ViewCell.View>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
+    </Frame>
 </pages:PopupPage>

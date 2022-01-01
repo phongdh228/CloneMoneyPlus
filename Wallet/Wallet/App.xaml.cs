@@ -11,6 +11,7 @@ namespace Wallet
             InitializeComponent();
 
             MainPage = new TabbedPageMain();
+
         }
 
         protected override void OnStart()
