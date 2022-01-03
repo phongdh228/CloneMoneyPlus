@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             x:Class="Wallet.PickWalletAccount"
-             Title="Chọn tài khoản"
-             NavigationPage.HasBackButton ="True">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wallet.Views.EditPickWalletAccount"
+             Title="Chọn tài khoản">
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="editButton" Priority="0" Order="Primary" IconImageSource="edit.jpg" Clicked="editButton_Clicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
@@ -27,7 +26,7 @@
                                 <Label Text="{Binding walletPrice}" HorizontalOptions="End" VerticalOptions="Center" Grid.Row="0" Grid.Column="2" TextColor="Gray"/>
                             </Grid>
                         </ViewCell>
-                        
+
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

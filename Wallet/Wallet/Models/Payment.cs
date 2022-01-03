@@ -14,6 +14,8 @@ namespace Wallet
         public string PaymentTitle { get; set; }
         public string PaymentWallet { get; set; }
         public string PaymentNote { get; set; }
-
+        public string walletName { get; set; }
+        public string walletImage { get; set; }
+        public int walletId { get; set; }
     }
 }

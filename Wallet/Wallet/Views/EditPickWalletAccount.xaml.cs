@@ -5,17 +5,16 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Wallet.Views;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Wallet
+namespace Wallet.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PickWalletAccount : ContentPage
+    public partial class EditPickWalletAccount : ContentPage
     {
-        WalletInfo wallet;
-        public PickWalletAccount()
+        public EditPickWalletAccount()
         {
             InitializeComponent();
             HienThiWallet();
@@ -31,7 +30,7 @@ namespace Wallet
         private void lstWallet_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             WalletInfo selectedWallet = e.SelectedItem as WalletInfo;
-            Navigation.PushAsync(new addNewPaymentPage(selectedWallet));
+ 
         }
 
         private void editButton_Clicked(object sender, EventArgs e)
