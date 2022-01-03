@@ -19,7 +19,7 @@ namespace Wallet.Views
         public EditPaymentPage()
         {
             InitializeComponent();
-          
+
         }
 
         public EditPaymentPage(Payment payment)
@@ -36,7 +36,7 @@ namespace Wallet.Views
             List<Payment> paymentOthers = dspayment;
             resultText.Text = paymentOthers.ElementAt(0).PaymentMoney.ToString();
             paymentNote.Text = paymentOthers.ElementAt(0).PaymentNote;
-            
+
             this.payment = payment;
         }
 
@@ -144,7 +144,7 @@ namespace Wallet.Views
                 money = result;
                 currentState = -1;
             }
-           
+
         }
 
         private void pickcalculationPoint_Clicked(object sender, EventArgs e)
