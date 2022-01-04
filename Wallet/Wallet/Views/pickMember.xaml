@@ -6,10 +6,10 @@
              NavigationPage.HasBackButton="True">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lstMember" ItemSelected="lstMember_ItemSelected">
+            <ListView x:Name="lstMember" ItemSelected="lstMember_ItemSelected" ItemTapped="lstMember_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ImageCell ImageSource="{Binding memberImage}" Text="{Binding memberTitle}" TextColor="Black"/>
+                        <ImageCell ImageSource="{Binding memberImage}" Text="{Binding memberTitle}" TextColor="Black" Tapped="ImageCell_Tapped"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

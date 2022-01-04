@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,15 +31,17 @@ namespace Wallet.Views
             onCalculate_Clicked(sender, e);
             Payment newPayment = new Payment();
             newPayment.PaymentImg = img;
-            newPayment.PaymentMoney = money.ToString();
+            newPayment.PaymentMoney = "+" + money.ToString();
             newPayment.PaymentTitle = title;
             newPayment.PaymentNote = paymentNote.Text;
             newPayment.PaymentTime = date;
             newPayment.PaymentWallet = walletKind;
 
 
-            Database db = new Database();
-            if (db.AddNewPayment(newPayment))
+
+            HttpClient http = new HttpClient();
+            var chuoi = http.PostAsync("http://webapimoneyplus.somee.com/api/XuLyController/CreatePayment?PaymentImg=" + newPayment.PaymentImg + "&PaymentTime=" + newPayment.PaymentTime + "&PaymentMoney=" + newPayment.PaymentMoney + "&PaymentTitle=" + newPayment.PaymentTitle + "&PaymentWallet=" + newPayment.PaymentWallet + "&PaymentNote=" + newPayment.PaymentNote, null);
+            if (chuoi != null)
             {
                 Navigation.PushAsync(new Views.Pocketbook());
             }

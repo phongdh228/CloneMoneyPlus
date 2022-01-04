@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Syncfusion.SfCalendar.XForms.iOS;
 
 namespace Wallet.iOS
 {
@@ -25,9 +26,11 @@ namespace Wallet.iOS
         {
             Rg.Plugins.Popup.Popup.Init();
             global::Xamarin.Forms.Forms.Init();
+            SfCalendarRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
         }
+
     }
 }

@@ -55,7 +55,7 @@ namespace Wallet.Views
             onCalculate_Clicked(sender, e);
             Payment newPayment = new Payment();
             newPayment.PaymentImg = img;
-            newPayment.PaymentMoney = money.ToString();
+            newPayment.PaymentMoney = "-" + (money).ToString();
             newPayment.PaymentTitle = title;
             newPayment.PaymentNote = paymentNote.Text;
             newPayment.PaymentTime = date;
