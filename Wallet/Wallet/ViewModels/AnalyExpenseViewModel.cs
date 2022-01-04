@@ -1,41 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using Microcharts;
-using SkiaSharp;
 using System.Net.Http;
 using Newtonsoft.Json;
 
-namespace Wallet.Views
+namespace Wallet.ViewModels
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AnalyExpensePage : ContentPage
+    internal class AnalyExpenseViewModel
     {
         List<AnalyIE> ExpenseList = new List<AnalyIE>();
-        List<AnalyIE> ListToShow = new List<AnalyIE>();
+        public List<AnalyIE> ListToShow = new List<AnalyIE>();
         List<Payment> payments = new List<Payment>();
         int TotalPrice = 0;
-        public AnalyExpensePage()
+
+        public AnalyExpenseViewModel()
         {
-            InitializeComponent();
             InitExpense();
             GetData();
             CountPrice();
-            InitChart();
-            InitList();
         }
 
-        protected override void OnAppearing()
+        protected virtual void OnAppearing()
         {
             GetData();
             CountPrice();
-            InitChart();
-            InitList();
         }
 
         protected void InitExpense()
@@ -58,7 +47,7 @@ namespace Wallet.Views
             ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend2_03.png", ieTitle = "Giáo dục", iePrice = 0, ieColor = "#ffeb3b" });
             ExpenseList.Add(new AnalyIE { ieImg = "caidat_thanhvien_14.png", ieTitle = "Trẻ em", iePrice = 0, ieColor = "#ffc107" });
             ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend2_07.png", ieTitle = "Thú nuôi", iePrice = 0, ieColor = "#ff9800" });
-            ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend2_09.png", ieTitle = "Du lịch", iePrice = 0, ieColor = "#ff5622" });
+            ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend2_09.png", ieTitle = "Du lịch", iePrice = 0, ieColor = "#ff5722" });
         }
 
         async void GetData()
@@ -66,7 +55,7 @@ namespace Wallet.Views
             HttpClient http = new HttpClient();
             var chuoi = await http.GetStringAsync("http://webapimoneyplus.somee.com/api/XuLyController/GetPayment");
             payments = JsonConvert.DeserializeObject<List<Payment>>(chuoi);
-            
+
         }
 
         void CountPrice()
@@ -105,41 +94,11 @@ namespace Wallet.Views
                 foreach (AnalyIE Expense in ListToShow)
                 {
                     float price = (float)Expense.iePrice * 100 / TotalPrice;
-                    if (price<1)
-                        Expense.iePercent ="0" + string.Format("{0:#.##}", price) + " %";
+                    if (price < 1)
+                        Expense.iePercent = "0" + string.Format("{0:#.##}", price) + " %";
                     else
                         Expense.iePercent = string.Format("{0:#.##}", price) + " %";
                 }
-        }
-
-        protected void InitChart()
-        {
-            List<ChartEntry> entries = new List<ChartEntry>();
-            if (ListToShow != null)
-                foreach (AnalyIE Expense in ListToShow)
-                {
-                    entries.Add(new ChartEntry(Expense.iePrice)
-                    {
-                        Label = Expense.ieTitle,
-                        ValueLabel = Expense.iePrice.ToString(),
-                        Color = SKColor.Parse(Expense.ieColor),
-                        ValueLabelColor = SKColor.Parse(Expense.ieColor)
-                    });
-                }
-            var chart = new DonutChart { Entries = entries, HoleRadius = (float)0.55, LabelTextSize = 36 };
-
-            chartViewBar.Chart = chart;
-        }
-
-        public void InitList()
-        {
-            lstExpense.ItemsSource = null;
-            lstExpense.ItemsSource = ListToShow;
-        }
-
-        private void lstExpense_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            Navigation.PushAsync(new AnalyIEDetail(e.SelectedItem as AnalyIE));
         }
     }
 }
