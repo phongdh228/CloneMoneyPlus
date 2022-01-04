@@ -78,13 +78,13 @@ namespace Wallet.Views
             if (payments != null)
                 foreach (Payment payment in payments)
                 {
-                    if (int.Parse(payment.PaymentMoney) > 0)
+                    if (int.Parse(payment.PaymentMoney) < 0)
                     {
                         foreach (AnalyIE Expense in ExpenseList)
                         {
                             if (Expense.ieTitle == payment.PaymentTitle)
                             {
-                                Expense.iePrice += int.Parse(payment.PaymentMoney);
+                               Expense.iePrice += Math.Abs(int.Parse(payment.PaymentMoney));
                                 break;
                             }
                         }

@@ -16,6 +16,7 @@ namespace Wallet.Views
     public partial class EditPaymentPage : ContentPage
     {
         Payment payment;
+        EditPickWalletAccount walletNew = new EditPickWalletAccount();
         public EditPaymentPage()
         {
             InitializeComponent();
@@ -26,6 +27,24 @@ namespace Wallet.Views
         {
             InitializeComponent();
             EditInitializing(payment);
+        }
+
+        public EditPaymentPage(WalletInfo wallet)
+        {
+            InitializeComponent();
+            PickAccountInit(wallet);
+        }
+
+        async void PickAccountInit(WalletInfo wallet)
+        {
+            HttpClient http = new HttpClient();
+            var chuoi = await http.GetStringAsync("http://webapimoneyplus.somee.com/api/XuLyController/LayWalletTheoId?Id=" + wallet.Id);
+            var dswallet = JsonConvert.DeserializeObject<List<WalletInfo>>(chuoi);
+
+            pickAccount.ImageSource = dswallet.ElementAt(0).walletImg;
+            walletImgNew = dswallet.ElementAt(0).walletImg;
+            walletKind = dswallet.ElementAt(0).walletName;
+            walletIdNew = dswallet.ElementAt(0).Id;
         }
 
         async void EditInitializing(Payment payment)
@@ -40,11 +59,12 @@ namespace Wallet.Views
             this.payment = payment;
         }
 
+        int walletIdNew=1;
         double money = 0;
-        string title = "Tiền công", img = "sachbotui_income_03.png", walletKind = "Sổ cái mặc định";
+        string title = "Tiền công", img = "sachbotui_income_03.png", walletKind = "Sổ cái mặc định", walletImgNew = "";
         DateTime date = DateTime.Today;
 
-
+        
 
         int currentState = 1;
         string mathOperator;
@@ -59,6 +79,8 @@ namespace Wallet.Views
             var PaymentNoteValue = paymentNote.Text;
             var PaymentTimeValue = date;
             var PaymentWalletValue = walletKind;
+            var WalletImageValue = walletImgNew;
+            var WalletIdValue = walletIdNew;
 
             payment.PaymentImg = PaymentImgValue;
             payment.PaymentMoney = PaymentMoneyValue;
@@ -66,9 +88,11 @@ namespace Wallet.Views
             payment.PaymentNote = PaymentNoteValue;
             payment.PaymentTime = PaymentTimeValue;
             payment.PaymentWallet = PaymentWalletValue;
+            payment.walletImage = WalletImageValue;
+            payment.walletId = WalletIdValue;
 
             HttpClient http = new HttpClient();
-            var chuoi = http.PutAsync("http://webapimoneyplus.somee.com/api/XuLyController/UpdatePayment?PaymentId=" + payment.PaymentId + "&PaymentImg=" + payment.PaymentImg + "&PaymentTime=" + payment.PaymentTime + "&PaymentMoney=" + payment.PaymentMoney + "&PaymentTitle=" + payment.PaymentTitle + "&PaymentWallet=" + payment.PaymentWallet + "&PaymentNote=" + payment.PaymentNote, null);
+            var chuoi = http.PutAsync("http://webapimoneyplus.somee.com/api/XuLyController/UpdatePayment?PaymentId=" + payment.PaymentId + "&PaymentImg=" + payment.PaymentImg + "&PaymentTime=" + payment.PaymentTime + "&PaymentMoney=" + payment.PaymentMoney + "&PaymentTitle=" + payment.PaymentTitle + "&PaymentWallet=" + payment.PaymentWallet + "&PaymentNote=" + payment.PaymentNote + "&walletName=" + payment.PaymentWallet + "&walletImage=" + payment.walletImage + "&walletId=" + payment.walletId, null);
             if (chuoi != null)
             {
                 Navigation.PopModalAsync();
@@ -80,9 +104,16 @@ namespace Wallet.Views
             }
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            if (walletNew.change_wallet)
+                PickAccountInit(walletNew.walletPublic);
+        }
+
         private void pickAccount_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new PickWalletAccount());
+            Navigation.PushModalAsync(walletNew);
         }
 
         private void pickMember_Clicked(object sender, EventArgs e)

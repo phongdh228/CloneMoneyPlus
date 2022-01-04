@@ -15,6 +15,7 @@ namespace Wallet.Views
     public partial class addNewPaymentPage : ContentPage
     {
         WalletInfo wallet;
+        PickWalletAccount walletNew = new PickWalletAccount();
         public addNewPaymentPage()
         {
             InitializeComponent();
@@ -77,9 +78,16 @@ namespace Wallet.Views
             }
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            if (walletNew.change_wallet)
+                PickAccountInit(walletNew.walletPublic);
+        }
+
         private void pickAccount_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new PickWalletAccount());
+            Navigation.PushAsync(walletNew);
         }
 
         private void pickMember_Clicked(object sender, EventArgs e)

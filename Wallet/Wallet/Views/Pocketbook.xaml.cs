@@ -18,8 +18,12 @@ namespace Wallet.Views
         public Pocketbook()
         {
             InitializeComponent();
+            MessagingCenter.Subscribe<App>((App)Application.Current, "OnCategoryCreated", (sender) => {
+                HienThiPayments();
+                TotalInit();
+            });
             HienThiPayments();
-            TotalInit();
+         
         }
         async void HienThiPayments()
         {
@@ -33,8 +37,9 @@ namespace Wallet.Views
         {
             base.OnAppearing();
             HienThiPayments();
+            TotalInit();
         }
-        int income = 0, outcome = 0;
+        int income, outcome;
         async void TotalInit()
         {
             List<Payment> paymentMain = new List<Payment>();
@@ -43,26 +48,27 @@ namespace Wallet.Views
             var dspayment = JsonConvert.DeserializeObject<List<Payment>>(chuoi);
             List<Payment> paymentOthers = dspayment;
 
+            income = 0;
+            outcome = 0;
 
             foreach (Payment payment in paymentOthers)
             {
-                var paymentId = payment.PaymentId;
-                var chuoi2 = await http.GetStringAsync("http://webapimoneyplus.somee.com/api/XuLyController/GetPaymentById?PaymentId=" + paymentId.ToString());
-                var dspayment2 = JsonConvert.DeserializeObject<List<Payment>>(chuoi2);
-                List<Payment> temp = dspayment2;
-                if (temp.Count > 0)
-                {
-                    paymentMain.Add(temp.ElementAt(0));
-                    string money = temp.ElementAt(0).PaymentMoney;
-                    income += Int32.Parse(money);
-                    if (Int32.Parse(temp.ElementAt(0).PaymentMoney) < 0)
+                
+                    paymentMain.Add(payment);
+                    string money = payment.PaymentMoney;
+                   
+                    if (Int32.Parse(payment.PaymentMoney) < 0)
                     {
                         outcome += Int32.Parse(money);
                     }
-                }
+                    else
+                    {
+                        income += Int32.Parse(money);
+                    }
+                
             };
             lstPayment.ItemsSource = paymentMain;
-            outcomeMoney.Text = "$" + outcome;
+            outcomeMoney.Text = "$" + Math.Abs(outcome);
             //totalPrice2.Text = "$" + (total - debit).ToString();
             incomeMoney.Text = "$" + income;
 

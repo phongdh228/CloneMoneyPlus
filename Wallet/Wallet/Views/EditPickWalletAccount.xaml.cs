@@ -14,6 +14,7 @@ namespace Wallet.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditPickWalletAccount : ContentPage
     {
+        public bool change_wallet = false;
         public EditPickWalletAccount()
         {
             InitializeComponent();
@@ -27,10 +28,14 @@ namespace Wallet.Views
             lstWallet.ItemsSource = dswallet;
         }
 
+        public WalletInfo walletPublic;
+
         private void lstWallet_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             WalletInfo selectedWallet = e.SelectedItem as WalletInfo;
- 
+            walletPublic = selectedWallet;
+            change_wallet = true;
+            Navigation.PopModalAsync();
         }
 
         private void editButton_Clicked(object sender, EventArgs e)

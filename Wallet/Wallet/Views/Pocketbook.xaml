@@ -37,8 +37,8 @@
                 <Label TextColor="White" Text="Thu nhập" Grid.Row="1" Grid.Column="2" FontAttributes="Bold" HorizontalOptions="End"/>
                 <Label TextColor="White" Text="Chi tiêu" Grid.Row="1" Grid.Column="3" FontAttributes="Bold" HorizontalOptions="End"/>
 
-                <Label TextColor="White" x:Name="outcomeMoney" Grid.Row="2" Grid.Column="2" HorizontalOptions="End"/>
-                <Label TextColor="White" x:Name="incomeMoney" Grid.Row="2" Grid.Column="3" HorizontalOptions="End"/>
+                <Label TextColor="White" x:Name="incomeMoney" Grid.Row="2" Grid.Column="2" HorizontalOptions="End"/>
+                <Label TextColor="White" x:Name="outcomeMoney" Grid.Row="2" Grid.Column="3" HorizontalOptions="End"/>
             </Grid>
 
             <ListView x:Name="lstPayment" HasUnevenRows="True" ItemSelected="lstPayment_ItemSelected"

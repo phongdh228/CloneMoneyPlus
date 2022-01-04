@@ -14,7 +14,7 @@ namespace Wallet
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PickWalletAccount : ContentPage
     {
-        WalletInfo wallet;
+        public bool change_wallet = false;
         public PickWalletAccount()
         {
             InitializeComponent();
@@ -27,11 +27,13 @@ namespace Wallet
             var dswallet = JsonConvert.DeserializeObject<List<WalletInfo>>(chuoi);
             lstWallet.ItemsSource = dswallet;
         }
-
+        public WalletInfo walletPublic;
         private void lstWallet_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             WalletInfo selectedWallet = e.SelectedItem as WalletInfo;
-            Navigation.PushAsync(new addNewPaymentPage(selectedWallet));
+            walletPublic = selectedWallet;
+            change_wallet = true;
+            Navigation.PopAsync();
         }
 
         private void editButton_Clicked(object sender, EventArgs e)
