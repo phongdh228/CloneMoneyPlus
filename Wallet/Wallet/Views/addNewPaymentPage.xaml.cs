@@ -24,7 +24,7 @@ namespace Wallet.Views
         }
 
         double money=0;
-        string title = "Tiền công", img = "sachbotui_income_03.png", walletKind = "Sổ cái mặc định";
+        string title = "Tiền công", img = "sachbotui_income_03.png", walletKind = "Tài khoản mặc định";
         DateTime date = DateTime.Today;
 
         int currentState = 1;
@@ -36,7 +36,7 @@ namespace Wallet.Views
             onCalculate_Clicked(sender, e);
             Payment newPayment = new Payment();
             newPayment.PaymentImg = img;
-            newPayment.PaymentMoney = money.ToString();
+            newPayment.PaymentMoney = "-" + (money).ToString();
             newPayment.PaymentTitle = title;
             newPayment.PaymentNote = paymentNote.Text;
             newPayment.PaymentTime = date;

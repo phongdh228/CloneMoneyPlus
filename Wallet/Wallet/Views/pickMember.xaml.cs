@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Wallet.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -58,6 +58,17 @@ namespace Wallet
         private void lstMember_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             Member selectedMember = e.SelectedItem as Member;
+        }
+
+        private void ImageCell_Tapped(object sender, EventArgs e)
+        {
+            Member tappedMember = (Member)((ListView)sender).SelectedItem;
+            Navigation.PushModalAsync(new addNewPaymentPage());
+        }
+
+        private void lstMember_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+
         }
     }
 }
