@@ -50,9 +50,9 @@ namespace Wallet.Views
 
             };
             lstWallet.ItemsSource = walletMain;
-            totalPrice.Text = "$" + total.ToString();
-            totalPrice2.Text = "$" + (total-debit).ToString();
-            debitPrice.Text = "$" + (-debit).ToString();
+            totalPrice.Text = "$" + total.ToString("#,##0");
+            totalPrice2.Text = "$" + (total-debit).ToString("#,##0");
+            debitPrice.Text = "$" + (-debit).ToString("#,##0");
         }
       
         public WalletPage()
