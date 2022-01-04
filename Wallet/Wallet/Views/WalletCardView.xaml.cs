@@ -26,6 +26,7 @@ namespace Wallet
             InitializeComponent();
             CardViewInit(wallet);
             ListPocket(wallet);
+           
         }
 
 
@@ -39,10 +40,19 @@ namespace Wallet
 
         async void ListPocket(WalletInfo wallet)
         {
-            HttpClient http = new HttpClient();
-            var chuoi = await http.GetStringAsync("http://webapimoneyplus.somee.com/api/XuLyController/GetPaymentByWalletId?walletId=" + wallet.Id);
-            var dswallet = JsonConvert.DeserializeObject<List<Payment>>(chuoi);
-            lstPocket.ItemsSource = dswallet;
+            try
+            {
+                HttpClient http = new HttpClient();
+                var chuoi = await http.GetStringAsync("http://webapimoneyplus.somee.com/api/XuLyController/GetPaymentByWalletId?walletId=" + wallet.Id);
+                var dswallet = JsonConvert.DeserializeObject<List<Payment>>(chuoi);
+                lstPocket.ItemsSource = dswallet;
+
+            }
+            catch
+            {
+
+            }
+
         }
 
         private void lstWallet_ItemSelected(object sender, SelectedItemChangedEventArgs e)
