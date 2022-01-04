@@ -68,14 +68,14 @@ namespace Wallet.Views
                 
             };
             lstPayment.ItemsSource = paymentMain;
-            outcomeMoney.Text = "$" + Math.Abs(outcome);
-            //totalPrice2.Text = "$" + (total - debit).ToString();
-            incomeMoney.Text = "$" + income;
-
+            //using ToString("#,##0") to get currency format
+            outcomeMoney.Text = "$" + Math.Abs(outcome).ToString("#,##0");
+            incomeMoney.Text = "$" + income.ToString("#,##0");
+            
             //Date appearance handling (fake time)
             string localTime = DateTime.Now.ToString("yyyy-MM");
             datetime.Text = localTime;
-            //datetime.Text = PaymentTime.ToString("yyyy-MM");
+            //datetime.Text = paymentMain.PaymentTime.ToString("yyyy-MM");
         }
 
         //void PaymentInit()

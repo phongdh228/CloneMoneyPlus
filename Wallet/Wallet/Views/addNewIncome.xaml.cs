@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -13,9 +14,31 @@ namespace Wallet.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class addNewIncome : ContentPage
     {
+        PickWalletAccount walletNew = new PickWalletAccount();
         public addNewIncome()
         {
             InitializeComponent();
+        }
+
+        public addNewIncome(WalletInfo wallet)
+        {
+            InitializeComponent();
+            PickAccountInit(wallet);
+        }
+
+        public int walletIdNew;
+        public string walletImageNew;
+
+        async void PickAccountInit(WalletInfo wallet)
+        {
+            HttpClient http = new HttpClient();
+            var chuoi = await http.GetStringAsync("http://webapimoneyplus.somee.com/api/XuLyController/LayWalletTheoId?Id=" + wallet.Id);
+            var dswallet = JsonConvert.DeserializeObject<List<WalletInfo>>(chuoi);
+
+            pickAccount.ImageSource = dswallet.ElementAt(0).walletImg;
+            walletImageNew = dswallet.ElementAt(0).walletImg;
+            walletKind = dswallet.ElementAt(0).walletName;
+            walletIdNew = dswallet.ElementAt(0).Id;
         }
 
         double money = 0;
@@ -25,22 +48,25 @@ namespace Wallet.Views
         int currentState = 1;
         string mathOperator;
         double firstNumber, secondNumber;
-
+        
         private void confirm_Clicked(object sender, EventArgs e)
         {
             onCalculate_Clicked(sender, e);
             Payment newPayment = new Payment();
             newPayment.PaymentImg = img;
-            newPayment.PaymentMoney = "+" + money.ToString();
+            newPayment.PaymentMoney = "+" + (money).ToString("#,##0");
             newPayment.PaymentTitle = title;
             newPayment.PaymentNote = paymentNote.Text;
             newPayment.PaymentTime = date;
             newPayment.PaymentWallet = walletKind;
+            newPayment.walletName = walletKind;
+            newPayment.walletImage = walletImageNew;
+            newPayment.walletId = walletIdNew;
 
 
 
             HttpClient http = new HttpClient();
-            var chuoi = http.PostAsync("http://webapimoneyplus.somee.com/api/XuLyController/CreatePayment?PaymentImg=" + newPayment.PaymentImg + "&PaymentTime=" + newPayment.PaymentTime + "&PaymentMoney=" + newPayment.PaymentMoney + "&PaymentTitle=" + newPayment.PaymentTitle + "&PaymentWallet=" + newPayment.PaymentWallet + "&PaymentNote=" + newPayment.PaymentNote, null);
+            var chuoi = http.PostAsync("http://webapimoneyplus.somee.com/api/XuLyController/CreatePayment?PaymentImg=" + newPayment.PaymentImg + "&PaymentTime=" + newPayment.PaymentTime + "&PaymentMoney=" + newPayment.PaymentMoney + "&PaymentTitle=" + newPayment.PaymentTitle + "&PaymentWallet=" + newPayment.PaymentWallet + "&PaymentNote=" + newPayment.PaymentNote + "&walletImage=" + newPayment.walletImage + "&walletName=" + newPayment.walletName + "&walletId=" + newPayment.walletId, null);
             if (chuoi != null)
             {
                 Navigation.PushAsync(new Views.Pocketbook());
@@ -51,7 +77,12 @@ namespace Wallet.Views
                 Navigation.PopAsync();
             }
         }
-
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            if (walletNew.change_wallet)
+                PickAccountInit(walletNew.walletPublic);
+        }
         private void onSelectNumber_Clicked(object sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -106,7 +137,7 @@ namespace Wallet.Views
 
         private void pickAccount_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new PickWalletAccount());
+            Navigation.PushAsync(walletNew);
         }
 
         private void pickMember_Clicked(object sender, EventArgs e)
@@ -126,7 +157,18 @@ namespace Wallet.Views
 
         private void pickDelete_Clicked(object sender, EventArgs e)
         {
-
+            if (resultText.Text != string.Empty)
+            {
+                int resultLength = resultText.Text.Length;
+                if (resultLength != 1)
+                {
+                    resultText.Text = resultText.Text.Remove(resultLength - 1);
+                }
+                else
+                {
+                    resultText.Text = 0.ToString();
+                }
+            }
         }
 
         private async void expend_Clicked(object sender, EventArgs e)
