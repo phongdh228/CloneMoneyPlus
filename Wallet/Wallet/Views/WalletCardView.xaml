@@ -52,7 +52,7 @@
                                      
                                         <Image Source="{Binding walletImg}" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2"/>
                                         <Label Text="{Binding  walletName}" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" FontSize="15"  VerticalOptions="Center" FontAttributes="Bold"/>
-                                        <Label Text="{Binding walletPrice}" Grid.Row="2" Grid.Column="3" VerticalTextAlignment="Center" VerticalOptions="Center"  FontAttributes="Bold" TextColor="Black"  HorizontalOptions="Center"/>
+                                        <Label Text="{Binding walletPrice, StringFormat='{0:N0}'}" Grid.Row="2" Grid.Column="3" VerticalTextAlignment="Center" VerticalOptions="Center"  FontAttributes="Bold" TextColor="Black"  HorizontalOptions="Center"/>
                                         <Label Text="{Binding walletCurrency}" Grid.Row="3" Grid.Column="3"  VerticalOptions="Start" HorizontalOptions="Center" />
                                         <Label Text="Thu nhập" Grid.Row="4" Grid.Column="0"/>
                                         <Grid Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Padding="10,0,10,0">

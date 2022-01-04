@@ -54,7 +54,7 @@
                                     <Image Source="{Binding walletImg}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
                                     <Label Text="{Binding  walletName}" Grid.Row="0" Grid.Column="1" FontSize="15"  VerticalOptions="Center" FontAttributes="Bold"/>
                                     <Label Text="{Binding walletNote}" Grid.Row="1" Grid.Column="1" FontSize="12" VerticalOptions="Center"/>
-                                    <Label Text="{Binding walletPrice}" Grid.Row="0" Grid.Column="2" VerticalTextAlignment="Center" VerticalOptions="Center"  FontAttributes="Bold" TextColor="Black"  HorizontalOptions="Center"/>
+                                    <Label Text="{Binding walletPrice, StringFormat='{0:N0}'}" Grid.Row="0" Grid.Column="2" VerticalTextAlignment="Center" VerticalOptions="Center"  FontAttributes="Bold" TextColor="Black"  HorizontalOptions="Center"/>
                                     <Label Text="{Binding walletCurrency}" Grid.Row="1" Grid.Column="2"  VerticalOptions="Start" HorizontalOptions="Center"/>
                                 </Grid>
                             </ViewCell.View>
