@@ -41,10 +41,10 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <ImageButton Source="sachbotui_income_03.png" Grid.Row="0" Grid.Column="0" class="title-style"/>
-                <ImageButton Source="sachbotui_income_05.png" Grid.Row="0" Grid.Column="1" class="title-style"/>
-                <ImageButton Source="sachbotui_income_07.png" Grid.Row="0" Grid.Column="2" class="title-style"/>
-                <ImageButton Source="sachbotui_income_09.png" Grid.Row="0" Grid.Column="3" class="title-style"/>
+                <ImageButton Source="sachbotui_income_03.png" Grid.Row="0" Grid.Column="0" class="title-style" x:Name="income03" Clicked="income03_Clicked"/>
+                <ImageButton Source="sachbotui_income_05.png" Grid.Row="0" Grid.Column="1" class="title-style" x:Name="income05" Clicked="income05_Clicked"/>
+                <ImageButton Source="sachbotui_income_07.png" Grid.Row="0" Grid.Column="2" class="title-style" x:Name="income07" Clicked="income07_Clicked"/>
+                <ImageButton Source="sachbotui_income_09.png" Grid.Row="0" Grid.Column="3" class="title-style" x:Name="income09" Clicked="income09_Clicked"/>
 
                 <ImageButton Source="sachbotui_income_15.png" Grid.Row="1" Grid.Column="0" class="title-style"/>
                

@@ -54,7 +54,7 @@ namespace Wallet.Views
             onCalculate_Clicked(sender, e);
             Payment newPayment = new Payment();
             newPayment.PaymentImg = img;
-            newPayment.PaymentMoney = "+" + (money).ToString("#,##0");
+            newPayment.PaymentMoney = "+" + (money).ToString();
             newPayment.PaymentTitle = title;
             newPayment.PaymentNote = paymentNote.Text;
             newPayment.PaymentTime = date;
@@ -147,12 +147,36 @@ namespace Wallet.Views
 
         private void pickDate_Clicked(object sender, EventArgs e)
         {
-
+           
         }
 
         private void pickcalculationPoint_Clicked(object sender, EventArgs e)
         {
 
+        }
+
+        private void income03_Clicked(object sender, EventArgs e)
+        {
+            title = "Tiền công";
+            img = "sachbotui_income_03.png";
+        }
+
+        private void income05_Clicked(object sender, EventArgs e)
+        {
+            title = "Tiền thưởng";
+            img = "sachbotui_income_05.png";
+        }
+
+        private void income07_Clicked(object sender, EventArgs e)
+        {
+            title = "Đầu tư";
+            img = "sachbotui_income_07.png";
+        }
+
+        private void income09_Clicked(object sender, EventArgs e)
+        {
+            title = "Bán thời gian";
+            img = "sachbotui_income_09.png";
         }
 
         private void pickDelete_Clicked(object sender, EventArgs e)
