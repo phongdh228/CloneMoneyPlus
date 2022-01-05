@@ -14,7 +14,7 @@
         <views:AnalyExpensePage Title="Chi tiêu" Icon="phantich_taisan_03.png"/>
         <views:AnalyIncomePage Title="Thu nhập" Icon="phantich_taisan_05.png" />
         <main:MoneyPlusPremium Title="Ngân sách" Icon="phantich_taisan_07.png" />
-        <main:MoneyPlusPremium Title="Xu hướng" Icon="phantich_taisan_09.png" />
+        <views:AnalyTrendPage Title="Xu hướng" Icon="phantich_taisan_09.png" />
         <main:MoneyPlusPremium Title="Tài sản" Icon="phantich_thunhap2_03.png" />
     </TabbedPage.Children>
 </TabbedPage>

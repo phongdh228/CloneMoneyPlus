@@ -124,6 +124,7 @@ namespace Wallet
                 var entry = this.Entries.ElementAt(i);
 
                 var x = this.Margin + (itemSize.Width / 2) + (i * (itemSize.Width + this.Margin));
+                //var x = -100 + (itemSize.Width / 2) + (i * (itemSize.Width + 200));
                 var y = headerHeight + (((multiline_max - entry.Value) / (multiline_max - multiline_min)) * itemSize.Height);
                 var point = new SKPoint(x, y);
                 result.Add(point);
