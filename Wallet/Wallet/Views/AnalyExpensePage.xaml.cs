@@ -18,7 +18,7 @@ namespace Wallet.Views
     {
         List<AnalyIE> ExpenseList = new List<AnalyIE>();
         List<AnalyIE> ListToShow = new List<AnalyIE>();
-        List<Payment> payments = new List<Payment>();
+        public List<Payment> payments = new List<Payment>();
         int TotalPrice = 0;
         public AnalyExpensePage()
         {
@@ -32,13 +32,14 @@ namespace Wallet.Views
 
         protected override void OnAppearing()
         {
+            base.OnAppearing();
             GetData();
             CountPrice();
             InitChart();
             InitList();
         }
 
-        protected void InitExpense()
+        void InitExpense()
         {
             ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend_01.png", ieTitle = "Chế độ ăn", iePrice = 0, ieColor = "#f44336" });
             ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend_03.png", ieTitle = "Hàng ngày", iePrice = 0, ieColor = "#e91e63" });
@@ -61,7 +62,7 @@ namespace Wallet.Views
             ExpenseList.Add(new AnalyIE { ieImg = "sachbotui_expend2_09.png", ieTitle = "Du lịch", iePrice = 0, ieColor = "#ff5622" });
         }
 
-        async void GetData()
+        public async void GetData()
         {
             HttpClient http = new HttpClient();
             var chuoi = await http.GetStringAsync("http://webapimoneyplus.somee.com/api/XuLyController/GetPayment");
@@ -112,7 +113,7 @@ namespace Wallet.Views
                 }
         }
 
-        protected void InitChart()
+        void InitChart()
         {
             List<ChartEntry> entries = new List<ChartEntry>();
             if (ListToShow != null)
@@ -131,7 +132,7 @@ namespace Wallet.Views
             chartViewBar.Chart = chart;
         }
 
-        public void InitList()
+        void InitList()
         {
             lstExpense.ItemsSource = null;
             lstExpense.ItemsSource = ListToShow;
