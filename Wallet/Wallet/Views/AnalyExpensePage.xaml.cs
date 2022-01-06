@@ -25,9 +25,6 @@ namespace Wallet.Views
             InitializeComponent();
             InitExpense();
             GetData();
-            CountPrice();
-            InitChart();
-            InitList();
         }
 
         protected override void OnAppearing()
