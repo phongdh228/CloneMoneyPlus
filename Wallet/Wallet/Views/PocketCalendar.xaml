@@ -11,7 +11,7 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <Grid BackgroundColor="#f06292">
+            <Grid BackgroundColor="#f06292" Padding="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="20"/>
@@ -35,17 +35,24 @@
                 <Label TextColor="White" x:Name="incomeMoney" Grid.Row="2" Grid.Column="3" HorizontalOptions="End"/>
 
             </Grid>
-
-            <syncfusion:SfCalendar x:Name="calendar" ViewMode="MonthView" ShowLeadingAndTrailingDays="False"/>
             
-            <ListView x:Name="lstPayment" HasUnevenRows="True" ItemSelected="lstPayment_ItemSelected">
-                <ListView.ItemTemplate>
+            <!--Calendar place-->
+            <syncfusion:SfCalendar x:Name="calendar" ViewMode="MonthView" ShowLeadingAndTrailingDays="False" HeightRequest="300">
+                <syncfusion:SfCalendar.MonthViewSettings>
+                    <syncfusion:MonthViewSettings BorderColor ="#ff0000" CellGridOptions="Both"/>
+                </syncfusion:SfCalendar.MonthViewSettings>
+            </syncfusion:SfCalendar>
+
+
+            <ListView x:Name="lstPayment" HasUnevenRows="True" ItemSelected="lstPayment_ItemSelected"
+                     >
+                <ListView.ItemTemplate >
                     <DataTemplate>
                         <ViewCell>
-                            <Grid>
+                            <Grid Padding="10">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="50"/>
-                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition/>
@@ -53,22 +60,22 @@
                                     <ColumnDefinition Width="2*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <Image Source="{Binding PaymentImg}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
 
-                                <Label Text="{Binding PaymentTitle}" Grid.Row="0" Grid.Column="1"/>
+                                <Image Source="{Binding PaymentImg}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" BackgroundColor="#FEF3F7"/>
 
-                                <Label Text="{Binding PaymentNote}" Grid.Row="1" Grid.Column="1"/>
+                                <Label Text="{Binding PaymentTitle}" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" VerticalTextAlignment="Center"/>
 
-                                <Label Text="{Binding PaymentMoney}" Grid.Row="0" Grid.Column="2"/>
+                                <Label Text="{Binding PaymentNote}" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" />
 
-                                <Label Text="{Binding PaymentWallet}" Grid.Row="1" Grid.Column="2"/>
+                                <Label Text="{Binding PaymentMoney}" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" FontAttributes="Bold"/>
+
+                                <Label Text="{Binding PaymentWallet}" Grid.Row="1" Grid.Column="2" HorizontalOptions="End" />
 
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

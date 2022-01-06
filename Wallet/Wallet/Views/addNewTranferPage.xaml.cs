@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,6 +14,7 @@ namespace Wallet.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class addNewTranferPage : ContentPage
     {
+        PickWalletAccount walletNew = new PickWalletAccount();
         public addNewTranferPage()
         {
             InitializeComponent();
@@ -25,6 +28,27 @@ namespace Wallet.Views
         string mathOperator;
         double firstNumber, secondNumber;
 
+        public int walletIdNew;
+        public string walletImageNew;
+        async void PickAccountInit(WalletInfo wallet)
+        {
+            HttpClient http = new HttpClient();
+            var chuoi = await http.GetStringAsync("http://webapimoneyplus.somee.com/api/XuLyController/LayWalletTheoId?Id=" + wallet.Id);
+            var dswallet = JsonConvert.DeserializeObject<List<WalletInfo>>(chuoi);
+
+            
+            pickWalletAccount01.ImageSource = dswallet.ElementAt(0).walletImg;
+            walletImageNew = dswallet.ElementAt(0).walletImg;
+            walletKind = dswallet.ElementAt(0).walletName;
+            walletIdNew = dswallet.ElementAt(0).Id;
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            if (walletNew.change_wallet)
+                PickAccountInit(walletNew.walletPublic);
+        }
         private void pickDate_Clicked(object sender, EventArgs e)
         {
 
@@ -56,9 +80,15 @@ namespace Wallet.Views
 
         }
 
-        private void pickWalletAccount_Clicked(object sender, EventArgs e)
+
+        private void pickWalletAccount01_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new PickWalletAccount());
+            Navigation.PushAsync(walletNew);
+        }
+
+        private void pickWalletAccount02_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(walletNew);
         }
 
         private void onCalculate_Clicked(object sender, EventArgs e)

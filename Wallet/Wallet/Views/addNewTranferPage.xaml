@@ -41,7 +41,7 @@
                 </Grid.ColumnDefinitions>
 
                 <StackLayout Grid.Row="1" Grid.Column="0" BackgroundColor="#FEF3F7" >
-                    <ImageButton Source="{Binding walletImg}" Clicked="pickWalletAccount_Clicked"/>
+                    <Button ImageSource="main_caidat_1_26" x:Name="pickWalletAccount01"  Clicked="pickWalletAccount01_Clicked"/>
                     <Label Text="{Binding walletPrice}"/>
                     <Label Text="{Binding walletName}"/>
                 </StackLayout>
@@ -49,7 +49,7 @@
                 <Image Source="sachbotui_expend_23.png" Grid.Row="1" Grid.Column="1"/>
 
                 <StackLayout Grid.Row="1" Grid.Column="2" BackgroundColor="#FEF3F7">
-                    <ImageButton Source="{Binding walletImg}" Clicked="pickWalletAccount_Clicked"/>
+                    <Button ImageSource="vitien_chinhsuataikhoan_16" x:Name="pickWalletAccount02"  Clicked="pickWalletAccount02_Clicked"/>
                     <Label Text="{Binding walletPrice}"/>
                     <Label Text="{Binding walletName}"/>
                 </StackLayout>
