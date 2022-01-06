@@ -10,10 +10,10 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-
             <Grid BackgroundColor="#f06292" Padding="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
+                    <RowDefinition Height="20"/>
                     <RowDefinition Height="20"/>
                     <RowDefinition Height="20"/>
                 </Grid.RowDefinitions>
@@ -25,21 +25,22 @@
                 </Grid.ColumnDefinitions>
                 <Rectangle BackgroundColor="#f06292" Grid.RowSpan="1" Grid.ColumnSpan="4" />
                 <ImageButton Source="main_caidat_1_22.png" Grid.Row="0" Grid.Column="0" WidthRequest="50" BackgroundColor="Transparent"/>
+                <Label Text="Sổ cái mặ..." TextColor="White" FontSize="13" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"/>
                 <ImageButton Source="sachbotui_hoadon_03.png" Grid.Row="0" Grid.Column="1" WidthRequest="50" BackgroundColor="Transparent"/>
+                <Label Text="Thêm vào" TextColor="White" FontSize="13" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center"/>
 
-                <Label TextColor="White" x:Name="datetime" Grid.Row="1" Grid.Column="0" FontAttributes="Bold" Grid.RowSpan="2" VerticalOptions="Center"/>
-                <Label TextColor="White" Text="Thu nhập" Grid.Row="1" Grid.Column="2" FontAttributes="Bold" HorizontalOptions="End"/>
-                <Label TextColor="White" Text="Chi tiêu" Grid.Row="1" Grid.Column="3" FontAttributes="Bold" HorizontalOptions="End"/>
+                <Label TextColor="White" x:Name="datetime" Grid.Row="2" Grid.Column="0" FontAttributes="Bold" Grid.RowSpan="2" VerticalOptions="Center"/>
+                <Label TextColor="White" Text="Thu nhập" Grid.Row="2" Grid.Column="2" FontAttributes="Bold" HorizontalOptions="End"/>
+                <Label TextColor="White" Text="Chi tiêu" Grid.Row="2" Grid.Column="3" FontAttributes="Bold" HorizontalOptions="End"/>
 
-                <Label TextColor="White" x:Name="outcomeMoney" Grid.Row="2" Grid.Column="2" HorizontalOptions="End"/>
-                <Label TextColor="White" x:Name="incomeMoney" Grid.Row="2" Grid.Column="3" HorizontalOptions="End"/>
-
+                <Label TextColor="White" x:Name="incomeMoney" Grid.Row="3" Grid.Column="2" HorizontalOptions="End"/>
+                <Label TextColor="White" x:Name="outcomeMoney" Grid.Row="3" Grid.Column="3" HorizontalOptions="End"/>
             </Grid>
-            
+
             <!--Calendar place-->
-            <syncfusion:SfCalendar x:Name="calendar" ViewMode="MonthView" ShowLeadingAndTrailingDays="False" HeightRequest="300">
+            <syncfusion:SfCalendar x:Name="calendar" ViewMode="MonthView" ShowLeadingAndTrailingDays="False" HeightRequest="280">
                 <syncfusion:SfCalendar.MonthViewSettings>
-                    <syncfusion:MonthViewSettings BorderColor ="#ff0000" CellGridOptions="Both"/>
+                    <syncfusion:MonthViewSettings />
                 </syncfusion:SfCalendar.MonthViewSettings>
             </syncfusion:SfCalendar>
 
