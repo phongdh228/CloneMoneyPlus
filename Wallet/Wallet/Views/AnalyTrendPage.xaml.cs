@@ -17,7 +17,6 @@ namespace Wallet.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AnalyTrendPage : ContentPage
     {
-        AnalyExpensePage analyExpense = new AnalyExpensePage();
         List<Payment> payments = new List<Payment>();
         MultiLineChart multiLines;
         string[] ChartDates;
@@ -26,13 +25,12 @@ namespace Wallet.Views
         public AnalyTrendPage()
         {
             InitializeComponent();
-            payments = analyExpense.payments;
+            GetData();
         }
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            payments = analyExpense.payments;
-            //GetData();
+            GetData();
             InitList();
             InitTrends();
 
@@ -77,7 +75,7 @@ namespace Wallet.Views
             {
                 incomeEntries.Add(new ChartEntry(data)
                 {
-                    Color = SKColor.Parse("#09C"),
+                    Color = SKColor.Parse("#0000FF"),
                     ValueLabel = data.ToString(),
                     Label = ChartDates[i]
                 });
@@ -89,7 +87,7 @@ namespace Wallet.Views
             {
                 expenseEntries.Add(new ChartEntry(data)
                 {
-                    Color = SKColor.Parse("#F00"),
+                    Color = SKColor.Parse("#FF0000"),
                     ValueLabel = data.ToString(),
                     Label = ChartDates[i]
                 });
