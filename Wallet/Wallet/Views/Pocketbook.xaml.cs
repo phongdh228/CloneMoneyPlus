@@ -77,27 +77,10 @@ namespace Wallet.Views
             datetime.Text = localTime;
             //datetime.Text = paymentMain.PaymentTime.ToString("yyyy-MM");
         }
-
-        //void PaymentInit()
-        //{
-        //    Database db = new Database();
-        //    List<Payment> payments = db.GetPayments();
-        //    lstPayment.ItemsSource = payments;
-        //}
-
-
-        //void PaymentInit()
-        //{
-        //    Database db = new Database();
-        //    List<Payment> payments = db.GetPayments();
-        //    lstPayment.ItemsSource = payments;
-        //}
-
         private void newPayment_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new addNewPaymentPage());
         }
-
         private async void lstPayment_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             Payment selectedPayment = e.SelectedItem as Payment;

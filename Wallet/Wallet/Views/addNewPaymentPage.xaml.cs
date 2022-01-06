@@ -41,8 +41,6 @@ namespace Wallet.Views
             walletIdNew = dswallet.ElementAt(0).Id;
         }
 
-
-
         double money =0;
         string title = "Tiền công", img = "sachbotui_income_03.png", walletKind = "Sổ cái mặc định";
         DateTime date = DateTime.Today;

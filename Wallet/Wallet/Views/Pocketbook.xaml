@@ -61,7 +61,7 @@
                                 </Grid.ColumnDefinitions>
 
 
-                                <Image Source="{Binding PaymentImg}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" BackgroundColor="LightPink"/>
+                                <Image Source="{Binding PaymentImg}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" BackgroundColor="#FEF3F7"/>
 
                                 <Label Text="{Binding PaymentTitle}" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" VerticalTextAlignment="Center"/>
 
