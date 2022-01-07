@@ -30,7 +30,7 @@
 
                                 <Label Text="{Binding PaymentNote}" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" />
 
-                                <Label Text="{Binding PaymentMoney}" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" FontAttributes="Bold"/>
+                                <Label Text="{Binding PaymentMoney,StringFormat='{0:N0}'}" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" FontAttributes="Bold"/>
 
                                 <Label Text="{Binding PaymentWallet}" Grid.Row="1" Grid.Column="2" HorizontalOptions="End" />
 
