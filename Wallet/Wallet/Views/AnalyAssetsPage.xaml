@@ -5,8 +5,7 @@
              xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms">
     <ContentPage.Content>
         <StackLayout>
-            <Label BackgroundColor="White" HeightRequest="10"></Label>
-            <microcharts:ChartView x:Name="chartViewBar" HeightRequest="240" MinimumWidthRequest="600"/>
+            <microcharts:ChartView x:Name="chartViewBar" HeightRequest="200" MinimumWidthRequest="600" BackgroundColor="#f06292"/>
 
             <ListView x:Name="lstPayment" HasUnevenRows="True">
                 <ListView.ItemTemplate>

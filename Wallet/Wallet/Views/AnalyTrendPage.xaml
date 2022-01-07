@@ -4,8 +4,19 @@
              x:Class="Wallet.Views.AnalyTrendPage"
              xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms">
     <ContentPage.Content>
-        <StackLayout>
-            <microcharts:ChartView x:Name="chartViewBar" HeightRequest="250" MinimumWidthRequest="600"/>
+        <StackLayout BackgroundColor="White">
+            <Grid HeightRequest="550" BackgroundColor="#f06292">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <microcharts:ChartView Grid.Column="0" Grid.Row="0" x:Name="chartIncomeBar" HeightRequest="250" MinimumWidthRequest="600"/>
+                <microcharts:ChartView Grid.Column="0" Grid.Row="0" x:Name="chartExpenseBar" HeightRequest="250" MinimumWidthRequest="600"/>
+            </Grid>
+            
 
             <ListView x:Name="lstPayment" ItemSelected="lstPayment_ItemSelected"  HasUnevenRows="True">
                 <ListView.ItemTemplate>

@@ -18,7 +18,7 @@ namespace Wallet.Views
     public partial class AnalyTrendPage : ContentPage
     {
         List<Payment> payments = new List<Payment>();
-        MultiLineChart multiLines;
+        //MultiLineChart multiLines;
         string[] ChartDates;
         int start = 0;
         int lenght = 0;
@@ -46,7 +46,7 @@ namespace Wallet.Views
         void InitTrends()
         {
             start = int.Parse(payments.First().PaymentTime.Day.ToString());
-            int end = int.Parse(payments.LastOrDefault().PaymentTime.Day.ToString());
+            int end = int.Parse(payments.Last().PaymentTime.Day.ToString());
             lenght = end - start + 1;
             ChartDates = new string[lenght];
             int DayStart = int.Parse(payments.FirstOrDefault().PaymentTime.Day.ToString());
@@ -75,8 +75,8 @@ namespace Wallet.Views
             {
                 incomeEntries.Add(new ChartEntry(data)
                 {
-                    Color = SKColor.Parse("#0000FF"),
-                    ValueLabel = data.ToString(),
+                    Color = SKColor.Parse("#63f3ad"),
+                    ValueLabel = " ",
                     Label = ChartDates[i]
                 });
                 i++;
@@ -87,14 +87,27 @@ namespace Wallet.Views
             {
                 expenseEntries.Add(new ChartEntry(data)
                 {
-                    Color = SKColor.Parse("#FF0000"),
-                    ValueLabel = data.ToString(),
+                    Color = SKColors.White,
                     Label = ChartDates[i]
                 });
                 i++;
             }
 
-            entries.Add(incomeEntries);
+            chartIncomeBar.Chart = new LineChart { Entries = incomeEntries,
+                BackgroundColor = SKColor.Empty, LabelTextSize = 36,
+                ValueLabelOrientation = Orientation.Horizontal, LabelOrientation = Orientation.Horizontal,
+                LineSize = 10,
+                PointSize = 30,
+                LabelColor = SKColors.White
+            };
+            chartExpenseBar.Chart = new LineChart { Entries = expenseEntries,
+                BackgroundColor = SKColor.Empty, LabelTextSize = 36,
+                ValueLabelOrientation = Orientation.Horizontal, LabelOrientation = Orientation.Horizontal,
+                LineSize = 10,
+                PointSize = 30
+            };
+
+            /*entries.Add(incomeEntries);
             entries.Add(expenseEntries);
 
             multiLines = new MultiLineChart
@@ -108,7 +121,7 @@ namespace Wallet.Views
                 IsAnimated = false
 
             };
-            chartViewBar.Chart = multiLines;
+            chartViewBar.Chart = multiLines;*/
         }
 
         void InitList()

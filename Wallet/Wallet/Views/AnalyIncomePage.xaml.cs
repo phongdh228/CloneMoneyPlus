@@ -24,21 +24,19 @@ namespace Wallet.Views
         public AnalyIncomePage()
         {
             InitializeComponent();
-            InitExpense();
+            InitIncome();
             GetData();
-            CountPrice();
-            InitChart();
-            InitList();
         }
         protected override void OnAppearing()
         {
+            base.OnAppearing();
             GetData();
             CountPrice();
             InitChart();
             InitList();
         }
 
-        protected void InitExpense()
+        protected void InitIncome()
         {
             IncomeList.Add(new AnalyIE { ieImg = "sachbotui_income_03.png", ieTitle = "Tiền công", iePrice = 0, ieColor = "#f44336" });
             IncomeList.Add(new AnalyIE { ieImg = "sachbotui_income_05.png", ieTitle = "Tiền thưởng", iePrice = 0, ieColor = "#e91e63" });
@@ -69,7 +67,7 @@ namespace Wallet.Views
                         {
                             if (Income.ieTitle == payment.PaymentTitle)
                             {
-                                Income.iePrice += int.Parse(payment.PaymentMoney);
+                                Income.iePrice += Math.Abs(int.Parse(payment.PaymentMoney));
                                 break;
                             }
                         }
