@@ -88,7 +88,8 @@
                 </ListView>
                 <ImageButton Source="sachbotui_hoadon_07.png" HorizontalOptions="End" VerticalOptions="End" Grid.Row="1" Grid.Column="1" 
                         Padding="10" Margin="20" WidthRequest="50" HeightRequest="50" CornerRadius="25" 
-                         Clicked="newPayment_Clicked" BackgroundColor="#F4F7F5" >
+                         Clicked="newPayment_Clicked" BackgroundColor="#F4F7F5" 
+                             BorderColor="#d6d4d4" BorderWidth="1">
                    
                 </ImageButton>
 
