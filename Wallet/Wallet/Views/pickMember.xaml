@@ -6,7 +6,7 @@
              NavigationPage.HasBackButton="True">
     <ContentPage.Resources>
         <Style Class="title-style" TargetType="ImageButton">
-            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
             <Setter Property="VerticalOptions" Value="Center"/>
             <Setter Property="BackgroundColor" Value="Transparent"/>
         </Style>

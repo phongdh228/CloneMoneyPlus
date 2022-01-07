@@ -15,6 +15,10 @@ namespace Wallet.Views
     public partial class addNewIncome : ContentPage
     {
         PickWalletAccount walletNew = new PickWalletAccount();
+        pickMember memberChosen = new pickMember();
+
+        public string memberIcon { get; set; }
+        public string memberTitle { get; set; }
         public addNewIncome()
         {
             InitializeComponent();
@@ -82,6 +86,9 @@ namespace Wallet.Views
             base.OnAppearing();
             if (walletNew.change_wallet)
                 PickAccountInit(walletNew.walletPublic);
+            memberIcon = memberChosen.img;
+            memberTitle = memberChosen.str;
+            pickMember.ImageSource = memberIcon;
         }
         private void onSelectNumber_Clicked(object sender, EventArgs e)
         {

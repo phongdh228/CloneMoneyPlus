@@ -68,14 +68,11 @@ namespace Wallet.Views
                 
             };
             lstPayment.ItemsSource = paymentMain;
-            //using ToString("#,##0") to get currency format
             outcomeMoney.Text = "$" + Math.Abs(outcome).ToString("#,##0");
             incomeMoney.Text = "$" + income.ToString("#,##0");
             
-            //Date appearance handling (fake time)
             string localTime = DateTime.Now.ToString("yyyy-MM");
             datetime.Text = localTime;
-            //datetime.Text = paymentMain.PaymentTime.ToString("yyyy-MM");
         }
         private void newPayment_Clicked(object sender, EventArgs e)
         {

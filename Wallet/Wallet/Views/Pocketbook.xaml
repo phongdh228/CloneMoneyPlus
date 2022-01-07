@@ -90,23 +90,10 @@
                         Padding="10" Margin="20" WidthRequest="50" HeightRequest="50" CornerRadius="25" 
                          Clicked="newPayment_Clicked" BackgroundColor="#F4F7F5" 
                              BorderColor="#d6d4d4" BorderWidth="1">
-                   
+
                 </ImageButton>
 
             </Grid>
-           
-            <!--<AbsoluteLayout>
-                <ImageButton Source="sachbotui_hoadon_07.png" 
-                                                 Grid.Row="1"
-                            BackgroundColor="LightGray"
-                            AbsoluteLayout.LayoutFlags="PositionProportional"  
-                            AbsoluteLayout.LayoutBounds=".95,.95,80,130" 
-                            x:Name="newPayment" Clicked="newPayment_Clicked"
-                            CornerRadius="32"
-                            HeightRequest="30"
-                            WidthRequest="30"
-             />
-            </AbsoluteLayout>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

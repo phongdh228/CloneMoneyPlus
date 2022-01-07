@@ -37,7 +37,8 @@ namespace Wallet.Views
             base.OnAppearing();
             if (walletNew.change_wallet)
                 PickAccountInit(walletNew.walletPublic);
-            memberIcon = memberChosen.str;
+            memberIcon = memberChosen.img;
+            memberTitle = memberChosen.str;
             pickMember.ImageSource = memberIcon;
         }
 
