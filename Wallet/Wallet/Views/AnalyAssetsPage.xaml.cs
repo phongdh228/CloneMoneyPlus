@@ -68,7 +68,7 @@ namespace Wallet.Views
             void InitAssets()
         {
             start = int.Parse(payments.First().PaymentTime.Day.ToString());
-            int end = int.Parse(payments.LastOrDefault().PaymentTime.Day.ToString());
+            int end = int.Parse(payments.Last().PaymentTime.Day.ToString());
             lenght = end - start + 1;
             ChartDates = new string[lenght + 1]; //Thêm 1 ngày trước cho số tiền khởi điểm
             int DayStart = int.Parse(payments.FirstOrDefault().PaymentTime.Day.ToString()) - 1;
@@ -97,13 +97,15 @@ namespace Wallet.Views
             {
                 entries.Add(new ChartEntry(final[i])
                 {
-                    Color = SKColor.Parse("#0000FF"),
-                    ValueLabel = final[i].ToString(),
+                    Color = SKColor.Parse("#63f3ad"),
+                    ValueLabel = " ",
                     Label = ChartDates[i]
                 });
             }
 
-            var chart = new LineChart { Entries = entries, LabelTextSize = 36, ValueLabelOrientation = Orientation.Horizontal, LabelOrientation = Orientation.Horizontal };
+            var chart = new LineChart { Entries = entries, LabelTextSize = 36,
+                ValueLabelOrientation = Orientation.Horizontal, LabelOrientation = Orientation.Horizontal,
+                LabelColor = SKColors.White, BackgroundColor = SKColor.Empty, LineSize = 10, PointSize = 30 };
             chartViewBar.Chart = chart;
         }
 

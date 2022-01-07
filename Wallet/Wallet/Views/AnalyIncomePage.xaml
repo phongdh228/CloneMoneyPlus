@@ -4,7 +4,7 @@
              x:Class="Wallet.Views.AnalyIncomePage"
              xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="White">
             <microcharts:ChartView x:Name="chartViewBar" HeightRequest="250"/>
 
             <ListView x:Name="lstIncome" ItemSelected="lstIncome_ItemSelected"  HasUnevenRows="True">
