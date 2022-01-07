@@ -16,6 +16,11 @@ namespace Wallet.Views
     {
         WalletInfo wallet;
         PickWalletAccount walletNew = new PickWalletAccount();
+
+        pickMember memberChosen = new pickMember();
+
+        public string memberIcon { get; set; }
+        public string memberTitle { get; set; }
         public addNewPaymentPage()
         {
             InitializeComponent();
@@ -25,6 +30,15 @@ namespace Wallet.Views
         {
             InitializeComponent();
             PickAccountInit(wallet);
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            if (walletNew.change_wallet)
+                PickAccountInit(walletNew.walletPublic);
+            memberIcon = memberChosen.str;
+            pickMember.ImageSource = memberIcon;
         }
 
         public int walletIdNew;
@@ -76,13 +90,6 @@ namespace Wallet.Views
             }
         }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            if (walletNew.change_wallet)
-                PickAccountInit(walletNew.walletPublic);
-        }
-
         private void pickAccount_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(walletNew);
@@ -90,7 +97,7 @@ namespace Wallet.Views
 
         private void pickMember_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new pickMember());
+            Navigation.PushAsync(memberChosen);
         }
 
         private void pickDate_Clicked(object sender, EventArgs e)
