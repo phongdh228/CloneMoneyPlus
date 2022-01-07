@@ -157,7 +157,18 @@ namespace Wallet.Views
 
         private void pickDelete_Clicked(object sender, EventArgs e)
         {
-
+            if (resultText.Text != string.Empty)
+            {
+                int resultLength = resultText.Text.Length;
+                if (resultLength != 1)
+                {
+                    resultText.Text = resultText.Text.Remove(resultLength - 1);
+                }
+                else
+                {
+                    resultText.Text = 0.ToString();
+                }
+            }
         }
 
         private void chedoan_Clicked(object sender, EventArgs e)
