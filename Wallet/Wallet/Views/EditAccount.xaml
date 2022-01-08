@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Wallet.EditAccount"
              Title="Chỉnh sửa tài khoản"
+              Background="#fff"
            >
     
     <ContentPage.ToolbarItems>

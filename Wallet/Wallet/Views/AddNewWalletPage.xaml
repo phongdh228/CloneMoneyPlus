@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Wallet.AddNewWalletPage"
              Title="Tạo nên Tiền mặt"
-              Background="White"
+             Background="#fff"
              xmlns:local="clr-namespace:Wallet">
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="completeButton" Priority="0" Order="Primary" IconImageSource="complete.jpg" Clicked="completeButton_Clicked"></ToolbarItem>
