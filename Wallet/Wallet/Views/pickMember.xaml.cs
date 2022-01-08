@@ -12,63 +12,55 @@ namespace Wallet
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class pickMember : ContentPage
     {
-        
+        public string str = "Cá nhân";
+        public string img = "caidat_thanhvien_03.png";
+
         public pickMember()
         {
             InitializeComponent();
-            listInit();
         }
 
-        void listInit()
+
+        private void canhan_Clicked(object sender, EventArgs e)
         {
-            List<Member> memberList = new List<Member>();
-            memberList.Add(new Member()
-            {
-                memberImage = "caidat_thanhvien_03.png",
-                memberTitle = "Cá nhân"
-            });
-            memberList.Add(new Member()
-            {
-                memberImage = "caidat_thanhvien_10.png",
-                memberTitle = "Vợ"
-            });
-            memberList.Add(new Member()
-            {
-                memberImage = "caidat_thanhvien_12.png",
-                memberTitle = "Chồng"
-            });
-            memberList.Add(new Member()
-            {
-                memberImage = "caidat_thanhvien_14.png",
-                memberTitle = "Con cái"
-            });
-            memberList.Add(new Member()
-            {
-                memberImage = "caidat_thanhvien_16.png",
-                memberTitle = "Cha mẹ"
-            });
-            memberList.Add(new Member()
-            {
-                memberImage = "caidat_thanhvien_18.png",
-                memberTitle = "Gia đình"
-            });
-            lstMember.ItemsSource = memberList;
+            img = "caidat_thanhvien_03.png";
+            str = "Cá nhân";
+            Navigation.PopAsync();
         }
 
-        private void lstMember_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private void vo_Clicked(object sender, EventArgs e)
         {
-            Member selectedMember = e.SelectedItem as Member;
+            img = "caidat_thanhvien_10.png";
+            str = "Vợ";
+            Navigation.PopAsync();
         }
 
-        private void ImageCell_Tapped(object sender, EventArgs e)
+        private void chong_Clicked(object sender, EventArgs e)
         {
-            Member tappedMember = (Member)((ListView)sender).SelectedItem;
-            Navigation.PushModalAsync(new addNewPaymentPage());
+            str = "Chồng";
+            img = "caidat_thanhvien_12.png";
+            Navigation.PopAsync();
         }
 
-        private void lstMember_ItemTapped(object sender, ItemTappedEventArgs e)
+        private void concai_Clicked(object sender, EventArgs e)
         {
+            str = "Con cái";
+            img = "caidat_thanhvien_14.png";
+            Navigation.PopAsync();
+        }
 
+        private void chame_Clicked(object sender, EventArgs e)
+        {
+            str = "Cha mẹ";
+            img = "caidat_thanhvien_16.png";
+            Navigation.PopAsync();
+        }
+
+        private void giadinh_Clicked(object sender, EventArgs e)
+        {
+            str = "Gia đình";
+            img = "caidat_thanhvien_18.png";
+            Navigation.PopAsync();
         }
     }
 }

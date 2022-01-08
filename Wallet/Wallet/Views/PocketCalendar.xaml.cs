@@ -23,7 +23,22 @@ namespace Wallet
                 TotalInit();
             });
             HienThiPayments();
+            DayHeaderCustomize();
+        }
 
+        void DayHeaderCustomize()
+        {
+            List<string> customDayLabels = new List<string>()
+            {           
+                "CN",
+                "Thứ 2",
+                "Thứ 3",
+                "Thứ 4",
+                "Thứ 5",
+                "Thứ 6",
+                "Thứ 7",
+            };
+            calendar.CustomDayLabels = customDayLabels;
         }
 
         async void HienThiPayments()

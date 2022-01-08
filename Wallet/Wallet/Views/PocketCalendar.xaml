@@ -38,9 +38,11 @@
             </Grid>
 
             <!--Calendar place-->
-            <syncfusion:SfCalendar x:Name="calendar" ViewMode="MonthView" ShowLeadingAndTrailingDays="False" HeightRequest="280">
+            <syncfusion:SfCalendar x:Name="calendar" ViewMode="MonthView" ShowLeadingAndTrailingDays="False" HeightRequest="280" HeaderHeight="50" HorizontalOptions="CenterAndExpand">
                 <syncfusion:SfCalendar.MonthViewSettings>
-                    <syncfusion:MonthViewSettings />
+                    <syncfusion:MonthViewSettings 
+                        TodaySelectionBackgroundColor="#FFE0EB" TodaySelectionTextColor="Black" SelectedDayTextColor="White" DateSelectionColor="#EF6292" WeekEndTextColor="Red" TodayBorderColor="#EF6292"       
+                        />
                 </syncfusion:SfCalendar.MonthViewSettings>
             </syncfusion:SfCalendar>
 

@@ -10,9 +10,8 @@
             <Setter Property="VerticalOptions" Value="Center"/>
             <Setter Property="BackgroundColor" Value="Transparent"/>
         </Style>
-
-
     </ContentPage.Resources>
+    
     <ContentPage.Content>
         <StackLayout>
             <Grid Padding="10">
