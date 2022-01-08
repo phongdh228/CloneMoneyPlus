@@ -20,7 +20,6 @@ namespace Wallet.Views
         List<Payment> payments = new List<Payment>();
         List<WalletInfo> wallets = new List<WalletInfo>();
         AnalyByDay[] amountDaily;
-        string[] ChartDates;
         int totalMoney;
         int start = 0;
         int lenght = 0;
@@ -70,46 +69,39 @@ namespace Wallet.Views
             start = int.Parse(payments.First().PaymentTime.Day.ToString());
             int end = int.Parse(payments.Last().PaymentTime.Day.ToString());
             lenght = end - start + 1;
-            ChartDates = new string[lenght + 1]; //Thêm 1 ngày trước cho số tiền khởi điểm
             amountDaily = new AnalyByDay[lenght + 1];
+            for (int i = 0; i < lenght + 1; i++)
+            {
+                amountDaily[i] = new AnalyByDay();
+            }
             int DayStart = int.Parse(payments.FirstOrDefault().PaymentTime.Day.ToString()) - 1;
             for (int j = 0; j <= lenght; j++)
             {
-                ChartDates[j] = (DayStart + j).ToString() + " - " + payments.ElementAt(j).PaymentTime.Month.ToString();
+                amountDaily[j].analyDay = (DayStart + j).ToString() + " - " + payments.ElementAt(j).PaymentTime.Month.ToString();
             }
-            int[] changes = new int[lenght];
-            int[] final = new int[lenght + 1]; //0 là của số tiền khởi điểm nên lệch giá trị biến động 1 index
-            final[0] = totalMoney;
+            amountDaily[0].analyTotal = totalMoney;
             foreach (Payment payment in payments)
             {
                 int money = int.Parse(payment.PaymentMoney);
                 int date = int.Parse(payment.PaymentTime.Day.ToString());
-                changes[date-start] += money;
-            }
-
-            for (int i = 0; i < lenght+1; i++)
-            {
-                amountDaily[i] = new AnalyByDay();
+                amountDaily[date-start + 1].analyChange += money;
             }
 
             for (int i = 0; i < lenght; i++)
             {
-                final[i + 1] = final[i] + changes[i];
-                amountDaily[i + 1].analyChange = changes[i];
+                amountDaily[i + 1].analyTotal = amountDaily[i].analyTotal + amountDaily[i + 1].analyChange;
             }
 
             var entries = new List<ChartEntry>();
 
             for (int i = 0; i <= lenght; i++)
             {
-                entries.Add(new ChartEntry(final[i])
+                entries.Add(new ChartEntry(amountDaily[i].analyTotal)
                 {
                     Color = SKColor.Parse("#63f3ad"),
                     ValueLabel = " ",
-                    Label = ChartDates[i]
+                    Label = amountDaily[i].analyDay
                 });
-                amountDaily[i].analyDay = ChartDates[i];
-                amountDaily[i].analyTotal = final[i];
             }
 
             var chart = new LineChart { Entries = entries, LabelTextSize = 36,

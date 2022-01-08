@@ -4,16 +4,34 @@
              x:Class="Wallet.Views.AnalyAssetsPage"
              xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Spacing="0">
             <microcharts:ChartView x:Name="chartViewBar" HeightRequest="200" MinimumWidthRequest="600" BackgroundColor="#f06292"/>
 
+            <Grid BackgroundColor="WhiteSmoke">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Ngày" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="Black"/>
+
+                <Label Text="Thu nhập và chi tiêu" Grid.Row="0" Grid.Column="2" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="Black"/>
+
+                <Label Text="Thăng bằng" Grid.Row="0" Grid.Column="3" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="Black"/>
+            </Grid>
+            
             <ListView x:Name="lstPayment" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid Padding="10">
+                            <Grid Padding="5">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="40"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition/>
@@ -25,11 +43,11 @@
 
                                 <Image Source="calendar.png" Grid.Row="0" Grid.Column="0"/>
 
-                                <Label Text="{Binding analyDay}" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                                <Label Text="{Binding analyDay}" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="Black"/>
 
-                                <Label Text="{Binding analyChange,StringFormat='{0:N0}'}" Grid.Row="0" Grid.Column="2" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                                <Label Text="{Binding analyChange,StringFormat='{0:N0}'}" Grid.Row="0" Grid.Column="2" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="Black"/>
 
-                                <Label Text="{Binding analyTotal,StringFormat='{0:N0}'}" Grid.Row="0" Grid.Column="3" VerticalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="Center"/>
+                                <Label Text="{Binding analyTotal,StringFormat='{0:N0}'}" Grid.Row="0" Grid.Column="3" VerticalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black"/>
 
                             </Grid>
                         </ViewCell>
