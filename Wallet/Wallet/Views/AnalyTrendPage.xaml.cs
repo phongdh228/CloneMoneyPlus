@@ -18,10 +18,9 @@ namespace Wallet.Views
     public partial class AnalyTrendPage : ContentPage
     {
         List<Payment> payments = new List<Payment>();
-        MultiLineChart multiLines;
-        string[] ChartDates;
         int start = 0;
         int lenght = 0;
+        AnalyByDay[] amountDaily;
         public AnalyTrendPage()
         {
             InitializeComponent();
@@ -31,9 +30,8 @@ namespace Wallet.Views
         {
             base.OnAppearing();
             GetData();
-            InitList();
             InitTrends();
-
+            InitList();
         }
 
         async void GetData()
@@ -46,151 +44,71 @@ namespace Wallet.Views
         void InitTrends()
         {
             start = int.Parse(payments.First().PaymentTime.Day.ToString());
-            int end = int.Parse(payments.LastOrDefault().PaymentTime.Day.ToString());
+            int end = int.Parse(payments.Last().PaymentTime.Day.ToString());
             lenght = end - start + 1;
-            ChartDates = new string[lenght];
+            amountDaily = new AnalyByDay[lenght];
+            for (int j = 0; j < lenght; j++)
+            {
+                amountDaily[j] = new AnalyByDay();
+            }
             int DayStart = int.Parse(payments.FirstOrDefault().PaymentTime.Day.ToString());
             for (int j = 0; j < lenght; j++)
             {
-                ChartDates[j] = (DayStart + j).ToString() + " - " + payments.ElementAt(j).PaymentTime.Month.ToString();
+                amountDaily[j].analyDay = (DayStart + j).ToString() + " - " + payments.ElementAt(j).PaymentTime.Month.ToString();
             }
-            int[] ListIncome = new int[lenght];
-            int[] ListExpense = new int[lenght];
             foreach (Payment payment in payments)
             {
                 int money = int.Parse(payment.PaymentMoney);
                 int date = int.Parse(payment.PaymentTime.Day.ToString());
                 if (money > 0)
-                    ListIncome[date - start] += money;
+                    amountDaily[date - start].analyIncome += money;
                 else
-                    ListExpense[date - start] += Math.Abs(money);
+                    amountDaily[date - start].analyExpense += Math.Abs(money);
             }
 
-            var entries = new List<List<ChartEntry>>();
             var incomeEntries = new List<ChartEntry>();
             var expenseEntries = new List<ChartEntry>();
 
-            int i = 0;
-            foreach (var data in ListIncome)
+            for (int i = 0; i < lenght; i++)
             {
-                incomeEntries.Add(new ChartEntry(data)
+                incomeEntries.Add(new ChartEntry(amountDaily[i].analyIncome)
                 {
-                    Color = SKColor.Parse("#0000FF"),
-                    ValueLabel = data.ToString(),
-                    Label = ChartDates[i]
+                    Color = SKColor.Parse("#63f3ad"),
+                    ValueLabel = " ",
+                    Label = amountDaily[i].analyDay
                 });
-                i++;
+                expenseEntries.Add(new ChartEntry(amountDaily[i].analyExpense)
+                {
+                    Color = SKColors.White,
+                    Label = amountDaily[i].analyDay
+                });
+                amountDaily[i].analyTotal = amountDaily[i].analyIncome - amountDaily[i].analyExpense;
             }
 
-            i = 0;
-            foreach (var data in ListExpense)
-            {
-                expenseEntries.Add(new ChartEntry(data)
-                {
-                    Color = SKColor.Parse("#FF0000"),
-                    ValueLabel = data.ToString(),
-                    Label = ChartDates[i]
-                });
-                i++;
-            }
-
-            entries.Add(incomeEntries);
-            entries.Add(expenseEntries);
-
-            multiLines = new MultiLineChart
-            {
-                multiline_entries = entries,
-                LabelTextSize = 30f,
-                LabelOrientation = Orientation.Horizontal,
-                LineAreaAlpha = 50,
-                PointAreaAlpha = 50,
-                legend_names = new List<string> { "Thu nhập", "Chi tiêu" },
-                IsAnimated = false
-
+            chartIncomeBar.Chart = new LineChart { Entries = incomeEntries,
+                BackgroundColor = SKColor.Empty, LabelTextSize = 36,
+                ValueLabelOrientation = Orientation.Horizontal, LabelOrientation = Orientation.Horizontal,
+                LineSize = 10,
+                PointSize = 30,
+                LabelColor = SKColors.White
             };
-            chartViewBar.Chart = multiLines;
+            chartExpenseBar.Chart = new LineChart { Entries = expenseEntries,
+                BackgroundColor = SKColor.Empty, LabelTextSize = 36,
+                ValueLabelOrientation = Orientation.Horizontal, LabelOrientation = Orientation.Horizontal,
+                LineSize = 10,
+                PointSize = 30
+            };
         }
 
         void InitList()
         {
             lstPayment.ItemsSource = null;
-            lstPayment.ItemsSource = payments;
+            lstPayment.ItemsSource = amountDaily;
         }
 
         private void lstPayment_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
 
         }
-
-
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-        /*private string[] months = new string[] { "JAN", "FRB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" };
-
-        private float[] turnoverData = new float[] { 1000, 5000, 3500, 12000, 9000, 15000, 3000, 0, 0, 0, 0, 0 };
-        private float[] chargesData = new float[] { 100, 500, 350, 1200, 900, 1500, 300, 0, 0, 0, 0, 0 };
-
-        private SKColor blueColor = SKColor.Parse("#09C");
-        private SKColor redColor = SKColor.Parse("#CC0000");
-
-
-        private void InitData()
-        {
-            var entries = new List<List<ChartEntry>>();
-            var turnoverEntries = new List<ChartEntry>();
-            var chargesEntries = new List<ChartEntry>();
-
-            int i = 0;
-            foreach (var data in turnoverData)
-            {
-                turnoverEntries.Add(new ChartEntry(data)
-                {
-                    Color = blueColor,
-                    ValueLabel = $"{data / 1000} k",
-                    Label = months[i]
-                });
-                i++;
-            }
-
-            i = 0;
-            foreach (var data in chargesData)
-            {
-                chargesEntries.Add(new ChartEntry(data)
-                {
-                    Color = redColor,
-                    ValueLabel = $"{data / 1000} k",
-                    Label = months[i]
-                });
-                i++;
-            }
-
-            entries.Add(turnoverEntries);
-            entries.Add(chargesEntries);
-
-            multiLines = new MultiLineChart
-            {
-                multiline_entries = entries,
-                LabelTextSize = 30f,
-                LabelOrientation = Orientation.Horizontal,
-                LineAreaAlpha = 50,
-                PointAreaAlpha = 50,
-                legend_names = new List<string> { "Turnover Chart", "Charges Chart" },
-                IsAnimated = false
-
-            };
-            chartViewBar.Chart = multiLines;
-        }*/
     }
 }

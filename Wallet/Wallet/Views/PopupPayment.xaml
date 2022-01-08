@@ -38,10 +38,10 @@
 
                                 <Label Text="{Binding PaymentMoney}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" TextColor="Green"/>
                                 <Label Text="Ngày: " Grid.Row="3" Grid.Column="0" />
-                                <Label Text="{Binding PaymentTime} " Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Start" TextColor="Black"/>
+                                <Label Text="{Binding PaymentTime} " Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Start" TextColor="Black"/>
 
                                 <Label Text="Thành viên: " Grid.Row="4" Grid.Column="0"/>
-                                <Label Text="{Binding PaymentMember}" Grid.Row="4" Grid.Column="1" HorizontalOptions="Start" TextColor="Black"/>
+                                <Label Text="Riêng tôi" Grid.Row="4" Grid.Column="1" HorizontalOptions="Start" TextColor="Black"/>
 
                                 <Label Text="Tài khoản: " Grid.Row="5" Grid.Column="0"/>
                                 <Label Text="Mặc định" Grid.Row="5" Grid.Column="1" HorizontalOptions="Start" TextColor="Black"/>

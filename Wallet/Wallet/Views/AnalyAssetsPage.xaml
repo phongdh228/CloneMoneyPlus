@@ -4,35 +4,49 @@
              x:Class="Wallet.Views.AnalyAssetsPage"
              xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms">
     <ContentPage.Content>
-        <StackLayout>
-            <Label BackgroundColor="White" HeightRequest="10"></Label>
-            <microcharts:ChartView x:Name="chartViewBar" HeightRequest="240" MinimumWidthRequest="600"/>
+        <StackLayout Spacing="0">
+            <microcharts:ChartView x:Name="chartViewBar" HeightRequest="200" MinimumWidthRequest="600" BackgroundColor="#f06292"/>
 
+            <Grid BackgroundColor="WhiteSmoke">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Ngày" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="Black"/>
+
+                <Label Text="Thu nhập và chi tiêu" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="Black"/>
+
+                <Label Text="Thăng bằng" Grid.Row="0" Grid.Column="2" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="Black"/>
+            </Grid>
+            
             <ListView x:Name="lstPayment" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid Padding="10">
+                            <Grid Padding="5">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="20"/>
-                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="40"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
                                     <ColumnDefinition/>
                                     <ColumnDefinition Width="2*"/>
                                     <ColumnDefinition Width="2*"/>
                                 </Grid.ColumnDefinitions>
 
 
-                                <Image Source="{Binding PaymentImg}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" BackgroundColor="LightPink"/>
+                                <Image Source="calendar.png" Grid.Row="0" Grid.Column="0"/>
 
-                                <Label Text="{Binding PaymentTitle}" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding analyDay}" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="Black"/>
 
-                                <Label Text="{Binding PaymentNote}" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" />
+                                <Label Text="{Binding analyChange,StringFormat='{0:N0}'}" Grid.Row="0" Grid.Column="2" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="Black"/>
 
-                                <Label Text="{Binding PaymentMoney,StringFormat='{0:N0}'}" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" FontAttributes="Bold"/>
-
-                                <Label Text="{Binding PaymentWallet}" Grid.Row="1" Grid.Column="2" HorizontalOptions="End" />
+                                <Label Text="{Binding analyTotal,StringFormat='{0:N0}'}" Grid.Row="0" Grid.Column="3" VerticalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black"/>
 
                             </Grid>
                         </ViewCell>

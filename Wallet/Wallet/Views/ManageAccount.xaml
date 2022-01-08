@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Wallet.ManageAccount"
-             Title="Quản lý tài khoản">
+             Title="Quản lý tài khoản"
+              Background="#fff">
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="completeButton" Priority="0" Order="Primary" IconImageSource="complete.jpg" Clicked="completeButton_Clicked"></ToolbarItem>
     </ContentPage.ToolbarItems>

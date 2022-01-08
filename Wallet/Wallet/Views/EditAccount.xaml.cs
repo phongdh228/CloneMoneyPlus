@@ -26,7 +26,9 @@ namespace Wallet
         public EditAccount(WalletInfo wallet)
         {
             InitializeComponent();
-            EditInitializing(wallet);  
+            EditInitializing(wallet);
+            addPage.str = wallet.walletImg;
+            unitPage.str = wallet.walletCurrency;
         }
 
         private void pickIcon_Clicked(object sender, EventArgs e)
