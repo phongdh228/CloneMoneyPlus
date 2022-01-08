@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Wallet.Views.addNewTranferPage"
              NavigationPage.HasBackButton="true">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="expend" IconImageSource="sachbotui_income_03.png" Clicked="expend_Clicked"></ToolbarItem>
-        <ToolbarItem x:Name="income" IconImageSource="sachbotui_income_05.png" Clicked="income_Clicked"></ToolbarItem>
-        <ToolbarItem x:Name="tranfer" IconImageSource="vitien_chinhsuataikhoan_20.png"></ToolbarItem>
+    <ContentPage.ToolbarItems >
+        <ToolbarItem x:Name="expend" IconImageSource="sachbotui_income_03.png" Clicked="expend_Clicked" class="toolbar" ></ToolbarItem>
+        <ToolbarItem x:Name="income" IconImageSource="sachbotui_income_05.png" Clicked="income_Clicked" class="toolbar"></ToolbarItem>
+        <ToolbarItem x:Name="tranfer" IconImageSource="chuyenkhoan.png" class="toolbar"></ToolbarItem>
         <ToolbarItem x:Name="confirm" IconImageSource="vitien_chinhsuataikhoan_06.png" Clicked="confirm_Clicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
 
@@ -21,8 +21,8 @@
             <Setter Property="BackgroundColor" Value="WhiteSmoke"/>
             <Setter Property="FontAttributes" Value="Bold"/>
             <Setter Property="CornerRadius" Value="16"/>
-
         </Style>
+
     </ContentPage.Resources>
 
     <ContentPage.Content>

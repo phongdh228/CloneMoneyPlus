@@ -4,7 +4,7 @@
              x:Class="Wallet.Views.addNewPaymentPage"
              NavigationPage.HasBackButton="True">
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="expend" IconImageSource="sachbotui_income_03.png"></ToolbarItem>
+        <ToolbarItem x:Name="expend" IconImageSource="chitieu.png"></ToolbarItem>
         <ToolbarItem x:Name="income" IconImageSource="sachbotui_income_05.png" Clicked="income_Clicked"></ToolbarItem>
         <ToolbarItem x:Name="tranfer" IconImageSource="vitien_chinhsuataikhoan_20.png" Clicked="tranfer_Clicked"></ToolbarItem>
         <ToolbarItem x:Name="confirm" IconImageSource="vitien_chinhsuataikhoan_06.png" Clicked="confirm_Clicked"></ToolbarItem>

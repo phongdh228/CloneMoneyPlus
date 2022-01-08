@@ -269,7 +269,6 @@ namespace Wallet.Views
             img = "sachbotui_expend2_07.png";
         }
 
-
         private void dulich_Clicked(object sender, EventArgs e)
         {
             title = "Du lịch";
