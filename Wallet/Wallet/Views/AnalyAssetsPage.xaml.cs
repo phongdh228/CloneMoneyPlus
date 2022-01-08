@@ -17,9 +17,9 @@ namespace Wallet.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AnalyAssetsPage : ContentPage
     {
-        AnalyExpensePage analyExpense = new AnalyExpensePage();
         List<Payment> payments = new List<Payment>();
         List<WalletInfo> wallets = new List<WalletInfo>();
+        AnalyByDay[] amountDaily;
         string[] ChartDates;
         int totalMoney;
         int start = 0;
@@ -65,12 +65,13 @@ namespace Wallet.Views
                 payments = JsonConvert.DeserializeObject<List<Payment>>(chuoi);
         }
 
-            void InitAssets()
+        void InitAssets()
         {
             start = int.Parse(payments.First().PaymentTime.Day.ToString());
             int end = int.Parse(payments.Last().PaymentTime.Day.ToString());
             lenght = end - start + 1;
             ChartDates = new string[lenght + 1]; //Thêm 1 ngày trước cho số tiền khởi điểm
+            amountDaily = new AnalyByDay[lenght + 1];
             int DayStart = int.Parse(payments.FirstOrDefault().PaymentTime.Day.ToString()) - 1;
             for (int j = 0; j <= lenght; j++)
             {
@@ -86,9 +87,15 @@ namespace Wallet.Views
                 changes[date-start] += money;
             }
 
+            for (int i = 0; i < lenght+1; i++)
+            {
+                amountDaily[i] = new AnalyByDay();
+            }
+
             for (int i = 0; i < lenght; i++)
             {
                 final[i + 1] = final[i] + changes[i];
+                amountDaily[i + 1].analyChange = changes[i];
             }
 
             var entries = new List<ChartEntry>();
@@ -101,6 +108,8 @@ namespace Wallet.Views
                     ValueLabel = " ",
                     Label = ChartDates[i]
                 });
+                amountDaily[i].analyDay = ChartDates[i];
+                amountDaily[i].analyTotal = final[i];
             }
 
             var chart = new LineChart { Entries = entries, LabelTextSize = 36,
@@ -112,7 +121,7 @@ namespace Wallet.Views
         void InitList()
         {
             lstPayment.ItemsSource = null;
-            lstPayment.ItemsSource = payments;
+            lstPayment.ItemsSource = amountDaily;
         }
     }
 }
