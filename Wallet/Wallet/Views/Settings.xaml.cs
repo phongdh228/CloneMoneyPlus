@@ -51,7 +51,7 @@ namespace Wallet.Views
 
         private void cacthanhvien_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MoneyPlusPremium());
+            Navigation.PushAsync(new pickMember());
         }
 
         private void caidatngansach_Tapped(object sender, EventArgs e)
@@ -66,7 +66,7 @@ namespace Wallet.Views
 
         private void quanlytaikhoan_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Views.WalletPage());
+            Navigation.PushAsync(new ManageAccount());
         }
 
         private void timkiemhoadon_Tapped(object sender, EventArgs e)

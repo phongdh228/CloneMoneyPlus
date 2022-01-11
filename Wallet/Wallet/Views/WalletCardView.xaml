@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wallet.WalletCardView"
+             Title="Chi tiết tài khoản">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lstWallet" HasUnevenRows="True" IsPullToRefreshEnabled="True" ItemSelected="lstWallet_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Frame BorderColor="Gray"
+                                        CornerRadius="5"
+                                        Padding="8"
+                                       Margin="10" >
+                                   
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="40" />
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackLayout>
+                                            <Label Text="{Binding walletName}"
+                                                    FontSize="Medium"
+                                                    FontAttributes="Bold" 
+                                               Grid.Row="0"
+                                               Grid.Column="0"
+                                               HorizontalOptions="Fill"
+                                               VerticalOptions="Fill"/>
+                                     
+                               
+                                            <BoxView Color="#f06292"
+                                                 HeightRequest="2"
+                                                 HorizontalOptions="Fill" 
+                                                 Grid.Row="1" Grid.Column="0"
+                                                 Grid.ColumnSpan="4"/>
+                                        </StackLayout>
+
+                                     
+                                        <Image Source="{Binding walletImg}" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2"/>
+                                        <Label Text="{Binding  walletName}" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" FontSize="15"  VerticalOptions="Center" FontAttributes="Bold"/>
+                                        <Label Text="{Binding walletPrice, StringFormat='{0:N0}'}" Grid.Row="2" Grid.Column="3" VerticalTextAlignment="Center" VerticalOptions="Center"  FontAttributes="Bold" TextColor="Black"  HorizontalOptions="Center"/>
+                                        <Label Text="{Binding walletCurrency}" Grid.Row="3" Grid.Column="3"  VerticalOptions="Start" HorizontalOptions="Center" />
+                                        <Label Text="Thu nhập" Grid.Row="4" Grid.Column="0"/>
+                                        <Grid Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Padding="10,0,10,0">
+                                            <ProgressBar BackgroundColor="Transparent"  Progress="0.9"  HorizontalOptions="FillAndExpand" HeightRequest="20">
+                                                <ProgressBar.ScaleY>
+                                                    <OnPlatform
+                                                    x:TypeArguments="x:Double"
+                                                    iOS="2" 
+                                                    Android="3" />
+                                                </ProgressBar.ScaleY>
+                                            </ProgressBar>
+                                            <Label Text="90%" Margin="120,0,0,0" TextColor="White"></Label>
+                                        </Grid>
+                                        <Label Text="Chi tiêu" Grid.Row="5" Grid.Column="0"/>
+                                        <Grid Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Padding="10,0,10,0">
+                                            <ProgressBar BackgroundColor="Transparent"  Progress="0.16"  HorizontalOptions="FillAndExpand" HeightRequest="20">
+                                                <ProgressBar.ScaleY>
+                                                    <OnPlatform
+                                                    x:TypeArguments="x:Double"
+                                                    iOS="2" 
+                                                    Android="3" />
+                                                </ProgressBar.ScaleY>
+                                            </ProgressBar>
+                                            <Label Text="16%" Margin="120,0,0,0" TextColor="White"></Label>
+                                        </Grid>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView x:Name="lstPocket" HasUnevenRows="True" IsPullToRefreshEnabled="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid Padding="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="20"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <Image Source="{Binding PaymentImg}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" BackgroundColor="LightPink"/>
+
+                                    <Label Text="{Binding PaymentTitle}" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+
+                                    <Label Text="{Binding PaymentNote}" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" />
+
+                                    <Label Text="{Binding PaymentMoney}" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" FontAttributes="Bold"/>
+
+                                    <Label Text="{Binding PaymentWallet}" Grid.Row="1" Grid.Column="2" HorizontalOptions="End" />
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

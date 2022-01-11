@@ -11,8 +11,7 @@ namespace Wallet
             InitializeComponent();
 
             MainPage = new TabbedPageMain();
-            Database db = new Database();
-            db.createDatabase();
+
         }
 
         protected override void OnStart()

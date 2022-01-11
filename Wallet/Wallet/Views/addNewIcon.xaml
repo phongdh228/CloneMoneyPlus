@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wallet.addNewIcon"
+             Background="#fff"
+             Title="Biểu tượng">
+
+    <ContentPage.Resources>
+        <Style Class="title-style" TargetType="ImageButton">
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+        </Style>
+
+
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition />
+                    
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ImageButton Source="icon_tiengiay.jpg" Grid.Row="0" Grid.Column="0" class="title-style" x:Name="tiengiay" Clicked="tiengiay_Clicked"/>
+                <ImageButton Source="icon_atm.jpg" Grid.Row="0" Grid.Column="1" class="title-style" x:Name="atm" Clicked="atm_Clicked"/>
+                <ImageButton Source="icon_bit.jpg" Grid.Row="0" Grid.Column="2" class="title-style" x:Name="bit" Clicked="bit_Clicked"/>
+                <ImageButton Source="icon_tuixach.jpg" Grid.Row="0" Grid.Column="3" class="title-style" x:Name="tusach" Clicked="tusach_Clicked"/>
+
+                <ImageButton Source="icon_hungtien.jpg" Grid.Row="1" Grid.Column="0" class="title-style" x:Name="hungtien" Clicked="hungtien_Clicked"/>
+                <ImageButton Source="icon_bangtien.jpg" Grid.Row="1" Grid.Column="1" class="title-style" x:Name="bangtien" Clicked="bangtien_Clicked"/>
+                <ImageButton Source="icon_dongtien.jpg" Grid.Row="1" Grid.Column="2" class="title-style" x:Name="dongtien" Clicked="dongtien_Clicked"/>
+                <ImageButton Source="icon_mastercard.jpg" Grid.Row="1" Grid.Column="3" class="title-style" x:Name="mastercard" Clicked="mastercard_Clicked"/>
+
+                <ImageButton Source="icon_visa.jpg" Grid.Row="2" Grid.Column="0" class="title-style" x:Name="visa" Clicked="visa_Clicked"/>
+                <ImageButton Source="icon_amex.jpg" Grid.Row="2" Grid.Column="1" class="title-style" x:Name="amex" Clicked="amex_Clicked"/>
+                <ImageButton Source="icon_w.jpg" Grid.Row="2" Grid.Column="2" class="title-style" x:Name="w" Clicked="w_Clicked"/>
+                <ImageButton Source="icon_heodat.jpg" Grid.Row="2" Grid.Column="3" class="title-style" x:Name="heodat" Clicked="heodat_Clicked"/>
+
+                <ImageButton Source="icon_paypal.jpg" Grid.Row="3" Grid.Column="0" class="title-style" x:Name="paypal" Clicked="paypal_Clicked"/>
+                <ImageButton Source="icon_jcb.jpg" Grid.Row="3" Grid.Column="1" class="title-style" x:Name="jcb" Clicked="jcb_Clicked"/>
+                <ImageButton Source="icon_wechat.jpg" Grid.Row="3" Grid.Column="2" class="title-style" x:Name="wechat" Clicked="wechat_Clicked"/>
+                <ImageButton Source="icon_applepay.jpg" Grid.Row="3" Grid.Column="3" class="title-style" x:Name="applepay" Clicked="applepay_Clicked"/>
+
+                <ImageButton Source="icon_mayatm.jpg" Grid.Row="4" Grid.Column="0" class="title-style" x:Name="mayatm" Clicked="mayatm_Clicked"/>
+                <ImageButton Source="icon_coin.jpg" Grid.Row="4" Grid.Column="1" class="title-style" x:Name="coin" Clicked="coin_Clicked"/>
+                <ImageButton Source="icon_city.jpg" Grid.Row="4" Grid.Column="2" class="title-style" x:Name="city" Clicked="city_Clicked"/>
+                <ImageButton Source="icon_discover.jpg" Grid.Row="4" Grid.Column="3" class="title-style" x:Name="discover" Clicked="discover_Clicked"/>
+
+                <ImageButton Source="icon_gpay.jpg" Grid.Row="5" Grid.Column="0" class="title-style" x:Name="gpay" Clicked="gpay_Clicked"/>
+                <ImageButton Source="icon_hsbc.jpg" Grid.Row="5" Grid.Column="1" class="title-style" x:Name="hsbc" Clicked="hsbc_Clicked"/>
+                <ImageButton Source="icon_atm2.jpg" Grid.Row="5" Grid.Column="2" class="title-style" x:Name="atm2" Clicked="atm2_Clicked"/>
+                <ImageButton Source="icon_stripe.jpg" Grid.Row="5" Grid.Column="3" class="title-style" x:Name="stripe" Clicked="stripe_Clicked"/>
+
+                <ImageButton Source="icon_atm3.jpg" Grid.Row="6" Grid.Column="0" class="title-style" x:Name="atm3" Clicked="atm3_Clicked"/>
+                <ImageButton Source="icon_thumuc.jpg" Grid.Row="6" Grid.Column="1" class="title-style" x:Name="thumuc" Clicked="thumuc_Clicked"/>
+                <ImageButton Source="icon_damau.jpg" Grid.Row="6" Grid.Column="2" class="title-style" x:Name="damau" Clicked="damau_Clicked"/>
+                <ImageButton Source="icon_dola.jpg" Grid.Row="6" Grid.Column="3" class="title-style" x:Name="dola" Clicked="dola_Clicked"/>
+
+                <ImageButton Source="icon_atm4.jpg" Grid.Row="7" Grid.Column="0" class="title-style" x:Name="atm4" Clicked="atm4_Clicked"/>
+                <ImageButton Source="icon_line.jpg" Grid.Row="7" Grid.Column="1" class="title-style" x:Name="line" Clicked="line_Clicked"/>
+                <ImageButton Source="icon_v.jpg" Grid.Row="7" Grid.Column="2" class="title-style" x:Name="v" Clicked="v_Clicked"/>
+                <ImageButton Source="icon_phone.jpg" Grid.Row="7" Grid.Column="3" class="title-style" x:Name="phone" Clicked="phone_Clicked"/>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

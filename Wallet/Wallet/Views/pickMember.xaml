@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="Wallet.pickMember"
+             Title="Chọn thành viên"
+             NavigationPage.HasBackButton="True">
+    <ContentPage.Resources>
+        <Style Class="title-style" TargetType="ImageButton">
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+        </Style>
+        
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button ImageSource="caidat_thanhvien_03.png" Text="Cá nhân" class="title-style" x:Name="canhan" Clicked="canhan_Clicked"/>
+            <Button ImageSource="caidat_thanhvien_10.png" Text="Vợ" class="title-style" x:Name="vo" Clicked="vo_Clicked"/>
+            <Button ImageSource="caidat_thanhvien_12.png" Text="Chồng" class="title-style" x:Name="chong" Clicked="chong_Clicked"/>
+            <Button ImageSource="caidat_thanhvien_14.png" Text="Con cái" class="title-style" x:Name="concai" Clicked="concai_Clicked"/>
+            <Button ImageSource="caidat_thanhvien_16.png" Text="Cha mẹ" class="title-style" x:Name="chame" Clicked="chame_Clicked"/>
+            <Button ImageSource="caidat_thanhvien_18.png" Text="Gia đình" class="title-style" x:Name="giadinh" Clicked="giadinh_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

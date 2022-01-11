@@ -10,13 +10,29 @@
     <ContentPage.Content>
         <StackLayout>
             <Frame VerticalOptions="FillAndExpand" BackgroundColor="#f06292" Padding="5" >
-                <StackLayout VerticalOptions="FillAndExpand">
-                    <Label TextColor="White" HorizontalOptions="Start" Text="Ví tiền" FontSize="25" />
-                    <Label TextColor="White" HorizontalOptions="Start" Text="Tài sản ròng" FontSize="10" />
-                    <Label TextColor="White" HorizontalOptions="Start" x:Name="totalPrice" FontSize="30" />
-                    <Label TextColor="White" HorizontalOptions="Start" Text="Tài sản" FontSize="10" />
-                    <Label TextColor="White" HorizontalOptions="Start" x:Name="totalPrice2" FontSize="12" />
-                </StackLayout>
+                <Grid VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition />
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Label TextColor="White" HorizontalOptions="Start" Text="Ví tiền" FontSize="25" Grid.Row="0" Grid.Column="0" FontAttributes="Bold"/>
+                    <Label TextColor="White" HorizontalOptions="Start" Text="Tài sản ròng" FontSize="10" Grid.Row="1" Grid.Column="0"/>
+                    <Label TextColor="White" HorizontalOptions="Start" x:Name="totalPrice" FontSize="30" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" FontAttributes="Bold"/>
+                    <Label TextColor="White" HorizontalOptions="Start" Text="Tài sản" FontSize="10" Grid.Row="4" Grid.Column="0"/>
+                    <Label TextColor="White" HorizontalOptions="Start" Text="Món nợ" FontSize="10" Grid.Row="4" Grid.Column="1"/>
+                    <Label TextColor="White" HorizontalOptions="Start" x:Name="totalPrice2" FontSize="12" Grid.Row="5" Grid.Column="0" FontAttributes="Bold"/>
+                    <Label TextColor="White" HorizontalOptions="Start" x:Name="debitPrice" FontSize="12" Grid.Row="5" Grid.Column="1" FontAttributes="Bold"/>
+                </Grid>
             </Frame>
             <ListView x:Name="lstWallet" HasUnevenRows="True" IsPullToRefreshEnabled="True" ItemSelected="lstWallet_ItemSelected">
                 <ListView.ItemTemplate>
@@ -38,7 +54,7 @@
                                     <Image Source="{Binding walletImg}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
                                     <Label Text="{Binding  walletName}" Grid.Row="0" Grid.Column="1" FontSize="15"  VerticalOptions="Center" FontAttributes="Bold"/>
                                     <Label Text="{Binding walletNote}" Grid.Row="1" Grid.Column="1" FontSize="12" VerticalOptions="Center"/>
-                                    <Label Text="{Binding walletPrice}" Grid.Row="0" Grid.Column="2" VerticalTextAlignment="Center" VerticalOptions="Center"  FontAttributes="Bold" TextColor="Black"  HorizontalOptions="Center"/>
+                                    <Label Text="{Binding walletPrice, StringFormat='{0:N0}'}" Grid.Row="0" Grid.Column="2" VerticalTextAlignment="Center" VerticalOptions="Center"  FontAttributes="Bold" TextColor="Black"  HorizontalOptions="Center"/>
                                     <Label Text="{Binding walletCurrency}" Grid.Row="1" Grid.Column="2"  VerticalOptions="Start" HorizontalOptions="Center"/>
                                 </Grid>
                             </ViewCell.View>

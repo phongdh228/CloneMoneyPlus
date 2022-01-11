@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wallet.TabbedPageMain"
+             xmlns:views="clr-namespace:Wallet.Views"
+             BarBackgroundColor="#F6F6F6"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" xmlns:wallet="clr-namespace:Wallet"
+            android:TabbedPage.ToolbarPlacement="Bottom">
+
+    <TabbedPage.Children>
+        <NavigationPage
+            Title="Sách bỏ túi"
+            IconImageSource="pocketbook.png" >
+            <x:Arguments>
+                <views:Pocketbook />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage
+            Title="Ví tiền"
+            IconImageSource="wallet.png">
+            <x:Arguments>
+                <views:WalletPage />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage
+            Title="Phân tích"
+            IconImageSource="analytics.png">
+            <x:Arguments>
+                <views:AnalyticPage/>
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage
+            Title="Cài đặt"
+            IconImageSource="settings.png">
+            <x:Arguments>
+                <views:Settings />
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
+</TabbedPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="Wallet.PickWalletAccount"
+             Title="Chọn tài khoản"
+             NavigationPage.HasBackButton ="True">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="editButton" Priority="0" Order="Primary" IconImageSource="edit.jpg" Clicked="editButton_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lstWallet" HasUnevenRows="True" IsPullToRefreshEnabled="True" ItemSelected="lstWallet_ItemSelected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="0,5,10,5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding walletImg}" WidthRequest="40" HeightRequest="50"  Grid.Row="0" Grid.Column="0"/>
+                                <Label Text="{Binding walletName}" TextColor="Black" VerticalOptions="Center" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="1"/>
+                                <Label Text="{Binding walletPrice}" HorizontalOptions="End" VerticalOptions="Center" Grid.Row="0" Grid.Column="2" TextColor="Gray"/>
+                            </Grid>
+                        </ViewCell>
+                        
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

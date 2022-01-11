@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wallet.Views.AnalyticPage"
+             xmlns:views="clr-namespace:Wallet.Views"
+             xmlns:main="clr-namespace:Wallet"
+             Title="Phân tích">
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="Thời gian:" Clicked="timeButton_Clicked"></ToolbarItem>
+        <ToolbarItem x:Name="timeView" Text="1 tháng" Clicked="timeButton_Clicked"></ToolbarItem>
+    </TabbedPage.ToolbarItems>
+
+    <TabbedPage.Children>
+        <views:AnalyExpensePage Title="Chi tiêu" Icon="phantich_taisan_03.png"/>
+        <views:AnalyIncomePage Title="Thu nhập" Icon="phantich_taisan_05.png" />
+        <main:MoneyPlusPremium Title="Ngân sách" Icon="phantich_taisan_07.png" />
+        <views:AnalyTrendPage Title="Xu hướng" Icon="phantich_taisan_09.png" />
+        <views:AnalyAssetsPage Title="Tài sản" Icon="phantich_thunhap2_03.png" />
+    </TabbedPage.Children>
+</TabbedPage>
